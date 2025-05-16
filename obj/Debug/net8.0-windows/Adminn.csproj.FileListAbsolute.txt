@@ -1,0 +1,155 @@
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\App.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+D:\One Drive\OneDrive\Desktop\Adminn\bin\Debug\net8.0-windows\Adminn.exe
+D:\One Drive\OneDrive\Desktop\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
+D:\One Drive\OneDrive\Desktop\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+D:\One Drive\OneDrive\Desktop\Adminn\bin\Debug\net8.0-windows\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\MainWindow.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.g.resources
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.GeneratedMSBuildEditorConfig.editorconfig
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfoInputs.cache
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfo.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.csproj.CoreCompileInputs.cache
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.sourcelink.json
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Reports.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Home.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Home.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Employee.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Supplier.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Products.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Customer.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Products.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Profile.g.cs
+D:\One Drive\OneDrive\Desktop\Adminn\obj\Debug\net8.0-windows\Profile.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\bin\Debug\net8.0-windows\Adminn.exe
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\bin\Debug\net8.0-windows\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Home.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Products.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Profile.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\App.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Customer.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Employee.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Home.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\MainWindow.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Products.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Profile.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Reports.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Supplier.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.g.resources
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.GeneratedMSBuildEditorConfig.editorconfig
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfoInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfo.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.csproj.CoreCompileInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.sourcelink.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
+C:\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.exe
+C:\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
+C:\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+C:\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.dll
+C:\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Home.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Products.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Profile.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\App.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Home.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Products.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Profile.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.g.resources
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfoInputs.cache
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfo.cs
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.csproj.CoreCompileInputs.cache
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.sourcelink.json
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.dll
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
+C:\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.exe
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Home.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Products.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Profile.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\App.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Home.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Products.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Profile.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.g.resources
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfoInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfo.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll

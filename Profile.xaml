@@ -1,0 +1,303 @@
+﻿<Page x:Class="Adminn.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Adminn"
+      mc:Ignorable="d" 
+      d:DesignHeight="680" d:DesignWidth="1000"
+      Title="Profile">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="HeaderTextStyle">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="LabelStyle">
+            <Setter Property="Margin" Value="0,8,0,8"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#505050"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="ValueStyle">
+            <Setter Property="Margin" Value="0,8,0,8"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="SectionBorderStyle">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="DividerStyle">
+            <Setter Property="Height" Value="1"/>
+            <Setter Property="Fill" Value="#E0E0E0"/>
+            <Setter Property="Margin" Value="0,15,0,15"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ProfileButtonStyle">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="StatusBadgeStyle">
+            <Setter Property="Background" Value="#E1F5E7"/>
+            <Setter Property="BorderBrush" Value="#79D497"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="8,3"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#F8F8F8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Sidebar -->
+      
+            <!-- Main Content -->
+        <ScrollViewer Padding="30" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" PanningMode="VerticalOnly" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Profile Header -->
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,30">
+                    <Ellipse Width="162" Height="100" Margin="0,0,0,10">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Images/dsd.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="Muhammad Fayaz" FontSize="22" FontWeight="SemiBold"/>
+                        <TextBlock Text=" ✓" Foreground="#1E88E5" FontWeight="Bold" FontSize="16"/>
+                    </StackPanel>
+
+                    <TextBlock Text="@example.com" FontSize="14" Foreground="#505050" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                </StackPanel>
+
+                <!-- Profile Content -->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left Column -->
+                    <StackPanel Grid.Column="0" Margin="0,0,15,0">
+                        <!-- Personal Details Section -->
+                        <Border Style="{StaticResource SectionBorderStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Personal details" Style="{StaticResource HeaderTextStyle}"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Full Name -->
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Full name:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Muhammad Fayyaz" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Date of Birth -->
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Date of Birth:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="January 1, 1987" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Gender -->
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Gender:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="Male" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Nationality -->
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Nationality:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Pakistani" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Address -->
+                                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Address:" Style="{StaticResource LabelStyle}"/>
+                                    <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                        <!--<TextBlock Text="🇵🇰" Margin="0,0,5,0"/>-->
+                                        <TextBlock Text="S-4 AB Heights, Airport Road, Lhr" Style="{StaticResource ValueStyle}"/>
+                                    </StackPanel>
+
+                                    <!-- Phone Number -->
+                                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Phone Number:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="0301-8515333" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Email -->
+                                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Email:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="6" Grid.Column="1" Text="@example.com" Style="{StaticResource ValueStyle}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Security Settings Section -->
+                        <Border Style="{StaticResource SectionBorderStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Security Settings" Style="{StaticResource HeaderTextStyle}"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Password Last Changed -->
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Password Last Changed:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="July 15, 2024" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Two-Factor Authentication -->
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Two-Factor Authentication:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Enabled" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#2E7D32" />
+                                    
+
+                                    <!-- Security Questions -->
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Security Questions Set:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="Yes" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Login Notifications -->
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Login Notifications:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Enabled" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#2E7D32" />
+                                   
+
+                                    <!-- Connected Devices -->
+                                    <!--<TextBlock Grid.Row="4" Grid.Column="0" Text="Connected Devices:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="1" Text="3 Devices" Style="{StaticResource ValueStyle}"/>-->
+
+                                    <!-- Recent Activity -->
+                                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Recent Account Activity:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="No Suspicious Activity Detected" Style="{StaticResource ValueStyle}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- Right Column -->
+                    <StackPanel Grid.Column="1" Margin="15,0,0,0">
+                        <!-- Account Details Section -->
+                        <Border Style="{StaticResource SectionBorderStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Account Details" Style="{StaticResource HeaderTextStyle}"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Display Name -->
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Display Name:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="example" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Account Created -->
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Account Created:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="March 20, 2020" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Last Login -->
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Last Login:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="August 22, 2024" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Membership Status -->
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Membership Status:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Premium Member" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#7B5FF6"/>
+
+                                    <!-- Account Verification -->
+                                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Account Verification:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="1" Text="Verified" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#2E7D32" />
+
+                                    
+                                    <!-- Language Preference -->
+                                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Language Preference:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="English" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Time Zone -->
+                                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Time Zone:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="6" Grid.Column="1" Text="(UTC + 5)" Style="{StaticResource ValueStyle}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Preferences Section -->
+                        <Border Style="{StaticResource SectionBorderStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Preferences" Style="{StaticResource HeaderTextStyle}"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Email Notifications -->
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Email Notifications:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Subscribed" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#2E7D32" />
+                                   
+
+                                    <!-- SMS Alerts -->
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="SMS Alerts:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Enabled" Style="{StaticResource ValueStyle}" FontWeight="SemiBold" Foreground="#2E7D32" />
+                                   
+
+                                    <!-- Content Preferences -->
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Content Preferences:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="Admin" Style="{StaticResource ValueStyle}"/>
+
+                                    <!-- Dark Mode --><!--
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Dark Mode:" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Activated" Style="{StaticResource ValueStyle}"/>-->
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

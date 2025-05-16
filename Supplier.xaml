@@ -1,0 +1,44 @@
+﻿<Page x:Class="Adminn.Supplier"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Adminn"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Supplier">
+
+    <Grid>
+
+        <Grid>
+            <!--  DataGrid  -->
+            <DataGrid
+            Margin="0,60,0,45"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            HeadersVisibility="Column"
+            IsReadOnly="True"
+            SelectionMode="Single" BorderBrush="Black">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="100" Header="Supplier ID" />
+                    <DataGridTextColumn Width="120" Header="Name" />
+                    <DataGridTextColumn Width="150" Header="Phone Number" />
+                    <DataGridTextColumn Width="120" Header="Role" />
+                    <DataGridTextColumn Width="120" Header="Plant Name" />
+                    <DataGridTextColumn Width="120" Header="Status" />
+                    <DataGridTextColumn Width="80" Header="Created At" />
+                    <DataGridTextColumn Width="80" Header="Updated At" />
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Height="45" VerticalAlignment="Bottom" Background="White">
+                <Button Content="Add New Supplier" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.718,-0.081" Background="#FF065668" BorderBrush="#FF065668" Width="118" Foreground="White" Height="27"/>
+            </Grid>
+        </Grid>
+
+        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="🚚 Supplier" VerticalAlignment="Top" Width="157" Foreground="White" Background="#FF065668"  FontSize="22" FontWeight="Bold"/>
+
+
+    </Grid>
+</Page>
