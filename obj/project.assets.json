@@ -1,0 +1,152 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Adminn/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Adminn.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Adminn.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Employee/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Employee.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Employee.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Supplier/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Supplier.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Supplier.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Adminn/1.0.0": {
+      "type": "project",
+      "path": "../Other/Adminn/Adminn.csproj",
+      "msbuildProject": "../Other/Adminn/Adminn.csproj"
+    },
+    "Employee/1.0.0": {
+      "type": "project",
+      "path": "../Other/Employee/Employee.csproj",
+      "msbuildProject": "../Other/Employee/Employee.csproj"
+    },
+    "Supplier/1.0.0": {
+      "type": "project",
+      "path": "../Other/Supplier/Supplier.csproj",
+      "msbuildProject": "../Other/Supplier/Supplier.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Adminn >= 1.0.0",
+      "Employee >= 1.0.0",
+      "Supplier >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Dashboard\\Dashboard.csproj",
+      "projectName": "Dashboard",
+      "projectPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Dashboard\\Dashboard.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Dashboard\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Adminn\\Adminn.csproj": {
+              "projectPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Adminn\\Adminn.csproj"
+            },
+            "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Employee.csproj": {
+              "projectPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Employee.csproj"
+            },
+            "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Supplier\\Supplier.csproj": {
+              "projectPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Supplier\\Supplier.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+﻿<Window x:Class="Dashboard.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Prime Tech" 
+        Height="450" 
+        Width="800"
+        
+        
+        ResizeMode="canResize">
+
+
+    <Window.Resources>
+        <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0F1A3D" Offset="0"/>
+            <GradientStop Color="#2A325C" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007BFF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20 10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                              CornerRadius="4"
+                              Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0056B3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <Viewbox Stretch="Uniform" OpacityMask="#FF0C151D" Margin="0,0,2,0">
+        <Grid Background="White" 
+              Width="650" 
+              Height="635" 
+              MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+
+            <!-- Rest of your XAML content remains the same -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <!-- Hero Banner -->
+                    <Grid Height="250"/>
+
+                    <!-- Main Content -->
+                    <StackPanel Margin="30,47,30,0" VerticalAlignment="Top" Orientation="Vertical">
+                        <!-- Company Info with Logo -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Image Width="50" Height="50" Margin="0,0,10,0"/>
+                            <!-- Logo Image Placeholder -->
+                        </StackPanel>
+
+                        <!-- Image Row -->
+
+                        <!-- Icons Section -->
+                    </StackPanel>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="                      PRIME-TECH" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Foreground="#FF014860" Height="50" Width="405"/>
+                    <Image HorizontalAlignment="Left" Height="131" Margin="207,20,0,0" VerticalAlignment="Top" Width="131" Source="/dsd.png"/>
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,97,0,0" TextWrapping="Wrap" Text="Welcome to Prime Tech, a leading exporter of premium-quality mangoes. With a passion for excellence and a commitment to delivering the freshest and most flavorful mangoes, we have established ourselves as a trusted name in the global fruit trade." VerticalAlignment="Top" Width="579"  FontSize="16" FontFamily="Times New Roman" Background="{x:Null}" />
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Seamless Exports, Trusted Solutions" FontWeight="Bold" FontSize="22"/>
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,389,0,0" TextWrapping="Wrap" Text="We source our mangoes from the finest, government-approved farms, ensuring that only the best fruit reaches our customers. Each mango is carefully hand-picked at peak ripeness to preserve its exceptional taste, texture, and freshness. Whether you are a distributor, retailer, or wholesaler, we are dedicated to consistently meeting your needs with reliability and quality." VerticalAlignment="Top" Width="596" FontSize="16" FontFamily="Times New Roman" Background="{x:Null}" />
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,488,0,0" TextWrapping="Wrap" Text="At Prime Tech, our mission is to bridge the gap between mango growers and consumers by providing farm-fresh mangoes that meet international standards. Experience the taste of perfection with us as we bring you the rich, tropical flavors of the finest mangoes." VerticalAlignment="Top" Width="578" FontSize="16" FontFamily="Times New Roman" Background="{x:Null}"/>
+
+                    <TextBlock HorizontalAlignment="Left" FontSize="14" FontWeight="Bold" VerticalAlignment="Top" Margin="27,20,0,0">
+            <Hyperlink Click="ReturnToPreviousPage">
+                ← Return
+            </Hyperlink>
+                    </TextBlock>
+
+
+                   
+
+                    <Image HorizontalAlignment="Center" Height="280" Margin="0,109,0,0" VerticalAlignment="Top" Width="300" Source="/Images/download-removebg-preview (1).png" Stretch="Fill"/>
+                    <Button
+        Content="Supplier"
+        Margin="51,572,0,23"
+        HorizontalAlignment="Left"
+        Width="149"
+        Height="40"
+        Click="Supplier_Click"/>
+
+                    <Button
+        Content="Employee"
+        Margin="450,572,0,23"
+        HorizontalAlignment="Left"
+        Width="149"
+        Height="40"
+        Click="Employee_Click"/>
+
+                    <Button
+        Content="Admin"
+        Margin="0,572,0,23"
+        HorizontalAlignment="Center"
+        Width="149"
+        Height="40"
+        Click="Admin_Click"/>
+                </Grid>
+            </ScrollViewer>
+            <Grid/>
+        </Grid>
+    </Viewbox>
+</Window>

@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Forget_Password.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Other\Adminn\Adminn.csproj" />
+    <ProjectReference Include="..\Other\Employee\Employee.csproj" />
+    <ProjectReference Include="..\Other\Supplier\Supplier.csproj" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <None Remove="download-removebg-preview %281%29.png" />
+    <None Remove="download__1_-removebg-preview.png" />
+    <None Remove="dsd.png" />
+    <None Remove="Facebook.png" />
+    <None Remove="Images\Best_Cybersecurity_solutions_in_Wisconsin___X-Centric_IT_solutions__1_-removebg-preview.png" />
+    <None Remove="Images\download-removebg-preview %281%29.png" />
+    <None Remove="Images\download-removebg-preview.png" />
+    <None Remove="Images\download__1_-removebg-preview.png" />
+    <None Remove="Images\dsd.png" />
+    <None Remove="Images\Facebook.png" />
+    <None Remove="Images\FDGVDF.png" />
+    <None Remove="Images\Instagram.png" />
+    <None Remove="Images\KKK.jpg" />
+    <None Remove="Images\La_transparence_mutuelle___clé_d_une_relation_client_durable-removebg-preview.png" />
+    <None Remove="Images\logo_dolphin-removebg-preview.png" />
+    <None Remove="Images\Watercolor and earth map vector - WeLoveSoLo.jpg" />
+    <None Remove="Images\X.png" />
+    <None Remove="Instagram.png" />
+    <None Remove="Watercolor and earth map vector - WeLoveSoLo.jpg" />
+    <None Remove="X.png" />
+  </ItemGroup>-->
+
+ 
+
+  <ItemGroup>
+    <Resource Include="Images\Best_Cybersecurity_solutions_in_Wisconsin___X-Centric_IT_solutions__1_-removebg-preview.png" />
+    <Resource Include="Images\download-removebg-preview (1).png" />
+    <Resource Include="Images\download-removebg-preview.png" />
+    <Resource Include="Images\download__1_-removebg-preview.png" />
+    <Resource Include="Images\dsd.png" />
+    <Resource Include="Images\Facebook.png" />
+    <Resource Include="Images\FDGVDF.png" />
+    <Resource Include="Images\Forget_Password.png" />
+    <Resource Include="Images\Instagram.png" />
+    <Resource Include="Images\KKK.jpg" />
+    <Resource Include="Images\La_transparence_mutuelle___clé_d_une_relation_client_durable-removebg-preview.png" />
+    <Resource Include="Images\logo_dolphin-removebg-preview.png" />
+    <Resource Include="Images\Watercolor and earth map vector - WeLoveSoLo.jpg" />
+    <Resource Include="Images\X.png" />
+  </ItemGroup>
+
+	
+</Project>
