@@ -153,3 +153,6 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\re
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\LGA.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\LGA.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.sourcelink.json

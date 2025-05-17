@@ -13,6 +13,7 @@
     <None Remove="Images\download-removebg-preview %281%29.png" />
     <None Remove="Images\dsd.png" />
     <None Remove="Images\Leonardo_Phoenix_10_Design_a_professional_and_visually_appeali_3.jpg" />
+    <None Remove="Images\LG..jpg" />
     <None Remove="Leonardo_Phoenix_10_Design_a_professional_and_visually_appeali_3.jpg" />
   </ItemGroup>
 
@@ -20,6 +21,7 @@
     <Resource Include="Images\download-removebg-preview (1).png" />
     <Resource Include="Images\dsd.png" />
     <Resource Include="Images\Leonardo_Phoenix_10_Design_a_professional_and_visually_appeali_3.jpg" />
+    <Resource Include="Images\LG..jpg" />
   </ItemGroup>
 
   <ItemGroup>

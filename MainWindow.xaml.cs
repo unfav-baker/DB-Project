@@ -123,23 +123,9 @@ namespace Adminn
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-            // Simplified object initialization for newWindow  
-            //var newWindow = new Dashboard.MainWindow 
-
-            //{
-            //    WindowState = this.WindowState
-            //};
-
-            //if (this.WindowState == WindowState.Normal)
-            //{
-            //    newWindow.Left = this.Left;
-            //    newWindow.Top = this.Top;
-            //    newWindow.Width = this.Width;
-            //    newWindow.Height = this.Height;
-            //}
-
-            //newWindow.Show();
-            //this.Close();
+            LGA newWindow = new();
+            newWindow.Show();
+            this.Close();// Optional: close current window
         }
     }
 }
