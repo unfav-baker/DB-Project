@@ -39,16 +39,12 @@
                          Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
                 <!-- Subtitle -->
-                <TextBlock HorizontalAlignment="Left" Margin="49,81,0,0" TextWrapping="Wrap" 
+                <TextBlock HorizontalAlignment="Left" Margin="39,81,0,0" TextWrapping="Wrap" 
                          Text="Reset Your Password" VerticalAlignment="Top" 
                          FontWeight="Bold" FontSize="16" Foreground="Black" Height="19" 
                          Width="200" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
                 <!-- Description -->
-                <TextBlock HorizontalAlignment="Left" Margin="26,107,0,0" TextWrapping="Wrap" 
-                         Text="Enter your email to receive reset instructions" VerticalAlignment="Top" 
-                         Width="220" Background="{x:Null}" FontSize="10" Grid.Column="2" 
-                         Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
                 <!-- Return Link -->
                 <TextBlock  
@@ -62,6 +58,7 @@
 
                 <!-- Email Input -->
                 <CC:Dashboard  
+                    x:Name="EmailInput"
                     Margin="0,139,0,254"  
                     BorderThickness="1"  
                     CaretBrush="Black"  
@@ -73,9 +70,26 @@
                     Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" 
                     Width="246" Height="35" Grid.Column="2" />
 
+                <!-- Verification Code Input -->
+                <CC:Dashboard  
+                    x:Name="VerificationCodeInput"
+                    Margin="0,185,0,208"  
+                    BorderThickness="1"  
+                    CaretBrush="Black"  
+                    VerticalContentAlignment="Center"  
+                    CornerRadius="18"  
+                    FontFamily="Segoe UI Symbol"  
+                    FontSize="16"  
+                    PlaceHolder="Verification Code" BorderBrush="Black" Foreground="Black" 
+                    Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" 
+                    Width="246" Height="35" Grid.Column="2" />
+
+                <!-- Verification Code Label -->
+
                 <!-- Send Reset Link Button -->
-                <Button Content="Send Reset Link"  
-                      
+                <Button x:Name="SendResetLinkButton" 
+                    Content="Reset Password"  
+                    
                     Background="#FF0080C3"  
                     Foreground="White"  
                     FontSize="14"  
@@ -85,7 +99,7 @@
                     Cursor="Hand"  
                     HorizontalAlignment="Left"  
                     VerticalAlignment="Top"  
-                    Margin="43,200,0,0"  
+                    Margin="43,231,0,0"  
                     RenderTransformOrigin="0.656,-1.011"  
                     Grid.RowSpan="2" Grid.Column="2">
                     <Button.Template>
@@ -129,7 +143,7 @@
                          Foreground="Gray" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
                 <!-- Success/Error Message Placeholder -->
-                <TextBlock x:Name="MessageTextBlock" HorizontalAlignment="Left" Margin="16,175,0,0" 
+                <TextBlock x:Name="MessageTextBlock" HorizontalAlignment="Left" Margin="16,205,0,0" 
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="246" 
                          FontSize="12" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2" 
                          Grid.ColumnSpan="2" Visibility="Collapsed"/>

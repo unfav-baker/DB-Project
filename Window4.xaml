@@ -131,7 +131,7 @@
                     Grid.Column="2" HorizontalAlignment="Left" Width="246" />
 
                 <CC:Dashboard
-                    x:Name="RoleTextBox"
+                    x:Name="CodeTextBox"
                     FontSize="16"
                     Margin="16,298,0,98"
                     BorderThickness="1"
@@ -140,7 +140,7 @@
                     VerticalContentAlignment="Center"
  CornerRadius="18"
  FontFamily="Segoe UI Symbol"
-                    PlaceHolder="Role" 
+                    PlaceHolder="Enter the code you get on Email " 
                     BorderBrush="Black" 
                     Foreground="Black" 
                     Grid.Row="1" 

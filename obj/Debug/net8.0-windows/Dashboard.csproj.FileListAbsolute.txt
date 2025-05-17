@@ -176,3 +176,5 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
