@@ -1,0 +1,139 @@
+D:\ Practiceeeee\Supplier\bin\Debug\net8.0-windows\Supplier.exe
+D:\ Practiceeeee\Supplier\bin\Debug\net8.0-windows\Supplier.deps.json
+D:\ Practiceeeee\Supplier\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+D:\ Practiceeeee\Supplier\bin\Debug\net8.0-windows\Supplier.dll
+D:\ Practiceeeee\Supplier\bin\Debug\net8.0-windows\Supplier.pdb
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Home.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Profile.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Home.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Products.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Profile.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Ratings.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Reports.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\App.g.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.cache
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.lref
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Export Orders.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\MainWindow.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Products.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Ratings.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Reports.baml
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.g.resources
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.GeneratedMSBuildEditorConfig.editorconfig
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfoInputs.cache
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfo.cs
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.csproj.CoreCompileInputs.cache
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.dll
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\refint\Supplier.dll
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.pdb
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cache
+D:\ Practiceeeee\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\bin\Debug\net8.0-windows\Supplier.exe
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\bin\Debug\net8.0-windows\Supplier.deps.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\bin\Debug\net8.0-windows\Supplier.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\bin\Debug\net8.0-windows\Supplier.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Home.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Profile.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Ratings.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Home.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Products.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Profile.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Ratings.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Reports.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\App.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.lref
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Export Orders.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\MainWindow.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Products.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Reports.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.g.resources
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.GeneratedMSBuildEditorConfig.editorconfig
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfoInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfo.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.csproj.CoreCompileInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.sourcelink.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\refint\Supplier.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Supplier\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
+C:\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.exe
+C:\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.deps.json
+C:\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+C:\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.dll
+C:\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.pdb
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Home.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Profile.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Home.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Profile.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\App.g.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.cache
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.lref
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.g.resources
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfoInputs.cache
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfo.cs
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.csproj.CoreCompileInputs.cache
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.dll
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\refint\Supplier.dll
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.pdb
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cache
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
+C:\Project\Other\Supplier\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.exe
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Home.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Profile.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Home.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Profile.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\App.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.g.resources
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfoInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfo.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\refint\Supplier.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Images\LG..jpg
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_Content.g.cs
