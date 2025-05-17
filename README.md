@@ -37,8 +37,8 @@ Integration includes:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com
-cd your-repo-name
+git clone https://github.com/unfav-baker/DB-Project.git
+
 
 To Switch to any of the Branch you can use
 
