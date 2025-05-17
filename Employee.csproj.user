@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Generate Reports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LGE.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Profile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Reports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View Customer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View Suppliers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

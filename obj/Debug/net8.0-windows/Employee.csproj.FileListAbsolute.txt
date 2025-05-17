@@ -1,0 +1,172 @@
+D:\ Practiceeeee\Employee\bin\Debug\net8.0-windows\Employee.exe
+D:\ Practiceeeee\Employee\bin\Debug\net8.0-windows\Employee.deps.json
+D:\ Practiceeeee\Employee\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+D:\ Practiceeeee\Employee\bin\Debug\net8.0-windows\Employee.dll
+D:\ Practiceeeee\Employee\bin\Debug\net8.0-windows\Employee.pdb
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\App.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\MainWindow.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.g.resources
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.dll
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.pdb
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Home.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Profile.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Reports.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\View Customer.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\View Suppliers.g.cs
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Home.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Profile.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\Reports.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\View Customer.baml
+D:\ Practiceeeee\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\bin\Debug\net8.0-windows\Employee.exe
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\bin\Debug\net8.0-windows\Employee.deps.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\bin\Debug\net8.0-windows\Employee.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\bin\Debug\net8.0-windows\Employee.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Home.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Profile.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\View Customer.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Home.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Profile.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Reports.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\View Customer.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\View Suppliers.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\App.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\MainWindow.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Reports.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.g.resources
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.sourcelink.json
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.pdb
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
+D:\One Drive\OneDrive\Desktop\Air University\2nd Semester\Employee\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
+C:\Project\Other\Employee\Employee\bin\Debug\net8.0-windows\Employee.exe
+C:\Project\Other\Employee\Employee\bin\Debug\net8.0-windows\Employee.deps.json
+C:\Project\Other\Employee\Employee\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+C:\Project\Other\Employee\Employee\bin\Debug\net8.0-windows\Employee.dll
+C:\Project\Other\Employee\Employee\bin\Debug\net8.0-windows\Employee.pdb
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Home.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Profile.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\View Customer.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Home.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Profile.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Reports.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\View Customer.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\View Suppliers.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\App.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Reports.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.g.resources
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.dll
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.pdb
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
+C:\Project\Other\Employee\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
+C:\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.exe
+C:\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.deps.json
+C:\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+C:\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.dll
+C:\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.pdb
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Home.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Home.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\App.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.g.resources
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.dll
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.pdb
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
+C:\Project\Other\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.exe
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\Employee.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Home.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Home.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\App.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.g.resources
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.baml

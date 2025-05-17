@@ -1,0 +1,93 @@
+﻿<Page x:Class="Employee.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="EmployeeProfilePage"
+      Background="#F3F4F6">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <StackPanel Background="#FF065668" Grid.Column="0" >
+            <Image Source="Images/dsd.png" Height="100" Width="100" Margin="0,20" HorizontalAlignment="Center"/>
+            <TextBlock Text="Employee Name" Foreground="White" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" />
+            <TextBlock Text="Employye Email" Foreground="LightGray" FontSize="14" HorizontalAlignment="Center" Margin="0,5,0,30"/>
+            <!-- Add navigation links here if needed -->
+        </StackPanel>
+
+        <!-- Main Content -->
+        <ScrollViewer Grid.Column="1" Padding="20">
+            <StackPanel Orientation="Vertical" >
+
+                <TextBlock Text="Employee Profile" FontSize="24" FontWeight="Bold" Foreground="#111827"/>
+
+                <!-- Personal Info -->
+                <Border Background="White" CornerRadius="10" Padding="15" Margin="0,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Full Name" FontWeight="Bold"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Gender" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Date of Birth" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Nationality" FontWeight="Bold"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Email" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example.com"/>
+                            <TextBlock Text="Phone Number" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Employment Details -->
+                <Border Background="White" CornerRadius="10" Padding="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Employee ID" FontWeight="Bold"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Last Login" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Hire Date" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Role" FontWeight="Bold"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Login Notifications" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                            <TextBlock Text="Admin" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="example"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Preferences -->
+                <Border Background="White" CornerRadius="10" Padding="15">
+                    <StackPanel>
+                        <TextBlock Text="Language Preference" FontWeight="Bold"/>
+                        <TextBlock Text="example"/>
+                        <TextBlock Text="Time Zone" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <TextBlock Text="example"/>
+                        
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
