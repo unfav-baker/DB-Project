@@ -100,6 +100,7 @@ C:\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cac
 C:\Project\Other\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
 C:\Project\Other\Supplier\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.exe
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Images\LG..jpg
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.deps.json
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Supplier.dll
@@ -109,16 +110,19 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Home.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Profile.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Ratings.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\App.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_Content.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_MarkupCompile.lref
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Export Orders.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Products.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Reports.baml
@@ -128,12 +132,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfoInputs.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.AssemblyInfo.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.sourcelink.json
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\refint\Supplier.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\ref\Supplier.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\LGS.baml
-D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\bin\Debug\net8.0-windows\Images\LG..jpg
-D:\Downloads\Downloads\WhatsApp\Project\Other\Supplier\obj\Debug\net8.0-windows\Supplier_Content.g.cs
