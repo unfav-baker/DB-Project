@@ -145,6 +145,7 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Home.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.g.cs
@@ -155,6 +156,7 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee_MarkupCompile.lref
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
@@ -163,10 +165,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfoInputs.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.AssemblyInfo.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.sourcelink.json
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\refint\Employee.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\ref\Employee.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.baml
