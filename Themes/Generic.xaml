@@ -45,18 +45,18 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <!--  || When Text Block is empty, Show PlaceHolder ||  -->
+                          <!--|| When Text Block is empty, Show PlaceHolder ||-->  
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Text" Value="" />
                             </MultiTrigger.Conditions>
                             <Setter TargetName="_TextBlock" Property="Visibility" Value="Visible" />
                         </MultiTrigger>
-                        <!--  || Hover Effect ||  -->
+                          <!--|| Hover Effect ||-->  
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="_Border" Property="BorderBrush" Value="#FCA618" />
                         </Trigger>
-                        <!--  || Focus Effect ||  -->
+                          <!--|| Focus Effect ||-->  
                         <Trigger Property="IsFocused" Value="True">
                             <Setter TargetName="_Border" Property="BorderBrush" Value="#F67034" />
                         </Trigger>

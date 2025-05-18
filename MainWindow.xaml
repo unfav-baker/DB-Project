@@ -150,7 +150,7 @@
 
            <!-- Main Content Area -->  
 
-           <CC:Adminn  
+           <CC:Adminn 
 BorderThickness="1"  
 CaretBrush="{x:Null}"  
 CornerRadius="15"  
