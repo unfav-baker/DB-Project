@@ -120,6 +120,7 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Suppl
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
@@ -136,6 +137,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Windo
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window3.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window2.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window3.g.cs
@@ -152,6 +156,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Gener
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\App.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Themes\Generic.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window4.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.baml
@@ -164,17 +171,10 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashb
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfoInputs.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfo.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.CoreCompileInputs.cache
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.Up2Date
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\refint\Dashboard.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\ref\Dashboard.dll
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.baml
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.baml
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
