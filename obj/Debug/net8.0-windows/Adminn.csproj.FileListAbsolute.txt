@@ -115,11 +115,6 @@ C:\Project\Other\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.exe
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
@@ -131,8 +126,14 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Pr
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\App.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.exe
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
@@ -155,4 +156,3 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\re
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
