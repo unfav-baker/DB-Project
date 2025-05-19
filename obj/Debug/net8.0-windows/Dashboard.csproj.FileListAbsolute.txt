@@ -1,136 +1,3 @@
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Employee.exe
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Employee.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
-D:\One Drive\OneDrive\Desktop\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.AssemblyReference.cache
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\MainWindow.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window2.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3_b.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3_c.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window2.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3_b.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window3_c.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4_b.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4_c.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window5.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window6.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window7.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\App.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\App.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Themes\Generic.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4_b.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window4_c.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window5.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window6.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Window7.baml
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.g.resources
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfoInputs.cache
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfo.cs
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.CoreCompileInputs.cache
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.Up2Date
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\refint\Dashboard.dll
-D:\One Drive\OneDrive\Desktop\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
-C:\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window2.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window2.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window5.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window6.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window7.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\App.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.pdb
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Themes\Generic.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\App.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window5.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window6.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Window7.baml
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.g.resources
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfoInputs.cache
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfo.cs
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.CoreCompileInputs.cache
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.dll
-C:\Project\Dashboard\obj\Debug\net8.0-windows\refint\Dashboard.dll
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.genruntimeconfig.cache
-C:\Project\Dashboard\obj\Debug\net8.0-windows\ref\Dashboard.dll
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.AssemblyReference.cache
-C:\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.Up2Date
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Employee.exe
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Employee.dll
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.deps.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.exe
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
-C:\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.pdb
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.deps.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.exe
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.exe
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.pdb
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.dll
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.pdb
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
-D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.AssemblyReference.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Window2.baml
@@ -155,6 +22,27 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\App.g
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.exe
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.exe
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\App.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.baml
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml

@@ -94,7 +94,7 @@ namespace Dashboard {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Dashboard;component/window4.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Dashboard;V1.0.0.0;component/window4.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Window4.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
