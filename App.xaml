@@ -1,9 +1,10 @@
-﻿<Application x:Class="Adminn.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Adminn"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+﻿<Application x:Class="Adminn.App"  
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+            StartupUri="MainWindow.xaml">  
+   <Application.Resources>  
+       <!-- Add the missing StringToVisibilityConverter resource -->
+        <!--<converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="StringToVisibilityConverter"/>-->  
+   </Application.Resources>  
 </Application>
