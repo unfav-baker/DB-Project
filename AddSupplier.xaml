@@ -1,0 +1,154 @@
+﻿<Page x:Class="Adminn.AddSupplier"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Adminn"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddSupplier">
+    <Grid>
+        <!-- Header -->
+        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" 
+                  Margin="24,13,0,0" 
+                  TextWrapping="Wrap" 
+                  Text="➕ Add New Supplier" 
+                  VerticalAlignment="Top" 
+                  Width="300" 
+                  Foreground="White" 
+                  Background="#FF065668"  
+                  FontSize="22" 
+                  FontWeight="Bold"/>
+
+        <!-- Form Content -->
+        <Grid Margin="50,80,50,50" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Form Title -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="4" 
+                      Text="Supplier Information" 
+                      FontSize="20" 
+                      FontWeight="Bold" 
+                      Margin="0,0,0,20" 
+                      HorizontalAlignment="Center"
+                      Foreground="#FF065668"/>
+
+            <!-- Name -->
+            <Label Grid.Row="1" Grid.Column="0" 
+                   Content="Name:" 
+                   VerticalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="0,5"/>
+            <TextBox x:Name="txtName" 
+                     Grid.Row="1" Grid.Column="1" 
+                     Height="30" 
+                     Margin="10,5" 
+                     VerticalContentAlignment="Center"/>
+
+            <!-- Phone Number -->
+            <Label Grid.Row="1" Grid.Column="2" 
+                   Content="Phone Number:" 
+                   VerticalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="20,5,0,5"/>
+            <TextBox x:Name="txtPhoneNumber" 
+                     Grid.Row="1" Grid.Column="3" 
+                     Height="30" 
+                     Margin="10,5" 
+                     VerticalContentAlignment="Center"/>
+
+            <!-- Role -->
+            <Label Grid.Row="2" Grid.Column="0" 
+                   Content="Role:" 
+                   VerticalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="0,5"/>
+            <ComboBox x:Name="cmbRole" 
+                      Grid.Row="2" Grid.Column="1" 
+                      Height="30" 
+                      Margin="10,5" 
+                      VerticalContentAlignment="Center">
+                <ComboBoxItem Content="Plant Supplier"/>
+                <ComboBoxItem Content="Seed Supplier"/>
+                <ComboBoxItem Content="Organic Plant Supplier"/>
+                <ComboBoxItem Content="Importer"/>
+                <ComboBoxItem Content="Wholesaler"/>
+                <ComboBoxItem Content="Equipment Supplier"/>
+                <ComboBoxItem Content="Seedling Specialist"/>
+                <ComboBoxItem Content="Rare Plant Supplier"/>
+            </ComboBox>
+
+            <!-- Plant Name -->
+            <Label Grid.Row="2" Grid.Column="2" 
+                   Content="Plant Name:" 
+                   VerticalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="20,5,0,5"/>
+            <TextBox x:Name="txtPlantName" 
+                     Grid.Row="2" Grid.Column="3" 
+                     Height="30" 
+                     Margin="10,5" 
+                     VerticalContentAlignment="Center"/>
+
+            <!-- Status -->
+            <Label Grid.Row="3" Grid.Column="0" 
+                   Content="Status:" 
+                   VerticalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="0,5"/>
+            <ComboBox x:Name="cmbStatus" 
+                      Grid.Row="3" Grid.Column="1" 
+                      Height="30" 
+                      Margin="10,5" 
+                      VerticalContentAlignment="Center">
+                <ComboBoxItem Content="Active" IsSelected="True"/>
+                <ComboBoxItem Content="Inactive"/>
+                <ComboBoxItem Content="Pending"/>
+                <ComboBoxItem Content="On Hold"/>
+            </ComboBox>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="6" Grid.ColumnSpan="4" 
+                       Orientation="Horizontal" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,30,0,0">
+                <Button x:Name="btnSave" 
+                       Content="Save Supplier" 
+                       Width="120" 
+                       Height="35" 
+                       Background="#FF065668" 
+                       Foreground="White" 
+                       BorderBrush="#FF065668" 
+                       FontWeight="Bold" 
+                       Margin="0,0,10,0" 
+                       Click="SaveSupplier_Click"/>
+                <Button x:Name="btnCancel" 
+                       Content="Cancel" 
+                       Width="80" 
+                       Height="35" 
+                       Background="#FFDC3545" 
+                       Foreground="White" 
+                       BorderBrush="#FFDC3545" 
+                       FontWeight="Bold" 
+                       Click="Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

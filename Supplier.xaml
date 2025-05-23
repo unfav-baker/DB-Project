@@ -7,38 +7,81 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Supplier">
-
     <Grid>
-
         <Grid>
-            <!--  DataGrid  -->
-            <DataGrid
-            Margin="0,60,0,45"
-            AutoGenerateColumns="False"
-            CanUserAddRows="False"
-            HeadersVisibility="Column"
-            IsReadOnly="True"
-            SelectionMode="Single" BorderBrush="Black">
+            <!-- DataGrid -->
+            <DataGrid x:Name="SupplierDataGrid" 
+                     Margin="0,61,0,45"
+                     AutoGenerateColumns="False"
+                     CanUserAddRows="False"
+                     HeadersVisibility="Column"
+                     IsReadOnly="False"
+                     SelectionMode="Single" 
+                     BorderBrush="Black"
+                     ItemsSource="{Binding Suppliers}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="100" Header="Supplier ID" />
-                    <DataGridTextColumn Width="120" Header="Name" />
-                    <DataGridTextColumn Width="150" Header="Phone Number" />
-                    <DataGridTextColumn Width="120" Header="Role" />
-                    <DataGridTextColumn Width="120" Header="Plant Name" />
-                    <DataGridTextColumn Width="120" Header="Status" />
-                    <DataGridTextColumn Width="80" Header="Created At" />
-                    <DataGridTextColumn Width="80" Header="Updated At" />
-
+                    <DataGridCheckBoxColumn Width="50" Header="" Binding="{Binding IsSelected}" />
+                    <DataGridTextColumn Width="100" Header="Supplier ID" Binding="{Binding SupplierId}" />
+                    <DataGridTextColumn Width="120" Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Width="150" Header="Phone Number" Binding="{Binding PhoneNumber}" />
+                    <DataGridTextColumn Width="120" Header="Role" Binding="{Binding Role}" />
+                    <DataGridTextColumn Width="120" Header="Plant Name" Binding="{Binding PlantName}" />
+                    <DataGridTextColumn Width="80" Header="Status" Binding="{Binding Status}" />
+                    <DataGridTextColumn Width="100" Header="Created At" Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy}" />
+                    <DataGridTextColumn Width="100" Header="Updated At" Binding="{Binding UpdatedAt, StringFormat=dd/MM/yyyy}" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Height="45" VerticalAlignment="Bottom" Background="White">
-                <Button Content="Add New Supplier" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.718,-0.081" Background="#FF065668" BorderBrush="#FF065668" Width="118" Foreground="White" Height="27"/>
+            <Grid Grid.ColumnSpan="2" Height="45" VerticalAlignment="Bottom" Background="White">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Content="Add New Supplier" 
+                           RenderTransformOrigin="0.718,-0.081" 
+                           Background="#FF065668" 
+                           BorderBrush="#FF065668" 
+                           Width="118" 
+                           Foreground="White" 
+                           Height="27" 
+                           Click="AddSupplier_Click" 
+                           Margin="0,0,10,0"/>
+                    <Button Content="👁" 
+                           Background="Black" 
+                           BorderBrush="Black" 
+                           Width="30" 
+                           Foreground="White" 
+                           Height="27" 
+                           Margin="0,0,5,0" 
+                           FontSize="14" 
+                           Click="ViewSupplier_Click"/>
+                    <Button Content="✏" 
+                           Background="#FF4A90E2" 
+                           BorderBrush="#FF4A90E2" 
+                           Width="30" 
+                           Foreground="White" 
+                           Height="27" 
+                           Margin="0,0,5,0" 
+                           FontSize="14" 
+                           Click="EditSupplier_Click"/>
+                    <Button Content="🗑" 
+                           Background="#FFDC3545" 
+                           BorderBrush="#FFDC3545" 
+                           Width="30" 
+                           Foreground="White" 
+                           Height="27" 
+                           Margin="0,0,0,0" 
+                           FontSize="14" 
+                           Click="DeleteSupplier_Click"/>
+                </StackPanel>
             </Grid>
         </Grid>
-
         <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="🚚 Supplier" VerticalAlignment="Top" Width="157" Foreground="White" Background="#FF065668"  FontSize="22" FontWeight="Bold"/>
-
-
+        <TextBlock HorizontalAlignment="Left" 
+                  Margin="24,13,0,0" 
+                  TextWrapping="Wrap" 
+                  Text="🚚 Supplier" 
+                  VerticalAlignment="Top" 
+                  Width="157" 
+                  Foreground="White" 
+                  Background="#FF065668"  
+                  FontSize="22" 
+                  FontWeight="Bold"/>
     </Grid>
 </Page>

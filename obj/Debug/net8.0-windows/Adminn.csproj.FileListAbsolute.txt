@@ -175,6 +175,8 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\ru
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.csproj.AssemblyReference.cache
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddCustomer.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddEmployee.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.g.cs
@@ -185,10 +187,13 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Pr
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Profile.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ViewReport.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\App.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn_MarkupCompile.lref
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddCustomer.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddEmployee.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Customer.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Employee.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Export Orders.baml
@@ -200,6 +205,7 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Pr
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Reports.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Supplier.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ViewReport.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.g.resources
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.GeneratedMSBuildEditorConfig.editorconfig
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.AssemblyInfoInputs.cache
@@ -212,5 +218,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\re
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddEmployee.g.cs
-D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddEmployee.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddSupplier.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddSupplier.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddProduct.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\AddProduct.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ViewOrderDetails.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\ViewOrderDetails.baml

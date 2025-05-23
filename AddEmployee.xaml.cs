@@ -142,7 +142,7 @@ namespace Adminn
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // If navigation fails, just show a message
                 MessageBox.Show("Employee added successfully! Please refresh the employee list manually.",

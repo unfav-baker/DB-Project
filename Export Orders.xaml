@@ -1,46 +1,89 @@
 ﻿<Page x:Class="Adminn.Export_Orders"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Export_Orders">
 
     <Grid>
         <Grid>
-            <!--  DataGrid  -->
-            <DataGrid
-     Margin="0,61,0,45"
-     AutoGenerateColumns="False"
-     CanUserAddRows="False"
-     HeadersVisibility="Column"
-     IsReadOnly="True"
-     SelectionMode="Single" BorderBrush="Black">
+            <DataGrid x:Name="OrdersDataGrid"
+                      Margin="0,61,0,45"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      BorderBrush="Black"
+                      ItemsSource="{Binding orders}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="100" Header="Order ID" />
-                    <DataGridTextColumn Width="120" Header="Customer Name" />
-                    <DataGridTextColumn Width="150" Header="Product ID" />
-                    <DataGridTextColumn Width="120" Header="Quantity Ordered" />
-                    <DataGridTextColumn Width="120" Header="Order Date" />
-                    <DataGridTextColumn Width="120" Header="Delivery Date" />
-                    <DataGridTextColumn Width="80" Header="Order Status" />
-                    <DataGridTextColumn Width="80" Header="Total Price" />
-                    <DataGridTextColumn Width="120" Header="Payment Status" />
-                    <DataGridTextColumn Width="120" Header="Supplier ID" />
-
-
+                    <DataGridTextColumn Width="100" Header="Order ID" Binding="{Binding OrderId}" />
+                    <DataGridTextColumn Width="120" Header="Customer Name" Binding="{Binding CustomerName}" />
+                    <DataGridTextColumn Width="150" Header="Product ID" Binding="{Binding ProductId}" />
+                    <DataGridTextColumn Width="120" Header="Quantity Ordered" Binding="{Binding QuantityOrdered}" />
+                    <DataGridTextColumn Width="120" Header="Order Date" Binding="{Binding OrderDate, StringFormat=dd/MM/yyyy}" />
+                    <DataGridTextColumn Width="120" Header="Delivery Date" Binding="{Binding DeliveryDate, StringFormat=dd/MM/yyyy}" />
+                    <DataGridTextColumn Width="80" Header="Order Status" Binding="{Binding OrderStatus}" />
+                    <DataGridTextColumn Width="80" Header="Total Price" Binding="{Binding TotalPrice, StringFormat=C}" />
+                    <DataGridTextColumn Width="120" Header="Payment Status" Binding="{Binding PaymentStatus}" />
+                    <DataGridTextColumn Width="120" Header="Supplier ID" Binding="{Binding SupplierId}" />
                 </DataGrid.Columns>
             </DataGrid>
             <Grid Grid.ColumnSpan="2" Height="45" VerticalAlignment="Bottom" Background="White">
-                <Button Content="View Orders" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.718,-0.081" Background="#FF065668" BorderBrush="#FF065668" Width="118" Foreground="White" Height="27"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Content="View Orders"
+                            Background="#FF065668"
+                            BorderBrush="#FF065668"
+                            Width="118"
+                            Foreground="White"
+                            Height="27"
+                            
+                            Margin="0,0,10,0"/>
+                    <Button Content="👁"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Width="30"
+                            Foreground="White"
+                            Height="27"
+                            Margin="0,0,5,0"
+                            FontSize="14"
+                            Click="ViewSelectedOrder_Click"/>
+                    <Button Content="✏"
+                            Background="#FF4A90E2"
+                            BorderBrush="#FF4A90E2"
+                            Width="30"
+                            Foreground="White"
+                            Height="27"
+                            Margin="0,0,5,0"
+                            FontSize="14"
+                            Click="EditOrder_Click"/>
+                    <Button Content="🗑"
+                            Background="#FFDC3545"
+                            BorderBrush="#FFDC3545"
+                            Width="30"
+                            Foreground="White"
+                            Height="27"
+                            Margin="0,0,10,0"
+                            FontSize="14"
+                            Click="DeleteOrder_Click"/>
+                    <Button Content="📊 Report"
+                           Background="#FF28A745"
+                           BorderBrush="#FF28A745"
+                           Width="80"
+                           Foreground="White"
+                           Height="27"
+                           Margin="0,0,0,0"
+                           FontSize="12"
+                           />
+                </StackPanel>
             </Grid>
         </Grid>
 
         <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📤 Orders" VerticalAlignment="Top" Width="151" Foreground="White" Background="#FF065668"  FontSize="22" FontWeight="Bold"/>
-
-
+        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📤 Orders" VerticalAlignment="Top"
+                   Width="151" Foreground="White" Background="#FF065668" FontSize="22" FontWeight="Bold"/>
     </Grid>
 </Page>
