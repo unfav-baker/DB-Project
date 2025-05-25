@@ -1,28 +1,41 @@
 ﻿<Page x:Class="Adminn.ViewReport"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="ViewReport">
     <Grid>
-        <!-- Header -->
-        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📊 View Report" VerticalAlignment="Top" Width="200" Foreground="White" Background="#FF065668" FontSize="22" FontWeight="Bold"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Back Button -->
-        <Button Content="← Back to Reports" HorizontalAlignment="Left" Margin="24,75,0,0" VerticalAlignment="Top" Width="120" Height="30" Background="#FF4A90E2" BorderBrush="#FF4A90E2" Foreground="White" Click="BackToReports_Click"/>
+        <Grid Grid.Row="0" Background="#FF065668">
+            <TextBlock Text="📊 View Report"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Margin="24,0,0,0"
+                       Foreground="White"
+                       FontSize="22" FontWeight="Bold"/>
+        </Grid>
 
-        <!-- Report Content Area -->
-        <ScrollViewer Margin="24,115,24,24" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-            <StackPanel>
-                <!-- Report Header Section -->
-                <Border Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1" Padding="20" Margin="0,0,0,20">
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="20">
+            <StackPanel x:Name="ReportContentPanel">
+                <Button Content="← Back to Reports"
+                        HorizontalAlignment="Left"
+                        Width="auto" Padding="10,5"
+                        Height="30"
+                        Background="#6C757D" BorderBrush="#6C757D"
+                        Foreground="White"
+                        Click="BackToReports_Click"
+                        Margin="0,0,0,20"/>
+
+                <Border Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1" Padding="20" CornerRadius="5" Margin="0,0,0,20">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
@@ -33,79 +46,46 @@
 
                         <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Report Summary" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
 
-                        <StackPanel Grid.Row="1" Grid.Column="0">
+                        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,10,0">
                             <TextBlock Text="Report Type:" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock x:Name="ReportTypeText" Text="Employee Performance Report" Margin="0,0,0,10"/>
+                            <TextBlock x:Name="ReportTypeText" Text="[Report Type]" Margin="0,0,0,10"/>
                             <TextBlock Text="Generated On:" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock x:Name="GeneratedDateText" Text="22/05/2025" Margin="0,0,0,10"/>
+                            <TextBlock x:Name="GeneratedDateText" Text="[Date]" Margin="0,0,0,10"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Row="1" Grid.Column="1">
+                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,0,0,0">
                             <TextBlock Text="Status:" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock x:Name="StatusText" Text="Completed" Foreground="Green" Margin="0,0,0,10"/>
+                            <TextBlock x:Name="StatusText" Text="[Status]" Foreground="Green" Margin="0,0,0,10"/>
                             <TextBlock Text="Last Updated:" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock x:Name="UpdatedDateText" Text="22/05/2025" Margin="0,0,0,10"/>
+                            <TextBlock x:Name="UpdatedDateText" Text="[Date]" Margin="0,0,0,10"/>
                         </StackPanel>
                     </Grid>
                 </Border>
 
-                <!-- Sample Report Content -->
-                <Border Background="White" BorderBrush="#DEE2E6" BorderThickness="1" Padding="20">
+                <Border Background="White" BorderBrush="#DEE2E6" BorderThickness="1" Padding="20" CornerRadius="5" Margin="0,0,0,20">
                     <StackPanel>
-                        <TextBlock Text="Report Details" FontSize="16" FontWeight="Bold" Margin="0,0,0,15"/>
-
-                        <!-- Sample Chart Area -->
-                        <Border Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1" Height="200" Margin="0,0,0,20">
-                            <TextBlock Text="📊 Chart/Graph Area" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6C757D"/>
-                        </Border>
-
-                        <!-- Sample Data Table -->
-                        <TextBlock Text="Performance Metrics" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <DataGrid x:Name="ReportDataGrid" Height="150" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column">
+                        <TextBlock Text="Performance Metrics" FontSize="16" FontWeight="Bold" Margin="0,0,0,15"/>
+                        <DataGrid x:Name="ReportDataGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  HeadersVisibility="Column"
+                                  ItemsSource="{Binding ReportMetrics}"
+                                  CanUserResizeColumns="True"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  MinHeight="150" MaxHeight="300">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Metric" Binding="{Binding Metric}" Width="150"/>
-                                <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="100"/>
-                                <DataGridTextColumn Header="Target" Binding="{Binding Target}" Width="100"/>
-                                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                                <DataGridTextColumn Header="Metric" Binding="{Binding Metric}" Width="2*" MinWidth="150"/>
+                                <DataGridTextColumn Header="Value"  Binding="{Binding Value}"  Width="*"  MinWidth="100"/>
+                                <DataGridTextColumn Header="Target" Binding="{Binding Target}" Width="*"  MinWidth="100"/>
+                                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="1.5*" MinWidth="120"/>
                             </DataGrid.Columns>
                         </DataGrid>
-
-                        <!-- Sample Analysis Text -->
-                        <TextBlock Text="Analysis" FontSize="14" FontWeight="Bold" Margin="0,20,0,10"/>
-                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                            This report provides a comprehensive overview of employee performance metrics for the current period. 
-                            The data shows positive trends in productivity and efficiency across all departments.
-                        </TextBlock>
-
-                        <TextBlock Text="Key Findings:" FontSize="14" FontWeight="Bold" Margin="0,10,0,10"/>
-                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                            • Overall productivity increased by 15% compared to the previous period
-                            <LineBreak/>
-                            • Employee satisfaction scores remained consistently high at 4.2/5.0
-                            <LineBreak/>
-                            • Training completion rates improved by 8%
-                            <LineBreak/>
-                            • Customer service response times decreased by 12%
-                        </TextBlock>
-
-                        <TextBlock Text="Recommendations:" FontSize="14" FontWeight="Bold" Margin="0,10,0,10"/>
-                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">
-                            • Continue current training programs
-                            <LineBreak/>
-                            • Implement additional performance incentives
-                            <LineBreak/>
-                            • Focus on maintaining work-life balance initiatives
-                            <LineBreak/>
-                            • Schedule quarterly reviews for sustained improvement
-                        </TextBlock>
                     </StackPanel>
                 </Border>
 
-                <!-- Action Buttons -->
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                    <Button Content="Print Report" Width="100" Height="35" Background="#FF28A745" BorderBrush="#FF28A745" Foreground="White" Margin="0,0,10,0" Click="PrintReport_Click"/>
-                    <Button Content="Export PDF" Width="100" Height="35" Background="#FF17A2B8" BorderBrush="#FF17A2B8" Foreground="White" Margin="0,0,10,0" Click="ExportPDF_Click"/>
-                    <Button Content="Email Report" Width="100" Height="35" Background="#FF6C757D" BorderBrush="#FF6C757D" Foreground="White" Click="EmailReport_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                    <Button Content="Print Report" Width="auto" Padding="10,5" Height="35" Background="#FF28A745" BorderBrush="#FF28A745" Foreground="White" Margin="0,0,10,0" Click="PrintReport_Click"/>
+                    <Button Content="Export Report" ToolTip="Export as XPS Document" Width="auto" Padding="10,5" Height="35" Background="#FF17A2B8" BorderBrush="#FF17A2B8" Foreground="White" Click="ExportReport_Click"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

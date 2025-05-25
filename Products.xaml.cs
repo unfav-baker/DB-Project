@@ -44,7 +44,7 @@ namespace Adminn
         {
             if (ProductsDataGrid.SelectedItem is ProductData selectedProduct)
             {
-                MessageBox.Show($"Product Details:\nID: {selectedProduct.ProductId}\nSupplier ID: {selectedProduct.SupplierId}\nCategory: {selectedProduct.Category}\nQuantity: {selectedProduct.Quantity}\nPrice: {selectedProduct.Price:C}\nBatch No: {selectedProduct.BatchNo}\nStatus: {selectedProduct.Status}",
+                MessageBox.Show($"Product Details:\n\n\n1:   ID: {selectedProduct.ProductId}\n\n2:   Supplier ID: {selectedProduct.SupplierId}\n\n3:   Category: {selectedProduct.Category}\n\n4:   Quantity: {selectedProduct.Quantity}\n\n5:   Price: {selectedProduct.Price:C}\n\n6:   Batch No: {selectedProduct.BatchNo}\n\n7:   Status: {selectedProduct.Status}",
                     "Product Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else

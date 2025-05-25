@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\App.xaml
-171647550774
+171674112270
 
-25-1864474098
-244560877172
-AddCustomer.xaml;AddEmployee.xaml;AddProduct.xaml;AddSupplier.xaml;Customer.xaml;Employee.xaml;Export Orders.xaml;Home.xaml;LGA.xaml;MainWindow.xaml;Products.xaml;Profile.xaml;Reports.xaml;Supplier.xaml;Themes\Generic.xaml;ViewOrderDetails.xaml;ViewReport.xaml;
+26406214496
+2451833546533
+AddCustomer.xaml;AddEmployee.xaml;AddProduct.xaml;AddSupplier.xaml;Customer.xaml;EditProfilePage.xaml;Employee.xaml;Export Orders.xaml;Home.xaml;LGA.xaml;MainWindow.xaml;Products.xaml;Profile.xaml;Reports.xaml;Supplier.xaml;Themes\Generic.xaml;ViewReport.xaml;
 
-False
+True
 

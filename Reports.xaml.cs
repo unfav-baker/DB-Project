@@ -43,7 +43,7 @@ namespace Adminn
         {
             if (ReportsDataGrid.SelectedItem is ReportData selectedReport)
             {
-                MessageBox.Show($"Report Details:\nID: {selectedReport.ReportId}\nType: {selectedReport.ReportType}\nDate Generated: {selectedReport.DateGenerated:dd/MM/yyyy}\nStatus: {selectedReport.Status}\nCreated At: {selectedReport.CreatedAt:dd/MM/yyyy}\nUpdated At: {selectedReport.UpdatedAt:dd/MM/yyyy}",
+                MessageBox.Show($"\nReport Details:\n\n1:    ID: {selectedReport.ReportId}\n\n2:    Type: {selectedReport.ReportType}\n\n3:    Date Generated: {selectedReport.DateGenerated:dd/MM/yyyy}\n\n4:    Status: {selectedReport.Status}\n\n5:    Created At: {selectedReport.CreatedAt:dd/MM/yyyy}\n\n6:    Updated At: {selectedReport.UpdatedAt:dd/MM/yyyy}",
                     "Report Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
@@ -90,7 +90,7 @@ namespace Adminn
                 using var connection = new MySqlConnection(connectionString);
                 connection.Open();
 
-                string query = @"SELECT Report_ID, Report_Type, Date_Generated, Statuss, Created_At, Updated_At 
+                string query = @"SELECT Report_ID,Employee_ID, Report_Type, Date_Generated, Statuss, Created_At, Updated_At 
                                FROM reports ORDER BY Report_ID";
 
                 using var command = new MySqlCommand(query, connection);
@@ -102,6 +102,7 @@ namespace Adminn
                 {
                     var report = new ReportData
                     {
+                       
                         ReportId = reader.GetInt32("Report_ID"),
                         ReportType = reader.IsDBNull("Report_Type") ? string.Empty : reader.GetString("Report_Type"),
                         DateGenerated = reader.IsDBNull("Date_Generated") ? DateTime.Now : reader.GetDateTime("Date_Generated"),

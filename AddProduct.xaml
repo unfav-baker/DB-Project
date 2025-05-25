@@ -1,169 +1,306 @@
 ﻿<Page x:Class="Adminn.AddProduct"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddProduct">
+      mc:Ignorable="d"
+      d:DesignHeight="650" d:DesignWidth="800" Title="Add New Product"
+      Background="#FFF0F2F5">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="FormLabelStyle">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#FF065668"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="FormInputStyle">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF7EB4EA"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF065668"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="1.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBox" x:Key="FormComboBoxStyle">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                            </Grid.ColumnDefinitions>
+                            <Popup x:Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
+                                <Border x:Name="dropDownBorder" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" CornerRadius="4" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <ScrollViewer x:Name="DropDownScrollViewer">
+                                        <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                            <ToggleButton x:Name="toggleButton"
+                                          Background="{TemplateBinding Background}"
+                                          BorderBrush="{TemplateBinding BorderBrush}"
+                                          BorderThickness="{TemplateBinding BorderThickness}"
+                                          Grid.ColumnSpan="2"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                          Style="{StaticResource {x:Type ToggleButton}}"
+                                          Focusable="False"/>
+                            <ContentPresenter x:Name="contentPresenter"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              IsHitTestVisible="false"
+                                              Margin="{TemplateBinding Padding}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF7EB4EA"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF065668"/>
+                                <Setter Property="BorderThickness" Value="1.5"/>
+                            </Trigger>
+                            <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">
+                                <Setter Property="Margin" TargetName="dropDownBorder" Value="0,2,0,2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="FormSaveButtonStyle">
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Background" Value="#FF065668"/>
+            <Setter Property="BorderBrush" Value="#FF065668"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4" BorderThickness="1"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF054A5C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="FormClearButtonStyle">
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="Foreground" Value="#FF495057"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FFE9ECEF"/>
+                                <Setter Property="BorderBrush" Value="#FF868E96"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="HeaderCloseButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,15,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                            <TextBlock Text="✕" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#40FFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
     <Grid>
-        <!-- Header -->
-        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" 
-                  Margin="24,13,0,0" 
-                  TextWrapping="Wrap" 
-                  Text="➕ Add New Product" 
-                  VerticalAlignment="Top" 
-                  Width="300" 
-                  Foreground="White" 
-                  Background="#FF065668"  
-                  FontSize="22" 
-                  FontWeight="Bold"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Form Content -->
-        <Grid Margin="50,80,50,50" Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#FF065668">
+            <Grid>
+                <TextBlock Text="➕ Add New Product"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Margin="24,0,0,0"
+                           Foreground="White"
+                           FontSize="22" FontWeight="Bold"/>
+                <Button x:Name="btnClosePage" Style="{StaticResource HeaderCloseButtonStyle}" Click="ClosePage_Click"/>
+            </Grid>
+        </Border>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="20">
+            <Border Background="White" CornerRadius="6" Padding="25" MaxWidth="750" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,10">
+                <Border.Effect>
+                    <DropShadowEffect Color="#DDDDDD" ShadowDepth="1" BlurRadius="10" Opacity="0.4"/>
+                </Border.Effect>
 
-            <!-- Form Title -->
-            <TextBlock Grid.Row="0" Grid.ColumnSpan="4" 
-                      Text="Product Information" 
-                      FontSize="20" 
-                      FontWeight="Bold" 
-                      Margin="0,0,0,20" 
-                      HorizontalAlignment="Center"
-                      Foreground="#FF065668"/>
+                <StackPanel>
+                    <TextBlock Text="Product Information" FontSize="20" FontWeight="SemiBold"
+                               Foreground="#FF333333" Margin="0,0,0,25" HorizontalAlignment="Left"/>
 
-            <!-- Supplier ID -->
-            <Label Grid.Row="1" Grid.Column="0" 
-                   Content="Supplier ID:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="0,5"/>
-            <ComboBox x:Name="cmbSupplierId" 
-                      Grid.Row="1" Grid.Column="1" 
-                      Height="30" 
-                      Margin="10,5" 
-                      VerticalContentAlignment="Center"
-                      DisplayMemberPath="DisplayText"
-                      SelectedValuePath="SupplierId"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-            <!-- Category -->
-            <Label Grid.Row="1" Grid.Column="2" 
-                   Content="Category:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="20,5,0,5"/>
-            <ComboBox x:Name="cmbCategory" 
-                      Grid.Row="1" Grid.Column="3" 
-                      Height="30" 
-                      Margin="10,5" 
-                      VerticalContentAlignment="Center">
-                <ComboBoxItem Content="Flowers"/>
-                <ComboBoxItem Content="Seeds"/>
-                <ComboBoxItem Content="Herbs"/>
-                <ComboBoxItem Content="Tropical Plants"/>
-                <ComboBoxItem Content="Indoor Plants"/>
-                <ComboBoxItem Content="Outdoor Plants"/>
-                <ComboBoxItem Content="Succulents"/>
-                <ComboBoxItem Content="Tools"/>
-                <ComboBoxItem Content="Fertilizers"/>
-                <ComboBoxItem Content="Pots"/>
-            </ComboBox>
+                        <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Supplier ID *" Style="{StaticResource FormLabelStyle}"/>
+                            <ComboBox x:Name="cmbSupplierId" Style="{StaticResource FormComboBoxStyle}"
+                                      DisplayMemberPath="DisplayText" 
+                                      SelectedValuePath="SupplierId"/>
+                        </StackPanel>
 
-            <!-- Quantity -->
-            <Label Grid.Row="2" Grid.Column="0" 
-                   Content="Quantity:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="0,5"/>
-            <TextBox x:Name="txtQuantity" 
-                     Grid.Row="2" Grid.Column="1" 
-                     Height="30" 
-                     Margin="10,5" 
-                     VerticalContentAlignment="Center"/>
+                        <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,0,0,15">
+                            <TextBlock Text="Category *" Style="{StaticResource FormLabelStyle}"/>
+                            <ComboBox x:Name="cmbCategory" Style="{StaticResource FormComboBoxStyle}">
+                                <ComboBoxItem Content="Flowers"/>
+                                <ComboBoxItem Content="Seeds"/>
+                                <ComboBoxItem Content="Herbs"/>
+                                <ComboBoxItem Content="Tropical Plants"/>
+                                <ComboBoxItem Content="Indoor Plants"/>
+                                <ComboBoxItem Content="Outdoor Plants"/>
+                                <ComboBoxItem Content="Succulents"/>
+                                <ComboBoxItem Content="Tools"/>
+                                <ComboBoxItem Content="Fertilizers"/>
+                                <ComboBoxItem Content="Pots"/>
+                            </ComboBox>
+                        </StackPanel>
 
-            <!-- Price -->
-            <Label Grid.Row="2" Grid.Column="2" 
-                   Content="Price:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="20,5,0,5"/>
-            <TextBox x:Name="txtPrice" 
-                     Grid.Row="2" Grid.Column="3" 
-                     Height="30" 
-                     Margin="10,5" 
-                     VerticalContentAlignment="Center"/>
+                        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Quantity *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtQuantity" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
 
-            <!-- Batch No -->
-            <Label Grid.Row="3" Grid.Column="0" 
-                   Content="Batch No:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="0,5"/>
-            <TextBox x:Name="txtBatchNo" 
-                     Grid.Row="3" Grid.Column="1" 
-                     Height="30" 
-                     Margin="10,5" 
-                     VerticalContentAlignment="Center"/>
+                        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,15">
+                            <TextBlock Text="Price *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtPrice" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
 
-            <!-- Status -->
-            <Label Grid.Row="3" Grid.Column="2" 
-                   Content="Status:" 
-                   VerticalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="20,5,0,5"/>
-            <ComboBox x:Name="cmbStatus" 
-                      Grid.Row="3" Grid.Column="3" 
-                      Height="30" 
-                      Margin="10,5" 
-                      VerticalContentAlignment="Center">
-                <ComboBoxItem Content="In Stock" IsSelected="True"/>
-                <ComboBoxItem Content="Out of Stock"/>
-                <ComboBoxItem Content="Low Stock"/>
-            </ComboBox>
+                        <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Batch No" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtBatchNo" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
 
-            <!-- Buttons -->
-            <StackPanel Grid.Row="6" Grid.ColumnSpan="4" 
-                       Orientation="Horizontal" 
-                       HorizontalAlignment="Center" 
-                       Margin="0,30,0,0">
-                <Button x:Name="btnSave" 
-                       Content="Save Product" 
-                       Width="120" 
-                       Height="35" 
-                       Background="#FF065668" 
-                       Foreground="White" 
-                       BorderBrush="#FF065668" 
-                       FontWeight="Bold" 
-                       Margin="0,0,10,0" 
-                       Click="SaveProduct_Click"/>
-                <Button x:Name="btnCancel" 
-                       Content="Cancel" 
-                       Width="80" 
-                       Height="35" 
-                       Background="#FFDC3545" 
-                       Foreground="White" 
-                       BorderBrush="#FFDC3545" 
-                       FontWeight="Bold" 
-                       Click="Cancel_Click"/>
-            </StackPanel>
-        </Grid>
+                        <StackPanel Grid.Row="2" Grid.Column="2" Margin="0,0,0,15">
+                            <TextBlock Text="Status *" Style="{StaticResource FormLabelStyle}"/>
+                            <ComboBox x:Name="cmbStatus" Style="{StaticResource FormComboBoxStyle}">
+                                <ComboBoxItem Content="In Stock" IsSelected="True"/>
+                                <ComboBoxItem Content="Out of Stock"/>
+                                <ComboBoxItem Content="Low Stock"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Text="* Required fields"
+                                   FontStyle="Italic" Foreground="Gray"
+                                   Margin="0,10,0,20" FontSize="12"/>
+
+                        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+                                    Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                            <Button x:Name="btnCancel" Content="Clear Form" Style="{StaticResource FormClearButtonStyle}" Click="Cancel_Click"/>
+                            <Button x:Name="btnSave" Content="Save Product" Style="{StaticResource FormSaveButtonStyle}" Click="SaveProduct_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
     </Grid>
 </Page>

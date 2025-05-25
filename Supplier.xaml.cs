@@ -43,7 +43,7 @@ namespace Adminn
         {
             if (SupplierDataGrid.SelectedItem is SupplierData selectedSupplier)
             {
-                MessageBox.Show($"Supplier Details:\nID: {selectedSupplier.SupplierId}\nName: {selectedSupplier.Name}\nPhone: {selectedSupplier.PhoneNumber}\nRole: {selectedSupplier.Role}\nPlant Name: {selectedSupplier.PlantName}\nStatus: {selectedSupplier.Status}",
+                MessageBox.Show($"Supplier Details:\n\n\n1:   ID: {selectedSupplier.SupplierId}\n\n2:   Name: {selectedSupplier.Name}\n\n3:   Phone: {selectedSupplier.PhoneNumber}\n\n4:   Role: {selectedSupplier.Role}\n\n5:   Plant Name: {selectedSupplier.PlantName}\n\n6:   Status: {selectedSupplier.Status}",
                     "Supplier Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else

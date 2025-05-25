@@ -7,83 +7,100 @@
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Export_Orders">
-
     <Grid>
-        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#FF065668">
+            <TextBlock Text="📤 Orders"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Margin="24,0,0,0"
+                       Foreground="White"
+                       FontSize="22" FontWeight="Bold"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
             <DataGrid x:Name="OrdersDataGrid"
-                      Margin="0,61,0,45"
+                      Grid.Row="0"
+                      Margin="0,0,0,10"
                       AutoGenerateColumns="False"
                       CanUserAddRows="False"
                       HeadersVisibility="Column"
-                      IsReadOnly="True"
-                      SelectionMode="Single"
-                      BorderBrush="Black"
-                      ItemsSource="{Binding orders}">
+                      IsReadOnly="False" SelectionMode="Single"
+                      BorderBrush="#CCCCCC"
+                      BorderThickness="1"
+                      ItemsSource="{Binding Orders}" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      CanUserResizeColumns="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="100" Header="Order ID" Binding="{Binding OrderId}" />
-                    <DataGridTextColumn Width="120" Header="Customer Name" Binding="{Binding CustomerName}" />
-                    <DataGridTextColumn Width="150" Header="Product ID" Binding="{Binding ProductId}" />
-                    <DataGridTextColumn Width="120" Header="Quantity Ordered" Binding="{Binding QuantityOrdered}" />
-                    <DataGridTextColumn Width="120" Header="Order Date" Binding="{Binding OrderDate, StringFormat=dd/MM/yyyy}" />
-                    <DataGridTextColumn Width="120" Header="Delivery Date" Binding="{Binding DeliveryDate, StringFormat=dd/MM/yyyy}" />
-                    <DataGridTextColumn Width="80" Header="Order Status" Binding="{Binding OrderStatus}" />
-                    <DataGridTextColumn Width="80" Header="Total Price" Binding="{Binding TotalPrice, StringFormat=C}" />
-                    <DataGridTextColumn Width="120" Header="Payment Status" Binding="{Binding PaymentStatus}" />
-                    <DataGridTextColumn Width="120" Header="Supplier ID" Binding="{Binding SupplierId}" />
+                    <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
+
+                    <DataGridTextColumn Header="Order ID"         Binding="{Binding OrderId}"         Width="100" MinWidth="80" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Customer Name"    Binding="{Binding CustomerName}"    Width="2*"  MinWidth="150" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Product ID"       Binding="{Binding ProductId}"       Width="100" MinWidth="80" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Quantity Ordered" Binding="{Binding QuantityOrdered}" Width="120" MinWidth="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Order Date"       Binding="{Binding OrderDate, StringFormat=dd/MM/yyyy}" Width="110" MinWidth="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Delivery Date"    Binding="{Binding DeliveryDate, StringFormat=dd/MM/yyyy}" Width="110" MinWidth="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Order Status"     Binding="{Binding OrderStatus}"     Width="1*"  MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Total Price"      Binding="{Binding TotalPrice, StringFormat=C}" Width="100" MinWidth="80" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Payment Status"   Binding="{Binding PaymentStatus}"   Width="1.2*" MinWidth="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Supplier ID"      Binding="{Binding SupplierId}"      Width="100" MinWidth="80" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.ColumnSpan="2" Height="45" VerticalAlignment="Bottom" Background="White">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Content="View Orders"
-                            Background="#FF065668"
-                            BorderBrush="#FF065668"
-                            Width="118"
-                            Foreground="White"
-                            Height="27"
-                            
-                            Margin="0,0,10,0"/>
-                    <Button Content="👁"
-                            Background="Black"
-                            BorderBrush="Black"
-                            Width="30"
-                            Foreground="White"
-                            Height="27"
-                            Margin="0,0,5,0"
-                            FontSize="14"
-                            Click="ViewSelectedOrder_Click"/>
-                    <Button Content="✏"
-                            Background="#FF4A90E2"
-                            BorderBrush="#FF4A90E2"
-                            Width="30"
-                            Foreground="White"
-                            Height="27"
-                            Margin="0,0,5,0"
-                            FontSize="14"
-                            Click="EditOrder_Click"/>
-                    <Button Content="🗑"
-                            Background="#FFDC3545"
-                            BorderBrush="#FFDC3545"
-                            Width="30"
-                            Foreground="White"
-                            Height="27"
-                            Margin="0,0,10,0"
-                            FontSize="14"
-                            Click="DeleteOrder_Click"/>
-                    <Button Content="📊 Report"
-                           Background="#FF28A745"
-                           BorderBrush="#FF28A745"
-                           Width="80"
-                           Foreground="White"
-                           Height="27"
-                           Margin="0,0,0,0"
-                           FontSize="12"
-                           />
-                </StackPanel>
-            </Grid>
-        </Grid>
 
-        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📤 Orders" VerticalAlignment="Top"
-                   Width="151" Foreground="White" Background="#FF065668" FontSize="22" FontWeight="Bold"/>
+            <Border Grid.Row="1"
+                    Height="45"
+                    Background="#F5F5F5"
+                    BorderBrush="#DDDDDD"
+                    BorderThickness="0,1,0,0">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                        <Button Content="Refresh Orders"
+                                Background="#FF065668"
+                                BorderBrush="#FF065668"
+                                Width="auto" Padding="10,5"
+                                Foreground="White"
+                                Height="30"
+                                Click="ViewOrdersButton_Click" 
+                                Margin="0,0,10,0"/>
+                        <Button Content="👁" ToolTip="View Selected Order"
+                                Background="#6C757D"
+                                BorderBrush="#6C757D"
+                                Width="35"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,5,0"
+                                FontSize="14"
+                                Click="ViewSelectedOrder_Click"/>
+                        <Button Content="🗑" ToolTip="Delete Order"
+                                Background="#FFDC3545"
+                                BorderBrush="#FFDC3545"
+                                Width="35"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,10,0"
+                                FontSize="14"
+                                Click="DeleteOrder_Click"/>
+                        <Button Content="📊 Report" ToolTip="Create Order Report"
+                                Background="#FF28A745"
+                                BorderBrush="#FF28A745"
+                                Width="auto" Padding="10,5"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                FontSize="12"
+                                Click="CreateOrderReport_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

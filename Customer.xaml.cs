@@ -44,18 +44,18 @@ namespace Adminn
         {
             if (CustomerDataGrid.SelectedItem is CustomerData selectedCustomer)
             {
-                MessageBox.Show($"Customer Details:\n" +
-                    $"Date: {selectedCustomer.Date:dd/MM/yyyy}\n" +
-                    $"Phyto Number: {selectedCustomer.PhytoNumber}\n" +
-                    $"Party Name: {selectedCustomer.PartyName}\n" +
-                    $"Export Through: {selectedCustomer.ExportThrough}\n" +
-                    $"Plant: {selectedCustomer.Plant}\n" +
-                    $"Importer: {selectedCustomer.Importer}\n" +
-                    $"Carton: {selectedCustomer.Carton}\n" +
-                    $"Weight: {selectedCustomer.Weight}\n" +
-                    $"Rate: {selectedCustomer.Rate:C}\n" +
-                    $"Amount: {selectedCustomer.Amount:C}\n" +
-                    $"Received: {selectedCustomer.Received}",
+                MessageBox.Show($"Customer Details:\n\n\n\n" +
+                    $"1:   Date: {selectedCustomer.Date:dd/MM/yyyy}\n\n" +
+                    $"2:   Phyto Number: {selectedCustomer.PhytoNumber}\n\n" +
+                    $"3:   Party Name: {selectedCustomer.PartyName}\n\n" +
+                    $"4:   Export Through: {selectedCustomer.ExportThrough}\n\n" +
+                    $"5:   Plant: {selectedCustomer.Plant}\n\n" +
+                    $"6:   Importer: {selectedCustomer.Importer}\n\n" +
+                    $"7:   Carton: {selectedCustomer.Carton}\n\n" +
+                    $"8:   Weight: {selectedCustomer.Weight}\n\n" +
+                    $"9:   Rate: {selectedCustomer.Rate:C}\n\n" +
+                    $"10:  Amount: {selectedCustomer.Amount:C}\n\n" +
+                    $"11:  Received: {selectedCustomer.Received}\n",
                     "Customer Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else

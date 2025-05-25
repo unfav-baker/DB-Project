@@ -13,7 +13,7 @@
    WindowState="Maximized"
    mc:Ignorable="d">  
    <Window.Resources>  
-       <!-- Sidebar Button Style -->  
+       
        <Style x:Key="SidebarButton" TargetType="Button">  
            <Setter Property="Background" Value="#FF065668"/>  
            <Setter Property="Foreground" Value="White"/>  
@@ -35,26 +35,26 @@
        </Style>  
    </Window.Resources>  
 
-   <!-- ScrollViewer wrapping EVERYTHING -->  
+   
    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">  
        <Grid Background="#FFE4E9EF">  
            <Grid.RowDefinitions>  
                <RowDefinition Height="60"/>  
-               <!-- Header -->  
+               
                <RowDefinition Height="Auto"/>  
                <RowDefinition/>  
-               <!-- Main Content -->  
+                 
            </Grid.RowDefinitions>  
 
            <Grid.ColumnDefinitions>  
                <ColumnDefinition Width="177"/>  
-               <!-- Sidebar -->  
+               
                <ColumnDefinition Width="2*"/>  
                <ColumnDefinition Width="621*"/>  
-               <!-- Content -->  
+                 
            </Grid.ColumnDefinitions>  
 
-           <!-- Header Section -->  
+             
            <Grid Background="White" Grid.Row="0" Grid.ColumnSpan="3">  
                <TextBlock Text="PRIME-TECH"   
                        Foreground="#FF065668"   
@@ -66,72 +66,39 @@
                <Image HorizontalAlignment="Left" Height="48" Margin="-10,-6,0,0" VerticalAlignment="Top" Width="96" Stretch="Fill" Source="Images/dsd.png" />  
            </Grid>  
 
-           <!-- Sidebar -->  
+             
            <Border Background="#FF065668" CornerRadius="15,15,0,0" Grid.Row="1" Grid.Column="0" Margin="0,0,3,0" Grid.RowSpan="2">  
                <DockPanel>  
                    <StackPanel DockPanel.Dock="Top" Margin="0,10,0,0" Height="522">  
-                       <!-- Circular Profile Image -->  
+                         
                        <Border Width="80" Height="80" CornerRadius="40" Margin="0,0,0,10" Background="White">  
                            <Image Stretch="Fill" Width="80" Height="80" Clip="M 40,0 A 40,40 0 1 1 40,80 A 40,40 0 1 1 40,0" Source="Images/Leonardo_Phoenix_10_Design_a_professional_and_visually_appeali_3.jpg"  />  
                        </Border>  
 
-                       <!-- Profile Button (Dropdown) -->  
+                         
                        <TextBlock Text="Admin" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF065668" Foreground="#FFFFFFFF"   FontSize="22  
                                 " FontWeight="Bold"   />  
 
                        <Button Content="🏠 Home" Style="{StaticResource SidebarButton}" Tag="HomePage" Click="NavigationButton_Click"/>  
 
-                       <!--<Frame  Grid.Column="1"/>-->  
-
                        <Button Content="👤 Profile" Style="{StaticResource SidebarButton}" Tag="ProfilePage" Click="NavigationButton_Click"/>  
-
-                       <!--<StackPanel Name="ProfileMenu" Visibility="Collapsed" Background="#FF065668">  
-                           <Button Content="   View Profile"  FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                           <Button Content="   Edit Profile"  FontSize="14"   Style="{StaticResource SidebarButton}"/>  
-                       </StackPanel>-->  
-
+                       
                        <Button Content="📝 Reports" Style="{StaticResource SidebarButton}" Tag="ReportsPage" Click="NavigationButton_Click"/>  
-                       <!--<Frame x:Name="MainContentFrame" Grid.Column="2" Grid.Row="1"/>-->  
-
-                       <!-- Employee Button (Dropdown) -->  
+                       
                        <Button Content="👨‍💼 Employee" Style="{StaticResource SidebarButton}" Tag="EmployeePage" Click="NavigationButton_Click"/>  
-                       <!--<Frame x:Name="EmployeeFrame" Grid.Column="2" Grid.Row="1"/>-->  
-                       <!--Click="Employee_Click"/>-->  
-                       <!--<StackPanel Name="EmployeeMenu" Visibility="Collapsed" Background="#FF065668">  
-                           <Button Content="   Manage Employees"  FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                           <Button Content="   Add Employee"  FontSize="14"   Style="{StaticResource SidebarButton}"/>  
-                       </StackPanel>-->  
 
-                       <!-- Customer Button (Dropdown) -->  
                        <Button Content="👥 Customer" Style="{StaticResource SidebarButton}" Tag="CustomerPage" Click="NavigationButton_Click"/>  
-
-                       <!--Click="Customer_Click"-->  
-                       <!--<StackPanel Name="CustomerMenu" Visibility="Collapsed" Background="#FF065668">  
-                           <Button Content="   Customer List"   FontSize="14"   Style="{StaticResource SidebarButton}"/>  
-                           <Button Content="   New Customer"   FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                       </StackPanel>-->  
-
-                       <!-- Supplier Button (Dropdown) -->  
+ 
                        <Button Content="🚚 Supplier" Style="{StaticResource SidebarButton}" Tag="SupplierPage" Click="NavigationButton_Click"/>  
-
-                       <!--<StackPanel Name="SupplierMenu" Visibility="Collapsed" Background="#FF065668">  
-                           <Button Content="   Supplier List"  FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                           <Button Content="   Add Supplier"  FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                       </StackPanel>-->  
-
+  
                        <Button Content="📦 Products" Style="{StaticResource SidebarButton}" Tag="ProductsPage" Click="NavigationButton_Click"/>  
 
                        <Button Content="📤 Export Orders" Style="{StaticResource SidebarButton}" Tag="ExportOrdersPage" Click="NavigationButton_Click"/>  
 
-                       <!-- Settings Button (Dropdown) -->  
-                       <!--<Button Content="⚙ Settings" Style="{StaticResource SidebarButton}" Click="Settings_Click"/>  
-                       <StackPanel Name="SettingsMenu" Visibility="Collapsed" Background="#FF065668">  
-                           <Button Content="   General Settings"  FontSize="14"    Style="{StaticResource SidebarButton}"/>  
-                           <Button Content="   Security Settings"   FontSize="14"  Style="{StaticResource SidebarButton}"/>  
-                       </StackPanel>-->  
+
                    </StackPanel>  
 
-                   <!-- Logout Button -->  
+                   
                    <Button Content="🚪 Logout"  
                            Click="Logout_Click"  
                            DockPanel.Dock="Bottom"  
@@ -142,13 +109,13 @@
                </DockPanel>  
            </Border>  
 
-           <!-- Main Content Area -->  
+          
            <Frame x:Name="MainContentFrame"   
       Grid.Column="2"   
       Grid.Row="2"   
       NavigationUIVisibility="Hidden" Height="601" VerticalAlignment="Center" Navigated="MainContentFrame_Navigated" Background="White" BorderBrush="Black"/>  
 
-           <!-- Main Content Area -->  
+           
 
            <CC:Adminn 
 BorderThickness="1"  
@@ -167,8 +134,7 @@ MinWidth="150" Height="26" Margin="0,0,10,0"/>
            <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>  
            <Grid Grid.Column="2" Grid.Row="2"/>  
 
-           <!-- Main Content -->  
-           <!-- Main Content -->  
+
 
        </Grid>  
    </ScrollViewer>  

@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Runtime.CompilerServices;
+using System.Text; // For StringBuilder
 using System.Windows;
 using System.Windows.Controls;
 using MySql.Data.MySqlClient;
@@ -11,36 +12,46 @@ namespace Adminn
 {
     public partial class Export_Orders : Page
     {
-        public ObservableCollection<OrderData> orders { get; set; }
+        public ObservableCollection<OrderData> Orders { get; set; } // Public property is PascalCase
 
         private readonly string connectionString = "Server=127.0.0.1;Port=3306;Database=prime_tech;Uid=root;Pwd=Abubaker85@@;";
 
         public Export_Orders()
         {
             InitializeComponent();
-            orders = new ObservableCollection<OrderData>();
+            Orders = new ObservableCollection<OrderData>(); // Initialize PascalCase property
             LoadOrderDataFromDatabase();
             DataContext = this;
         }
 
-        //private void ViewOrders_Click(object sender, RoutedEventArgs e)
-        //{
-        //    LoadOrderDataFromDatabase();
-        //    MessageBox.Show("Order data refreshed!", "Refresh Complete", MessageBoxButton.OK, MessageBoxImage.Information);
-        //}
+        private void ViewOrdersButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoadOrderDataFromDatabase();
+            MessageBox.Show("Order data refreshed!", "Refresh Complete", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
         private void ViewSelectedOrder_Click(object sender, RoutedEventArgs e)
         {
             if (OrdersDataGrid.SelectedItem is OrderData selectedOrder)
             {
-                // Navigate to the new ViewOrderDetails page, passing the selected order
-                ViewOrderDetails viewOrderDetailsPage = new ViewOrderDetails(selectedOrder);
+                StringBuilder orderDetailsBuilder = new StringBuilder();
 
-                // Find the main window's frame and navigate
-                if (Application.Current.MainWindow is MainWindow mainWindow)
-                {
-                    mainWindow.MainContentFrame.Navigate(viewOrderDetailsPage);
-                }
+                orderDetailsBuilder.AppendLine($"        Order Details - ID: {selectedOrder.OrderId}       \n ");
+                orderDetailsBuilder.AppendLine("-------------------------------------------------\n\n");
+                orderDetailsBuilder.AppendLine($"1:   Customer Name:    {selectedOrder.CustomerName}\n");
+                orderDetailsBuilder.AppendLine($"2:   Product ID:       {selectedOrder.ProductId}\n");
+                orderDetailsBuilder.AppendLine($"3:   Quantity Ordered: {selectedOrder.QuantityOrdered} \n");
+                orderDetailsBuilder.AppendLine($"4:   Order Date:       {selectedOrder.OrderDate:dd/MM/yyyy} \n");
+                orderDetailsBuilder.AppendLine($"5:   Delivery Date:    {selectedOrder.DeliveryDate:dd/MM/yyyy} \n");
+                orderDetailsBuilder.AppendLine($"6:   Order Status:     {selectedOrder.OrderStatus}  \n");
+                orderDetailsBuilder.AppendLine($"7:   Total Price:      {selectedOrder.TotalPrice:C}  \n");
+                orderDetailsBuilder.AppendLine($"8:   Payment Status:   {selectedOrder.PaymentStatus}  \n");
+                orderDetailsBuilder.AppendLine($"9:   Supplier ID:      {(selectedOrder.SupplierId.HasValue ? selectedOrder.SupplierId.Value.ToString() : "N/A")}\n");
+
+                MessageBox.Show(orderDetailsBuilder.ToString(),
+                                $"Details for Order ID: {selectedOrder.OrderId}",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
             }
             else
             {
@@ -52,9 +63,7 @@ namespace Adminn
         {
             if (OrdersDataGrid.SelectedItem is OrderData selectedOrder)
             {
-                // In a real application, you would navigate to an "Edit Order" page
-                // and pass the selectedOrder to it for modification.
-                MessageBox.Show($"Edit functionality for Order ID: {selectedOrder.OrderId}\n(Implement navigation to Edit Order page)", "Edit Order", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Edit functionality for Order ID: {selectedOrder.OrderId}\n(This would typically navigate to an Edit Order page)", "Edit Order Action", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -66,8 +75,8 @@ namespace Adminn
         {
             if (OrdersDataGrid.SelectedItem is OrderData selectedOrder)
             {
-                var result = MessageBox.Show($"Are you sure you want to delete Order ID: {selectedOrder.OrderId}?",
-                    "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var result = MessageBox.Show($"Are you sure you want to delete Order ID: {selectedOrder.OrderId} for '{selectedOrder.CustomerName}'?",
+                                              "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
                 if (result == MessageBoxResult.Yes)
                 {
@@ -82,38 +91,40 @@ namespace Adminn
 
         private void CreateOrderReport_Click(object sender, RoutedEventArgs e)
         {
-            // You can implement a report generation similar to your Products page here.
             try
             {
                 using var connection = new MySqlConnection(connectionString);
                 connection.Open();
 
                 string query = @"SELECT
-                               COUNT(*) as TotalOrders,
-                               SUM(Quantity_Ordered) as TotalQuantityOrdered,
-                               AVG(Total_Price) as AverageTotalPrice,
-                               COUNT(CASE WHEN Order_Status = 'Delivered' THEN 1 END) as DeliveredCount,
-                               COUNT(CASE WHEN Order_Status = 'Processing' THEN 1 END) as ProcessingCount,
-                               COUNT(CASE WHEN Order_Status = 'Shipped' THEN 1 END) as ShippedCount
-                               FROM orders"; // Assuming 'orders' is your table name
+                                COUNT(*) as TotalOrders,
+                                SUM(Quantity_Ordered) as TotalQuantityOrdered,
+                                AVG(Total_Price) as AverageTotalPrice,
+                                COUNT(CASE WHEN Order_Status = 'Delivered' THEN 1 END) as DeliveredCount,
+                                COUNT(CASE WHEN Order_Status = 'Processing' THEN 1 END) as ProcessingCount,
+                                COUNT(CASE WHEN Order_Status = 'Shipped' THEN 1 END) as ShippedCount
+                                FROM orders";
 
                 using var command = new MySqlCommand(query, connection);
                 using var reader = command.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    string report = $"📊 ORDERS REPORT\n" +
-                                  $"==================\n\n" +
-                                  $"Total Orders: {reader.GetInt32("TotalOrders")}\n" +
-                                  $"Total Quantity Ordered: {reader.GetInt32("TotalQuantityOrdered")}\n" +
-                                  $"Average Total Price: {reader.GetDecimal("AverageTotalPrice"):C}\n\n" +
-                                  $"ORDER STATUS BREAKDOWN:\n" +
-                                  $"✅ Delivered: {reader.GetInt32("DeliveredCount")}\n" +
-                                  $"🔄 Processing: {reader.GetInt32("ProcessingCount")}\n" +
-                                  $"🚚 Shipped: {reader.GetInt32("ShippedCount")}\n\n" +
-                                  $"Generated on: {DateTime.Now:dd/MM/yyyy HH:mm}";
+                    StringBuilder reportBuilder = new();
+                    reportBuilder.AppendLine("📊 ORDERS REPORT");
+                    reportBuilder.AppendLine("----------------------------------------------------------");
+                    reportBuilder.AppendLine($"Generated on: {DateTime.Now:dd/MM/yyyy HH:mm}");
+                    reportBuilder.AppendLine();
+                    reportBuilder.AppendLine($"Total Orders:             {reader.GetInt32("TotalOrders")}");
+                    reportBuilder.AppendLine($"Total Quantity Ordered:   {reader.GetInt32("TotalQuantityOrdered")}");
+                    reportBuilder.AppendLine($"Average Total Price:      {reader.GetDecimal("AverageTotalPrice"):C}");
+                    reportBuilder.AppendLine();
+                    reportBuilder.AppendLine("ORDER STATUS BREAKDOWN:");
+                    reportBuilder.AppendLine($"  ✅ Delivered:    {reader.GetInt32("DeliveredCount")}");
+                    reportBuilder.AppendLine($"  🔄 Processing:   {reader.GetInt32("ProcessingCount")}");
+                    reportBuilder.AppendLine($"  🚚 Shipped:      {reader.GetInt32("ShippedCount")}");
 
-                    MessageBox.Show(report, "Orders Report", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(reportBuilder.ToString(), "Orders Report", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -131,18 +142,20 @@ namespace Adminn
                 connection.Open();
 
                 string query = @"SELECT Order_ID, Customer_Name, Product_ID, Quantity_Ordered,
-                               Order_Date, Delivery_Date, Order_Status, Total_Price, Payment_Status, Supplier_ID
-                               FROM orders ORDER BY Order_ID";
+                                 Order_Date, Delivery_Date, Order_Status, Total_Price, Payment_Status, Supplier_ID
+                                 FROM orders ORDER BY Order_ID DESC";
 
                 using var command = new MySqlCommand(query, connection);
                 using var reader = command.ExecuteReader();
 
-                orders.Clear();
-
+                // It's crucial that 'Orders' is the same instance the DataGrid is bound to.
+                // If 'Orders' was already initialized in the constructor, Clear and Add is correct.
+                Orders.Clear();
                 while (reader.Read())
                 {
                     var order = new OrderData
                     {
+                        IsSelected = false,
                         OrderId = reader.GetInt32("Order_ID"),
                         CustomerName = reader.IsDBNull("Customer_Name") ? string.Empty : reader.GetString("Customer_Name"),
                         ProductId = reader.IsDBNull("Product_ID") ? 0 : reader.GetInt32("Product_ID"),
@@ -152,9 +165,9 @@ namespace Adminn
                         OrderStatus = reader.IsDBNull("Order_Status") ? string.Empty : reader.GetString("Order_Status"),
                         TotalPrice = reader.IsDBNull("Total_Price") ? 0m : reader.GetDecimal("Total_Price"),
                         PaymentStatus = reader.IsDBNull("Payment_Status") ? string.Empty : reader.GetString("Payment_Status"),
-                        SupplierId = reader.IsDBNull("Supplier_ID") ? 0 : reader.GetInt32("Supplier_ID")
+                        SupplierId = reader.IsDBNull("Supplier_ID") ? (int?)null : reader.GetInt32("Supplier_ID")
                     };
-                    orders.Add(order);
+                    Orders.Add(order);
                 }
             }
             catch (Exception ex)
@@ -182,8 +195,6 @@ namespace Adminn
                 {
                     MessageBox.Show("Order deleted successfully!", "Success",
                         MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Refresh the data in the DataGrid
                     LoadOrderDataFromDatabase();
                 }
                 else
@@ -198,127 +209,50 @@ namespace Adminn
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+    }
 
-        // OrderData class remains the same as previously defined
-        public class OrderData : INotifyPropertyChanged
+    public class OrderData : INotifyPropertyChanged
+    {
+        private bool _isSelected;
+        private int _orderId;
+        private string _customerName = string.Empty;
+        private int _productId;
+        private int _quantityOrdered;
+        private DateTime _orderDate;
+        private DateTime _deliveryDate;
+        private string _orderStatus = string.Empty;
+        private decimal _totalPrice;
+        private string _paymentStatus = string.Empty;
+        private int? _supplierId;
+
+        public bool IsSelected
         {
-            private int _orderId;
-            private string _customerName = string.Empty;
-            private int _productId;
-            private int _quantityOrdered;
-            private DateTime _orderDate;
-            private DateTime _deliveryDate;
-            private string _orderStatus = string.Empty;
-            private decimal _totalPrice;
-            private string _paymentStatus = string.Empty;
-            private int _supplierId;
-
-            public int OrderId
+            get => _isSelected;
+            set
             {
-                get => _orderId;
-                set
+                if (_isSelected != value)
                 {
-                    _orderId = value;
+                    _isSelected = value;
                     OnPropertyChanged();
                 }
             }
+        }
 
-            public string CustomerName
-            {
-                get => _customerName;
-                set
-                {
-                    _customerName = value ?? string.Empty;
-                    OnPropertyChanged();
-                }
-            }
+        public int OrderId { get => _orderId; set { _orderId = value; OnPropertyChanged(); } }
+        public string CustomerName { get => _customerName; set { _customerName = value ?? string.Empty; OnPropertyChanged(); } }
+        public int ProductId { get => _productId; set { _productId = value; OnPropertyChanged(); } }
+        public int QuantityOrdered { get => _quantityOrdered; set { _quantityOrdered = value; OnPropertyChanged(); } }
+        public DateTime OrderDate { get => _orderDate; set { _orderDate = value; OnPropertyChanged(); } }
+        public DateTime DeliveryDate { get => _deliveryDate; set { _deliveryDate = value; OnPropertyChanged(); } }
+        public string OrderStatus { get => _orderStatus; set { _orderStatus = value ?? string.Empty; OnPropertyChanged(); } }
+        public decimal TotalPrice { get => _totalPrice; set { _totalPrice = value; OnPropertyChanged(); } }
+        public string PaymentStatus { get => _paymentStatus; set { _paymentStatus = value ?? string.Empty; OnPropertyChanged(); } }
+        public int? SupplierId { get => _supplierId; set { _supplierId = value; OnPropertyChanged(); } }
 
-            public int ProductId
-            {
-                get => _productId;
-                set
-                {
-                    _productId = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public int QuantityOrdered
-            {
-                get => _quantityOrdered;
-                set
-                {
-                    _quantityOrdered = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public DateTime OrderDate
-            {
-                get => _orderDate;
-                set
-                {
-                    _orderDate = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public DateTime DeliveryDate
-            {
-                get => _deliveryDate;
-                set
-                {
-                    _deliveryDate = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public string OrderStatus
-            {
-                get => _orderStatus;
-                set
-                {
-                    _orderStatus = value ?? string.Empty;
-                    OnPropertyChanged();
-                }
-            }
-
-            public decimal TotalPrice
-            {
-                get => _totalPrice;
-                set
-                {
-                    _totalPrice = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public string PaymentStatus
-            {
-                get => _paymentStatus;
-                set
-                {
-                    _paymentStatus = value ?? string.Empty;
-                    OnPropertyChanged();
-                }
-            }
-
-            public int SupplierId
-            {
-                get => _supplierId;
-                set
-                {
-                    _supplierId = value;
-                    OnPropertyChanged();
-                }
-            }
-
-            public event PropertyChangedEventHandler? PropertyChanged;
-
-            protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

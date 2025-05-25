@@ -44,7 +44,7 @@ namespace Adminn
         {
             if (EmployeeDataGrid.SelectedItem is EmployeeData selectedEmployee)
             {
-                MessageBox.Show($"Employee Details:\nID: {selectedEmployee.EmployeeId}\nName: {selectedEmployee.Name}\nRole: {selectedEmployee.Role}\nPhone: {selectedEmployee.PhoneNumber}\nSalary: {selectedEmployee.Salary:C}\nStatus: {selectedEmployee.Status}",
+                MessageBox.Show($"Employee Details:\n\n1:   ID: {selectedEmployee.EmployeeId}\n\n2:   Name: {selectedEmployee.Name}\n\n3:   Role: {selectedEmployee.Role}\n\n4:   Phone: {selectedEmployee.PhoneNumber}\n\n5:   Salary: {selectedEmployee.Salary:C}\n\n6:   Status: {selectedEmployee.Status}",
                     "Employee Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else

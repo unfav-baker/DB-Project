@@ -1,113 +1,119 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 
-namespace Adminn
+namespace Adminn // Your project's namespace
 {
-    /// <summary>
-    /// Interaction logic for Profile.xaml
-    /// </summary>
     public partial class Profile : Page
     {
-        // User data model - in a real application, this would be loaded from a database or API
-        private UserProfile currentUser = null!; // Use null-forgiving operator to suppress warning
+        // Static field to hold the single, shared instance of profile data
+        private static ProfileData? _sharedUserProfileInstance;
+
+        // Instance property to easily access the shared data
+        public ProfileData? CurrentUserProfile { get; private set; }
 
         public Profile()
         {
             InitializeComponent();
-            LoadUserData();
+            // LoadProfileData will be called by the Navigated event when the page is first shown
+            // or when navigating back to it.
+            // To ensure it loads on first display if not part of a navigation sequence initially:
+            this.Loaded += Profile_Loaded;
         }
 
-        private void LoadUserData()
+        private void Profile_Loaded(object sender, RoutedEventArgs e)
         {
-            // In a real application, this data would come from a database or API
-            currentUser = new UserProfile
-            {
-                FullName = "Muhammad Fayyaz",
-                DisplayName = "Muhammad Fayaz",
-                Username = "example",
-                Email = "@example.com",
-                DateOfBirth = new DateTime(1987, 1, 1),
-                Gender = "Male",
-                Nationality = "Pakistani",
-                Address = "S-4 AB Heights, Airport Road, Lhr",
-                PhoneNumber = "0301-8515333",
-                AccountCreated = new DateTime(2020, 3, 20),
-                LastLogin = new DateTime(2024, 8, 22),
-                MembershipStatus = "Premium Member",
-                IsVerified = true,
-                LanguagePreference = "English",
-                TimeZone = "GMT-5 (UTC + 5)",
-                PasswordLastChanged = new DateTime(2024, 7, 15),
-                TwoFactorEnabled = true,
-                SecurityQuestionsSet = true,
-                LoginNotificationsEnabled = true,
-                ConnectedDevices = 3,
-                SuspiciousActivity = false,
-                EmailNotificationsSubscribed = true,
-                SmsAlertsEnabled = true,
-                ContentPreferences = "Admin",
-                DefaultDashboardView = "",
-                DarkModeEnabled = true
-            };
-
-            // Set data context for binding
-            DataContext = currentUser;
-
-            // If you wish to use data binding instead of hard-coded values in XAML:
-            // UpdateUIWithBindings();
+            // Ensure data is loaded when the page initially becomes visible.
+            // Unsubscribe to avoid multiple loads if Loaded fires again for some reason.
+            this.Loaded -= Profile_Loaded;
+            LoadProfileData();
         }
 
-        // Optional: Setup dynamic bindings if you want to move away from hard-coded values
-        private void UpdateUIWithBindings()
+        private void LoadProfileData()
         {
-            // Example of how you could set up bindings programmatically
-            // This is only needed if you want to replace the hard-coded values with dynamic binding
-
-            /*
-            // Find elements in your XAML and bind them to your UserProfile properties
-            TextBlock fullNameText = this.FindName("fullNameTextBlock") as TextBlock;
-            if (fullNameText != null)
+            // If the shared instance doesn't exist yet, load it once.
+            if (_sharedUserProfileInstance == null)
             {
-                Binding fullNameBinding = new Binding("FullName");
-                fullNameBinding.Source = currentUser;
-                fullNameText.SetBinding(TextBlock.TextProperty, fullNameBinding);
+                _sharedUserProfileInstance = ProfileData.LoadCurrentProfile();
             }
-            
-            // And so on for other elements...
-            */
-        }
-    }
 
-    // User profile model
-    public class UserProfile
-    {
-        public required string FullName { get; set; }
-        public required string DisplayName { get; set; }
-        public required string Username { get; set; }
-        public required string Email { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public required string Gender { get; set; }
-        public required string Nationality { get; set; }
-        public required string Address { get; set; }
-        public required string PhoneNumber { get; set; }
-        public DateTime AccountCreated { get; set; }
-        public DateTime LastLogin { get; set; }
-        public required string MembershipStatus { get; set; }
-        public bool IsVerified { get; set; }
-        public required string LanguagePreference { get; set; }
-        public required string TimeZone { get; set; }
-        public DateTime PasswordLastChanged { get; set; }
-        public bool TwoFactorEnabled { get; set; }
-        public bool SecurityQuestionsSet { get; set; }
-        public bool LoginNotificationsEnabled { get; set; }
-        public int ConnectedDevices { get; set; }
-        public bool SuspiciousActivity { get; set; }
-        public bool EmailNotificationsSubscribed { get; set; }
-        public bool SmsAlertsEnabled { get; set; }
-        public required string ContentPreferences { get; set; }
-        public required string DefaultDashboardView { get; set; }
-        public bool DarkModeEnabled { get; set; }
+            // Use the shared instance
+            CurrentUserProfile = _sharedUserProfileInstance;
+
+            if (CurrentUserProfile == null)
+            {
+                MessageBox.Show("Failed to load profile data.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Update TextBlocks from the CurrentUserProfile (which is now the shared, potentially modified instance)
+            ProfileNameTextBlock.Text = CurrentUserProfile.DisplayName;
+            ProfileEmailHeaderTextBlock.Text = CurrentUserProfile.Email;
+
+            FullNameTextBlock.Text = CurrentUserProfile.FullName;
+            DobTextBlock.Text = CurrentUserProfile.DateOfBirth?.ToString("MMMM d, yyyy") ?? "N/A";
+            GenderTextBlock.Text = CurrentUserProfile.Gender;
+            NationalityTextBlock.Text = CurrentUserProfile.Nationality;
+            AddressTextBlock.Text = CurrentUserProfile.Address;
+            PhoneNumberTextBlock.Text = CurrentUserProfile.PhoneNumber;
+
+            DisplayNameTextBlock.Text = CurrentUserProfile.DisplayName;
+            AccountCreatedTextBlock.Text = CurrentUserProfile.AccountCreated.ToString("MMMM d, yyyy");
+            EmailTextBlock.Text = CurrentUserProfile.Email;
+            AccountVerificationTextBlock.Text = CurrentUserProfile.AccountVerification;
+            LanguagePreferenceTextBlock.Text = CurrentUserProfile.LanguagePreference;
+            TimeZoneTextBlock.Text = CurrentUserProfile.TimeZone;
+        }
+
+        private void EditProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Ensure the shared instance is loaded before trying to edit it.
+            if (_sharedUserProfileInstance == null)
+            {
+                LoadProfileData(); // Try to load it if it wasn't (e.g. if Loaded event didn't fire as expected)
+                if (_sharedUserProfileInstance == null) // Still null after attempt
+                {
+                    MessageBox.Show("Profile data is not loaded. Cannot edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+
+            // CurrentUserProfile here will point to _sharedUserProfileInstance
+            if (CurrentUserProfile == null) // Should be redundant if _sharedUserProfileInstance is checked
+            {
+                MessageBox.Show("Profile data is not loaded. Cannot edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (this.NavigationService != null)
+            {
+                // Pass the *shared* instance to the EditProfilePage
+                EditProfilePage editPage = new EditProfilePage(_sharedUserProfileInstance);
+
+                // When we navigate away and then back, the Navigated event on NavigationService
+                // can be used to refresh this page.
+                NavigatedEventHandler? onNavigatedBack = null;
+                onNavigatedBack = (navSender, navArgs) =>
+                {
+                    // Check if we are navigating back TO this page instance
+                    if (navArgs.Content == this)
+                    {
+                        LoadProfileData(); // Reload/Refresh data from the (potentially modified) shared instance
+                        if (this.NavigationService != null)
+                        {
+                            this.NavigationService.Navigated -= onNavigatedBack; // Unsubscribe after use
+                        }
+                    }
+                };
+                this.NavigationService.Navigated += onNavigatedBack;
+
+                this.NavigationService.Navigate(editPage);
+            }
+            else
+            {
+                MessageBox.Show("Navigation service not available.");
+            }
+        }
     }
 }

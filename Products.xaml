@@ -8,88 +8,97 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Products">
     <Grid>
-        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#FF065668">
+            <TextBlock Text="📦 Products"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Margin="24,0,0,0"
+                       Foreground="White"
+                       FontSize="22" FontWeight="Bold"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
             <DataGrid x:Name="ProductsDataGrid"
-                     Margin="0,61,0,45"
-                     AutoGenerateColumns="False"
-                     CanUserAddRows="False"
-                     HeadersVisibility="Column"
-                     IsReadOnly="False"
-                     SelectionMode="Single"
-                     BorderBrush="Black"
-                     ItemsSource="{Binding products}">
+                      Grid.Row="0"
+                      Margin="0,0,0,10" AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      IsReadOnly="False" SelectionMode="Single"
+                      BorderBrush="#CCCCCC"
+                      BorderThickness="1"
+                      ItemsSource="{Binding products}"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      CanUserResizeColumns="True">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="50" Header="" Binding="{Binding IsSelected}" />
-                    <DataGridTextColumn Width="100" Header="Product ID" Binding="{Binding ProductId}" />
-                    <DataGridTextColumn Width="120" Header="Supplier ID" Binding="{Binding SupplierId}" />
-                    <DataGridTextColumn Width="150" Header="Category" Binding="{Binding Category}" />
-                    <DataGridTextColumn Width="120" Header="Quantity" Binding="{Binding Quantity}" />
-                    <DataGridTextColumn Width="120" Header="Price" Binding="{Binding Price, StringFormat=C}" />
-                    <DataGridTextColumn Width="120" Header="Batch No" Binding="{Binding BatchNo}" />
-                    <DataGridTextColumn Width="80" Header="Status" Binding="{Binding Status}" />
-                    <DataGridTextColumn Width="100" Header="Created At" Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy}" />
+                    <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
+
+                    <DataGridTextColumn Header="Product ID"   Binding="{Binding ProductId}"     Width="100" MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Supplier ID"  Binding="{Binding SupplierId}"    Width="100" MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Category"     Binding="{Binding Category}"        Width="1.5*" MinWidth="120" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Quantity"     Binding="{Binding Quantity}"        Width="80"  MinWidth="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Price"        Binding="{Binding Price, StringFormat=C}" Width="100" MinWidth="80" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Batch No"     Binding="{Binding BatchNo}"         Width="1*"  MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status"       Binding="{Binding Status}"          Width="90" MinWidth="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Created At"   Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy}" Width="120" MinWidth="100" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.ColumnSpan="2" Height="45" VerticalAlignment="Bottom" Background="White">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Content="Add New Product"
-                           RenderTransformOrigin="0.718,-0.081"
-                           Background="#FF065668"
-                           BorderBrush="#FF065668"
-                           Width="118"
-                           Foreground="White"
-                           Height="27"
-                           Click="AddProduct_Click"
-                           Margin="0,0,10,0"/>
-                    <Button Content="👁"
-                           Background="Black"
-                           BorderBrush="Black"
-                           Width="30"
-                           Foreground="White"
-                           Height="27"
-                           Margin="0,0,5,0"
-                           FontSize="14"
-                           Click="ViewProduct_Click"/>
-                    <Button Content="✏"
-                           Background="#FF4A90E2"
-                           BorderBrush="#FF4A90E2"
-                           Width="30"
-                           Foreground="White"
-                           Height="27"
-                           Margin="0,0,5,0"
-                           FontSize="14"
-                           Click="EditProduct_Click"/>
-                    <Button Content="🗑"
-                           Background="#FFDC3545"
-                           BorderBrush="#FFDC3545"
-                           Width="30"
-                           Foreground="White"
-                           Height="27"
-                           Margin="0,0,10,0"
-                           FontSize="14"
-                           Click="DeleteProduct_Click"/>
-                    <Button Content="📊 Report"
-                           Background="#FF28A745"
-                           BorderBrush="#FF28A745"
-                           Width="80"
-                           Foreground="White"
-                           Height="27"
-                           Margin="0,0,0,0"
-                           FontSize="12"
-                           Click="CreateReport_Click"/>
-                </StackPanel>
-            </Grid>
+
+            <Border Grid.Row="1"
+                    Height="45"
+                    Background="#F5F5F5"
+                    BorderBrush="#DDDDDD"
+                    BorderThickness="0,1,0,0">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                        <Button Content="Add New Product"
+                                Background="#FF065668"
+                                BorderBrush="#FF065668"
+                                Width="auto" Padding="10,5"
+                                Foreground="White"
+                                Height="30"
+                                Click="AddProduct_Click"
+                                Margin="0,0,10,0"/>
+                        <Button Content="👁" ToolTip="View Product"
+                                Background="#6C757D"
+                                BorderBrush="#6C757D"
+                                Width="35"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,5,0"
+                                FontSize="14"
+                                Click="ViewProduct_Click"/>
+                        <Button Content="🗑" ToolTip="Delete Product"
+                                Background="#FFDC3545"
+                                BorderBrush="#FFDC3545"
+                                Width="35"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,10,0"
+                                FontSize="14"
+                                Click="DeleteProduct_Click"/>
+                        <Button Content="📊 Report" ToolTip="Create Report for Product(s)"
+                                Background="#FF28A745"
+                                BorderBrush="#FF28A745"
+                                Width="auto" Padding="10,5"
+                                Foreground="White"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                FontSize="12"
+                                Click="CreateReport_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
         </Grid>
-        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left"
-                  Margin="24,13,0,0"
-                  TextWrapping="Wrap"
-                  Text="📦 Products"
-                  VerticalAlignment="Top"
-                  Width="161"
-                  Foreground="White"
-                  Background="#FF065668"
-                  FontSize="22"
-                  FontWeight="Bold"/>
     </Grid>
 </Page>

@@ -1,44 +1,55 @@
 ﻿<Page x:Class="Adminn.Reports"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Reports">
     <Grid>
         <Grid>
-            <!--  DataGrid  -->
+            <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📝 Reports" VerticalAlignment="Top" Width="auto" Foreground="White" FontSize="22" FontWeight="Bold"/>
+
             <DataGrid x:Name="ReportsDataGrid"
-            Margin="0,61,0,45"
-            AutoGenerateColumns="False"
-            CanUserAddRows="False"
-            HeadersVisibility="Column"
-            IsReadOnly="False"
-            SelectionMode="Single" 
-            BorderBrush="Black"
-            ItemsSource="{Binding ReportsList}">
+                      Margin="10,71,10,55"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      IsReadOnly="False" SelectionMode="Single"
+                      BorderBrush="#CCCCCC"
+                      BorderThickness="1"
+                      ItemsSource="{Binding ReportsList}"
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      CanUserResizeColumns="True">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="50" Header="" Binding="{Binding IsSelected}" />
-                    <DataGridTextColumn Width="100" Header="Report ID" Binding="{Binding ReportId}" />
-                    <DataGridTextColumn Width="120" Header="Report Type" Binding="{Binding ReportType}" />
-                    <DataGridTextColumn Width="150" Header="Date Generated" Binding="{Binding DateGenerated, StringFormat=dd/MM/yyyy}" />
-                    <DataGridTextColumn Width="120" Header="Status" Binding="{Binding Status}" />
-                    <DataGridTextColumn Width="120" Header="Created At" Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy}" />
-                    <DataGridTextColumn Width="120" Header="Updated At" Binding="{Binding UpdatedAt, StringFormat=dd/MM/yyyy}" />
+                    <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
+
+                    <DataGridTextColumn Header="Report ID"     Binding="{Binding ReportId}"        Width="1.2*" MinWidth="80" IsReadOnly="True"/>
+                    <!--<DataGridTextColumn Header="Employee ID"   Binding="{Binding EmployeeId}"      Width="1.3*" MinWidth="90" IsReadOnly="True"/>-->
+                    <DataGridTextColumn Header="Report Type"   Binding="{Binding ReportType}"      Width="2*"   MinWidth="120" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status"        Binding="{Binding Status}"          Width="1.5*" MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Updated At"    Binding="{Binding UpdatedAt, StringFormat=dd/MM/yyyy HH:mm}" Width="1.8*" MinWidth="130" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Generated At"  Binding="{Binding DateGenerated, StringFormat=dd/MM/yyyy HH:mm}" Width="1.8*" MinWidth="130" IsReadOnly="True"/>
+                  
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.ColumnSpan="2" Height="45" VerticalAlignment="Bottom" Background="White">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Content="View Reports" RenderTransformOrigin="0.718,-0.081" Background="#FF065668" BorderBrush="#FF065668" Width="118" Foreground="White" Height="27" Click="ViewReport_Click" Margin="0,0,10,0"/>
-                    <Button Content="👁" Background="Black" BorderBrush="Black" Width="30" Foreground="White" Height="27" Margin="0,0,5,0" FontSize="14" Click="ViewReportDetails_Click"/>
-                    <Button Content="✏" Background="#FF4A90E2" BorderBrush="#FF4A90E2" Width="30" Foreground="White" Height="27" Margin="0,0,5,0" FontSize="14" Click="EditReport_Click"/>
-                    <Button Content="🗑" Background="#FFDC3545" BorderBrush="#FFDC3545" Width="30" Foreground="White" Height="27" Margin="0,0,0,0" FontSize="14" Click="DeleteReport_Click"/>
-                </StackPanel>
-            </Grid>
+
+            <Border VerticalAlignment="Bottom"
+                    Height="45"
+                    Background="#F5F5F5"
+                    BorderBrush="#DDDDDD"
+                    BorderThickness="0,1,0,0">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0">
+                        <Button Content="View Reports" Background="#FF065668" BorderBrush="#FF065668" Width="auto" Padding="10,5" Foreground="White" Height="30" Click="ViewReport_Click" Margin="0,0,10,0"/>
+                        <Button Content="👁" ToolTip="View Details" Background="#6C757D" BorderBrush="#6C757D" Width="35" Foreground="White" Height="30" Margin="0,0,5,0" FontSize="14" Click="ViewReportDetails_Click"/>
+                        <Button Content="🗑" ToolTip="Delete" Background="#DC3545" BorderBrush="#DC3545" Width="35" Foreground="White" Height="30" Margin="0,0,0,0" FontSize="14" Click="DeleteReport_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
         </Grid>
-        <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📝 Reports" VerticalAlignment="Top" Width="171" Foreground="White" Background="#FF065668"  FontSize="22" FontWeight="Bold"/>
     </Grid>
 </Page>
