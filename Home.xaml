@@ -53,29 +53,30 @@
 
             <!-- Manage Orders Card -->
             <Button >
-                <StackPanel>
-                    <TextBlock Text="📑" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
-                    <TextBlock Text="MANAGE ORDERS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Button>
+      <StackPanel>
+          <TextBlock Text="📊" 
+                   FontSize="40"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+          <TextBlock Text="REPORTS"
+                   FontSize="16"
+                   FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+      </StackPanel>
+  </Button>
 
             <!-- Generate Reports Card -->
+          
             <Button >
                 <StackPanel>
-                    <TextBlock Text="📊" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
-                    <TextBlock Text="GENERATE REPORTS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
+                    <TextBlock Text="📑" 
+                 FontSize="40"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,10"/>
+                    <TextBlock Text="MANAGE ORDERS"
+                 FontSize="16"
+                 FontWeight="SemiBold"
+                 HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </UniformGrid>

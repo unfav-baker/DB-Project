@@ -84,7 +84,7 @@
                         <Button Content="📝 Reports" Style="{StaticResource SidebarButton}" Tag="ReportsPage" Click="NavigationButton_Click"/>
                         <Button Content="📤 Export Orders" Style="{StaticResource SidebarButton}" Tag="GenerateExportOrdersPage" Click="NavigationButton_Click"/>
                         <Button Content="🚚 Products" Style="{StaticResource SidebarButton}" Tag="GenerateProductsPage" Click="NavigationButton_Click"/>
-                        <Button Content="✩ Ratings" Style="{StaticResource SidebarButton}" Tag="GenerateRatingsPage" Click="NavigationButton_Click"/>
+                       
                     </StackPanel>
 
                     <!-- Logout Button -->
