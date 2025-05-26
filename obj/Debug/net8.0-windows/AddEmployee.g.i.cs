@@ -117,7 +117,7 @@ namespace Adminn {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Adminn;component/addemployee.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Adminn;V1.0.0.0;component/addemployee.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddEmployee.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

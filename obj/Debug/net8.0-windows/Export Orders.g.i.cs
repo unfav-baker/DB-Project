@@ -61,7 +61,7 @@ namespace Adminn {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Adminn;component/export%20orders.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Adminn;V1.0.0.0;component/export%20orders.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Export Orders.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
