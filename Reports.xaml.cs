@@ -1,502 +1,204 @@
 ﻿using System;
-
 using System.Collections.ObjectModel;
-
 using System.ComponentModel;
-
-using System.Data;
-
 using System.Runtime.CompilerServices;
-
 using System.Windows;
-
 using System.Windows.Controls;
-
 using MySql.Data.MySqlClient;
-
-
+using System.Diagnostics;
+using System.Text; // For StringBuilder in ViewReportDetails_Click
 
 namespace Adminn
-
 {
-
     public partial class Reports : Page
-
     {
+        public ObservableCollection<OrderSummaryData> ReportsList { get; set; } // Changed from ReportData
 
-        public ObservableCollection<ReportData> ReportsList { get; set; }
-
-
-
-        // Replace this with your actual MySQL connection string
-
-        private readonly string connectionString = "Server=127.0.0.1;Port=3306;Database=prime_tech;Uid=root;Pwd=Abubaker85@@;";
-
-
+        private readonly string? connectionString;
+        private const string DbConnectionStringEnvVar = "PRIMETECH_DB_CONN_STRING";
 
         public Reports()
-
         {
-
             InitializeComponent();
+            ReportsList = new ObservableCollection<OrderSummaryData>();
+            this.DataContext = this;
 
-            ReportsList = new ObservableCollection<ReportData>();
+            connectionString = Environment.GetEnvironmentVariable(DbConnectionStringEnvVar);
 
-
-
-            // Load report data from database
-
-            LoadReportDataFromDatabase();
-
-
-
-            // Set the DataContext for binding
-
-            DataContext = this;
-
-        }
-
-
-
-        private void ViewReport_Click(object sender, RoutedEventArgs e)
-
-        {
-
-            // Navigate to ViewReport page within the parent frame
-
-            ViewReport viewReportPage = new ViewReport();
-
-            // Find the main window's frame and navigate
-
-            if (Application.Current.MainWindow is MainWindow mainWindow)
-
+            if (string.IsNullOrEmpty(connectionString))
             {
-
-                mainWindow.MainContentFrame.Navigate(viewReportPage);
-
+                MessageBox.Show($"Database connection string environment variable '{DbConnectionStringEnvVar}' was not found or is empty. " +
+                                $"Please ensure your .env file is correctly set up and loaded at application startup (App.xaml.cs).\n\n" +
+                                "Report data cannot be loaded.",
+                                "Configuration Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-        }
-
-
-
-        private void ViewReportDetails_Click(object sender, RoutedEventArgs e)
-
-        {
-
-            if (ReportsDataGrid.SelectedItem is ReportData selectedReport)
-
-            {
-
-                MessageBox.Show($"\nReport Details:\n\n1: ID: {selectedReport.ReportId}\n\n2: Type: {selectedReport.ReportType}\n\n3: Date Generated: {selectedReport.DateGenerated:dd/MM/yyyy}\n\n4: Status: {selectedReport.Status}\n\n5: Created At: {selectedReport.CreatedAt:dd/MM/yyyy}\n\n6: Updated At: {selectedReport.UpdatedAt:dd/MM/yyyy}",
-
-                "Report Details", MessageBoxButton.OK, MessageBoxImage.Information);
-
-            }
-
             else
-
             {
-
-                MessageBox.Show("Please select a report to view.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
-
+                LoadOrderSummaryDataFromDatabase(); // Renamed method for clarity
             }
-
         }
 
-
-
-        private void EditReport_Click(object sender, RoutedEventArgs e)
-
+        private void LoadOrderSummaryDataFromDatabase()
         {
-
-            if (ReportsDataGrid.SelectedItem is ReportData selectedReport)
-
+            if (string.IsNullOrEmpty(connectionString))
             {
-
-                // Here you can navigate to an edit page or open an edit dialog
-
-                MessageBox.Show($"Edit functionality for Report ID: {selectedReport.ReportId}", "Edit Report", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                Debug.WriteLine("Adminn.Reports.xaml.cs: Connection string is null. Cannot load data.");
+                return;
             }
 
-            else
-
-            {
-
-                MessageBox.Show("Please select a report to edit.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
-
-            }
-
-        }
-
-
-
-        private void DeleteReport_Click(object sender, RoutedEventArgs e)
-
-        {
-
-            if (ReportsDataGrid.SelectedItem is ReportData selectedReport)
-
-            {
-
-                var result = MessageBox.Show($"Are you sure you want to delete report '{selectedReport.ReportType}' (ID: {selectedReport.ReportId})?",
-
-                "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-
-
-                if (result == MessageBoxResult.Yes)
-
-                {
-
-                    DeleteReportFromDatabase(selectedReport.ReportId);
-
-                }
-
-            }
-
-            else
-
-            {
-
-                MessageBox.Show("Please select a report to delete.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
-
-            }
-
-        }
-
-
-
-        private void LoadReportDataFromDatabase()
-
-        {
-
+            ReportsList.Clear();
             try
-
             {
-
-                using var connection = new MySqlConnection(connectionString);
-
+                using MySqlConnection connection = new(connectionString);
                 connection.Open();
 
+                string query = @"
+                    SELECT 
+                        o.Order_ID, o.Order_Date, c.Name AS PartyName, o.Export_Through,
+                        o.Plant, o.Importer, o.Phyto_Number, o.Carton, o.Weight,
+                        o.Rate, o.Total_Amount, o.Amount_Received
+                    FROM orders o
+                    INNER JOIN customer c ON o.FK_Customer_ID = c.Customer_ID
+                    ORDER BY o.Order_Date DESC, o.Order_ID DESC;";
 
-
-                string query = @"SELECT Report_ID,Employee_ID, Report_Type, Date_Generated, Statuss, Created_At, Updated_At
-
-FROM reports ORDER BY Report_ID";
-
-
-
-                using var command = new MySqlCommand(query, connection);
-
-                using var reader = command.ExecuteReader();
-
-
-
-                ReportsList.Clear();
-
-
+                using MySqlCommand command = new(query, connection);
+                using MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
-
                 {
+                    decimal totalAmount = reader.IsDBNull(reader.GetOrdinal("Total_Amount")) ? 0m : reader.GetDecimal(reader.GetOrdinal("Total_Amount"));
+                    decimal amountReceived = reader.IsDBNull(reader.GetOrdinal("Amount_Received")) ? 0m : reader.GetDecimal(reader.GetOrdinal("Amount_Received"));
 
-                    var report = new ReportData
-
+                    ReportsList.Add(new OrderSummaryData
                     {
-
-
-                        ReportId = reader.GetInt32("Report_ID"),
-
-                        ReportType = reader.IsDBNull("Report_Type") ? string.Empty : reader.GetString("Report_Type"),
-
-                        DateGenerated = reader.IsDBNull("Date_Generated") ? DateTime.Now : reader.GetDateTime("Date_Generated"),
-
-                        Status = reader.IsDBNull("Statuss") ? string.Empty : reader.GetString("Statuss"),
-
-                        CreatedAt = reader.IsDBNull("Created_At") ? DateTime.Now : reader.GetDateTime("Created_At"),
-
-                        UpdatedAt = reader.IsDBNull("Updated_At") ? DateTime.Now : reader.GetDateTime("Updated_At")
-
-                    };
-
-
-
-                    ReportsList.Add(report);
-
+                        OrderId = reader.GetInt32(reader.GetOrdinal("Order_ID")),
+                        OrderDate = reader.IsDBNull(reader.GetOrdinal("Order_Date")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("Order_Date")),
+                        PartyName = reader.IsDBNull(reader.GetOrdinal("PartyName")) ? "N/A" : reader.GetString(reader.GetOrdinal("PartyName")),
+                        ExportThrough = reader.IsDBNull(reader.GetOrdinal("Export_Through")) ? string.Empty : reader.GetString(reader.GetOrdinal("Export_Through")),
+                        Plant = reader.IsDBNull(reader.GetOrdinal("Plant")) ? string.Empty : reader.GetString(reader.GetOrdinal("Plant")),
+                        Importer = reader.IsDBNull(reader.GetOrdinal("Importer")) ? string.Empty : reader.GetString(reader.GetOrdinal("Importer")),
+                        PhytoNumber = reader.IsDBNull(reader.GetOrdinal("Phyto_Number")) ? string.Empty : reader.GetString(reader.GetOrdinal("Phyto_Number")),
+                        Carton = reader.IsDBNull(reader.GetOrdinal("Carton")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("Carton")),
+                        Weight = reader.IsDBNull(reader.GetOrdinal("Weight")) ? (decimal?)null : reader.GetDecimal(reader.GetOrdinal("Weight")),
+                        Rate = reader.IsDBNull(reader.GetOrdinal("Rate")) ? (decimal?)null : reader.GetDecimal(reader.GetOrdinal("Rate")),
+                        TotalAmount = totalAmount,
+                        AmountReceived = amountReceived,
+                        Balance = totalAmount - amountReceived
+                    });
                 }
-
             }
-
-            catch (Exception ex)
-
+            catch (MySqlException myEx)
             {
-
-                MessageBox.Show($"Error loading report data: {ex.Message}", "Database Error",
-
-                MessageBoxButton.OK, MessageBoxImage.Error);
-
+                Debug.WriteLine($"MySQL Error loading order summary data: {myEx.ToString()}");
+                MessageBox.Show($"Database Error (MySQL): {myEx.Message} (Code: {myEx.Number})", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Generic error loading order summary data: {ex.ToString()}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Application Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
-
-
-        private void DeleteReportFromDatabase(int reportId)
-
+        private void ViewReport_Click(object sender, RoutedEventArgs e) // This is your "View Reports" button
         {
+            // This button currently navigates to a generic "ViewReport" page.
+            // You need to define what this page should do.
+            // Does it show a summary of all orders? Or a form to generate a *new type* of report?
+            // For now, it navigates to a placeholder page.
+            // If you want this to act as a "Refresh" button for the current list, change its logic:
+            // LoadOrderSummaryDataFromDatabase();
+            // MessageBox.Show("Data refreshed!");
 
-            try
-
+            Debug.WriteLine("ViewReport_Click: Navigating to ViewReport page (placeholder).");
+            ViewReport viewReportPage = new ViewReport(); // Assuming ViewReport.xaml exists
+            if (Application.Current.MainWindow is MainWindow mainWindow && mainWindow.MainContentFrame != null)
             {
+                mainWindow.MainContentFrame.Navigate(viewReportPage);
+            }
+            else
+            {
+                MessageBox.Show("Could not find main frame for navigation.", "Navigation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
 
-                using var connection = new MySqlConnection(connectionString);
+        private void ViewReportDetails_Click(object sender, RoutedEventArgs e) // This is your "👁" button
+        {
+            if (ReportsDataGrid.SelectedItem is OrderSummaryData selectedOrder)
+            {
+                StringBuilder detailsBuilder = new StringBuilder();
+                detailsBuilder.AppendLine("Order Summary Details:");
+                detailsBuilder.AppendLine("------------------------------");
+                detailsBuilder.AppendLine($"Order ID: {selectedOrder.OrderId}");
+                detailsBuilder.AppendLine($"Order Date: {selectedOrder.OrderDate:dd/MM/yyyy}");
+                detailsBuilder.AppendLine($"Party Name: {selectedOrder.PartyName}");
+                detailsBuilder.AppendLine($"Export Through: {selectedOrder.ExportThrough}");
+                detailsBuilder.AppendLine($"Plant: {selectedOrder.Plant}");
+                detailsBuilder.AppendLine($"Importer: {selectedOrder.Importer}");
+                detailsBuilder.AppendLine($"Phyto Number: {selectedOrder.PhytoNumber}");
+                detailsBuilder.AppendLine($"Carton(s): {selectedOrder.Carton?.ToString() ?? "N/A"}");
+                detailsBuilder.AppendLine($"Weight: {selectedOrder.Weight?.ToString("N2") ?? "N/A"}");
+                detailsBuilder.AppendLine($"Rate: {selectedOrder.Rate?.ToString("C") ?? "N/A"}");
+                detailsBuilder.AppendLine($"Total Amount: {selectedOrder.TotalAmount:C}");
+                detailsBuilder.AppendLine($"Amount Received: {selectedOrder.AmountReceived?.ToString("C") ?? "N/A"}");
+                detailsBuilder.AppendLine($"Balance: {selectedOrder.Balance:C}");
 
+                MessageBox.Show(detailsBuilder.ToString(), "Order Details", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please select an order item to view its details.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void DeleteReport_Click(object sender, RoutedEventArgs e) // This is your "🗑" button
+        {
+            if (ReportsDataGrid.SelectedItem is OrderSummaryData selectedOrder)
+            {
+                var result = MessageBox.Show($"Are you sure you want to delete Order ID: {selectedOrder.OrderId} for '{selectedOrder.PartyName}'?",
+                                             "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    DeleteOrderFromDatabase(selectedOrder.OrderId);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an order item to delete.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void DeleteOrderFromDatabase(int orderId)
+        {
+            if (string.IsNullOrEmpty(this.connectionString))
+            {
+                MessageBox.Show("Database connection is not configured. Cannot delete.", "Configuration Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            try
+            {
+                using MySqlConnection connection = new(this.connectionString);
                 connection.Open();
-
-
-
-                string query = "DELETE FROM reports WHERE Report_ID = @Report_ID";
-
-
-
-                using var command = new MySqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@Report_ID", reportId);
-
-
-
+                string query = "DELETE FROM orders WHERE Order_ID = @OrderId";
+                using MySqlCommand command = new(query, connection);
+                command.Parameters.AddWithValue("@OrderId", orderId);
                 int rowsAffected = command.ExecuteNonQuery();
 
-
-
                 if (rowsAffected > 0)
-
                 {
-
-                    MessageBox.Show("Report deleted successfully!", "Success",
-
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-
-
-
-                    // Refresh the data
-
-                    LoadReportDataFromDatabase();
-
+                    MessageBox.Show("Order entry deleted successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    LoadOrderSummaryDataFromDatabase(); // Refresh the list
                 }
-
                 else
-
                 {
-
-                    MessageBox.Show("Report not found or could not be deleted.", "Error",
-
-                    MessageBoxButton.OK, MessageBoxImage.Error);
-
+                    MessageBox.Show("Order entry not found or could not be deleted.", "Deletion Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-
             }
-
             catch (Exception ex)
-
             {
-
-                MessageBox.Show($"Error deleting report: {ex.Message}", "Database Error",
-
-                MessageBoxButton.OK, MessageBoxImage.Error);
-
+                Debug.WriteLine($"Error deleting order entry: {ex.ToString()}");
+                MessageBox.Show($"Error deleting order entry: {ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
-
-
-
-        public void RefreshData()
-
-        {
-
-            LoadReportDataFromDatabase();
-
-        }
-
     }
-
-
-
-    public class ReportData : INotifyPropertyChanged
-
-    {
-
-        private bool _isSelected;
-
-        private int _reportId;
-
-        private string _reportType = string.Empty;
-
-        private DateTime _dateGenerated;
-
-        private string _status = string.Empty;
-
-        private DateTime _createdAt;
-
-        private DateTime _updatedAt;
-
-
-
-        public bool IsSelected
-
-        {
-
-            get => _isSelected;
-
-            set
-
-            {
-
-                _isSelected = value;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public int ReportId
-
-        {
-
-            get => _reportId;
-
-            set
-
-            {
-
-                _reportId = value;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public string ReportType
-
-        {
-
-            get => _reportType;
-
-            set
-
-            {
-
-                _reportType = value ?? string.Empty;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public DateTime DateGenerated
-
-        {
-
-            get => _dateGenerated;
-
-            set
-
-            {
-
-                _dateGenerated = value;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public string Status
-
-        {
-
-            get => _status;
-
-            set
-
-            {
-
-                _status = value ?? string.Empty;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public DateTime CreatedAt
-
-        {
-
-            get => _createdAt;
-
-            set
-
-            {
-
-                _createdAt = value;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public DateTime UpdatedAt
-
-        {
-
-            get => _updatedAt;
-
-            set
-
-            {
-
-                _updatedAt = value;
-
-                OnPropertyChanged();
-
-            }
-
-        }
-
-
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-
-
-        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-
-        {
-
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        }
-
-    }
-
 }

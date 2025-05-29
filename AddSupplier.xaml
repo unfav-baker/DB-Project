@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
       mc:Ignorable="d"
-      d:DesignHeight="550" d:DesignWidth="800" Title="Add New Supplier"
+      d:DesignHeight="650" d:DesignWidth="800" Title="Add New Supplier"
       Background="#FFF0F2F5">
 
     <Page.Resources>
@@ -15,7 +15,6 @@
             <Setter Property="Margin" Value="0,0,0,5"/>
             <Setter Property="FontSize" Value="13"/>
         </Style>
-
         <Style TargetType="TextBox" x:Key="FormInputStyle">
             <Setter Property="Height" Value="38"/>
             <Setter Property="Padding" Value="10,0"/>
@@ -32,8 +31,7 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="4" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
-                                          HorizontalScrollBarVisibility="Hidden"
-                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           Margin="{TemplateBinding Padding}"/>
@@ -51,8 +49,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <Style TargetType="ComboBox" x:Key="FormComboBoxStyle">
+        <Style TargetType="PasswordBox" x:Key="FormPasswordBoxStyle">
             <Setter Property="Height" Value="38"/>
             <Setter Property="Padding" Value="10,0"/>
             <Setter Property="FontSize" Value="14"/>
@@ -62,54 +59,39 @@
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="ComboBox">
-                        <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
-                            </Grid.ColumnDefinitions>
-                            <Popup x:Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
-                                <Border x:Name="dropDownBorder" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" CornerRadius="4" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                                    <ScrollViewer x:Name="DropDownScrollViewer">
-                                        <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                                    </ScrollViewer>
-                                </Border>
-                            </Popup>
-                            <ToggleButton x:Name="toggleButton"
-                                          Background="{TemplateBinding Background}"
-                                          BorderBrush="{TemplateBinding BorderBrush}"
-                                          BorderThickness="{TemplateBinding BorderThickness}"
-                                          Grid.ColumnSpan="2"
-                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                          Style="{StaticResource {x:Type ToggleButton}}"
-                                          Focusable="False"/>
-                            <ContentPresenter x:Name="contentPresenter"
-                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
-                                              Content="{TemplateBinding SelectionBoxItem}"
-                                              ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              IsHitTestVisible="false"
-                                              Margin="{TemplateBinding Padding}"
-                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Grid>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"/>
+                        </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" Value="#FF7EB4EA"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF7EB4EA"/>
                             </Trigger>
                             <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter Property="BorderBrush" Value="#FF065668"/>
-                                <Setter Property="BorderThickness" Value="1.5"/>
-                            </Trigger>
-                            <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">
-                                <Setter Property="Margin" TargetName="dropDownBorder" Value="0,2,0,2"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF065668"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="1.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-
+        <Style TargetType="ComboBox" x:Key="FormComboBoxStyle">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
         <Style TargetType="Button" x:Key="FormSaveButtonStyle">
             <Setter Property="Width" Value="160"/>
             <Setter Property="Height" Value="38"/>
@@ -119,25 +101,7 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Margin" Value="0,0,0,0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="4" BorderThickness="1"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF054A5C"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
         </Style>
-
         <Style TargetType="Button" x:Key="FormClearButtonStyle">
             <Setter Property="Width" Value="130"/>
             <Setter Property="Height" Value="38"/>
@@ -147,28 +111,9 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Margin" Value="0,0,10,0"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="4"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFE9ECEF"/>
-                                <Setter Property="BorderBrush" Value="#FF868E96"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Margin" Value="0,0,10,0"/>
         </Style>
-
         <Style TargetType="Button" x:Key="HeaderCloseButtonStyle">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="White"/>
@@ -196,7 +141,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
     </Page.Resources>
 
     <Grid>
@@ -207,12 +151,7 @@
 
         <Border Grid.Row="0" Background="#FF065668">
             <Grid>
-                <TextBlock Text="➕ Add New Supplier"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Margin="24,0,0,0"
-                           Foreground="White"
-                           FontSize="22" FontWeight="Bold"/>
+                <TextBlock Text="➕ Add New Supplier" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="24,0,0,0" Foreground="White" FontSize="22" FontWeight="Bold"/>
                 <Button x:Name="btnClosePage" Style="{StaticResource HeaderCloseButtonStyle}" Click="ClosePage_Click"/>
             </Grid>
         </Border>
@@ -222,13 +161,14 @@
                 <Border.Effect>
                     <DropShadowEffect Color="#DDDDDD" ShadowDepth="1" BlurRadius="10" Opacity="0.4"/>
                 </Border.Effect>
-
                 <StackPanel>
-                    <TextBlock Text="Supplier Information" FontSize="20" FontWeight="SemiBold"
-                               Foreground="#FF333333" Margin="0,0,0,25" HorizontalAlignment="Left"/>
-
+                    <TextBlock Text="Supplier Information" FontSize="20" FontWeight="SemiBold" Foreground="#FF333333" Margin="0,0,0,25" HorizontalAlignment="Left"/>
                     <Grid>
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -241,45 +181,69 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Name *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBlock Text="Supplier Name *" Style="{StaticResource FormLabelStyle}"/>
                             <TextBox x:Name="txtName" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
-
                         <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,0,0,15">
                             <TextBlock Text="Phone Number *" Style="{StaticResource FormLabelStyle}"/>
                             <TextBox x:Name="txtPhoneNumber" MaxLength="15" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Role *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBlock Text="Role/Type *" Style="{StaticResource FormLabelStyle}"/>
                             <ComboBox x:Name="cmbRole" Style="{StaticResource FormComboBoxStyle}">
-                                <ComboBoxItem Content="Plant Supplier"/>
-                                <ComboBoxItem Content="Seed Supplier"/>
-                                <ComboBoxItem Content="Organic Plant Supplier"/>
-                                <ComboBoxItem Content="Importer"/>
+                                <ComboBoxItem Content="Manufacturer"/>
                                 <ComboBoxItem Content="Wholesaler"/>
-                                <ComboBoxItem Content="Equipment Supplier"/>
-                                <ComboBoxItem Content="Seedling Specialist"/>
-                                <ComboBoxItem Content="Rare Plant Supplier"/>
+                                <ComboBoxItem Content="Distributor"/>
+                                <ComboBoxItem Content="Importer"/>
+                                <ComboBoxItem Content="Raw Material Provider"/>
+                                <ComboBoxItem Content="Service Provider"/>
                             </ComboBox>
                         </StackPanel>
-
                         <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Plant Name" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBlock Text="Plant Name (Optional)" Style="{StaticResource FormLabelStyle}"/>
                             <TextBox x:Name="txtPlantName" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Email (Optional)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtEmail" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="2" Margin="0,0,0,15">
+                            <TextBlock Text="Username (Optional, for login)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtUsername" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Password (Optional, for login)" Style="{StaticResource FormLabelStyle}"/>
+                            <PasswordBox x:Name="txtPassword" Style="{StaticResource FormPasswordBoxStyle}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="2" Margin="0,0,0,15">
+                            <TextBlock Text="BRN/TAX ID (Optional)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtBrnTaxId" Style="{StaticResource FormInputStyle}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,15">
+                            <TextBlock Text="Address (Optional)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtAddress" Style="{StaticResource FormInputStyle}" Height="76" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="5" Grid.Column="0" Margin="0,0,0,15">
+                            <TextBlock Text="Supplier Rating (1-5, Optional)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtSupplierRating" Style="{StaticResource FormInputStyle}" PreviewTextInput="DecimalOnly_PreviewTextInput" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="2" Margin="0,0,0,15">
                             <TextBlock Text="Status *" Style="{StaticResource FormLabelStyle}"/>
                             <ComboBox x:Name="cmbStatus" Style="{StaticResource FormComboBoxStyle}">
                                 <ComboBoxItem Content="Active" IsSelected="True"/>
                                 <ComboBoxItem Content="Inactive"/>
-                                <ComboBoxItem Content="Pending"/>
+                                <ComboBoxItem Content="Preferred"/>
                                 <ComboBoxItem Content="On Hold"/>
+                                <ComboBoxItem Content="Discontinued"/>
                             </ComboBox>
                         </StackPanel>
 
-                        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                        <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3"
                                     Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,25,0,0">
                             <Button x:Name="btnCancel" Content="Clear Form" Style="{StaticResource FormClearButtonStyle}" Click="Cancel_Click"/>
                             <Button x:Name="btnSave" Content="Save Supplier" Style="{StaticResource FormSaveButtonStyle}" Click="SaveSupplier_Click"/>

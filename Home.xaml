@@ -3,6 +3,9 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+
       xmlns:local="clr-namespace:Adminn"
       mc:Ignorable="d"
       d:DesignHeight="650" d:DesignWidth="950"
@@ -92,29 +95,25 @@
                     <RowDefinition Height="1.2*" MinHeight="80"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource DashboardCardStyle}">
-                    <StackPanel>
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource DashboardCardStyle}" Margin="0,0,143,133" Grid.RowSpan="3">
+                    <StackPanel Margin="0,0,0,-46">
                         <TextBlock Style="{StaticResource DashboardCardTitleStyle}" Text="Revenue" />
+                        <lvc:PieChart x:Name="RevenuePieChart" Height="200" Width="300" LegendLocation="Right">
+                            <lvc:PieChart.Series>
+                                <lvc:PieSeries Title="Export" Values="50" Fill="Green" />
+                                <lvc:PieSeries Title="Local" Values="30" Fill="Orange" />
+                                <lvc:PieSeries Title="Other" Values="20" Fill="Gray" />
+                            </lvc:PieChart.Series>
+                        </lvc:PieChart>
+
+
+
                     </StackPanel>
                 </Border>
 
-                <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource DashboardCardStyle}">
-                    <StackPanel>
-                        <TextBlock Style="{StaticResource DashboardCardTitleStyle}" Text="Total Sales" />
-                    </StackPanel>
-                </Border>
+                <!-- Total Sales -->
 
-                <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource DashboardCardStyle}">
-                    <StackPanel>
-                        <TextBlock Style="{StaticResource DashboardCardTitleStyle}" Text="Download your earning report" TextWrapping="Wrap"/>
-                    </StackPanel>
-                </Border>
-
-                <Border Grid.Row="2" Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource DashboardCardStyle}">
-                    <StackPanel>
-                        <TextBlock Style="{StaticResource DashboardCardTitleStyle}" Text="Total Orders" />
-                    </StackPanel>
-                </Border>
+                <!-- Total Orders -->
 
                 <Grid Grid.Row="4" Grid.Column="0">
                     <Grid.ColumnDefinitions>
@@ -123,18 +122,24 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0" Style="{StaticResource DashboardCardStyle}">
+                    <!-- Summary -->
+                    <Border Grid.Column="2" Style="{StaticResource DashboardCardStyle}" Margin="171,-412,-404,286">
                         <StackPanel>
                             <TextBlock Style="{StaticResource DashboardCardSmallTitleStyle}" Text="Summary" />
+                            <lvc:CartesianChart x:Name="SummaryChart" Height="179"/>
                         </StackPanel>
                     </Border>
 
-                    <Border Grid.Column="2" Style="{StaticResource DashboardCardStyle}">
+                    <!-- Daily Sales -->
+                    <Border Style="{StaticResource DashboardCardStyle}" Margin="108,-128,-372,1" Grid.Column="2">
                         <StackPanel>
                             <TextBlock Style="{StaticResource DashboardCardSmallTitleStyle}" Text="Daily Sales" />
+                            <lvc:CartesianChart x:Name="DailySalesChart" Height="185"/>
                         </StackPanel>
                     </Border>
+
                 </Grid>
+                <Button Content="Generate Reports" Background="#FF065668" BorderBrush="#FF065668" Width="auto" Padding="5,5" Foreground="White" Click="AddEmployee_Click" Margin="31,152,254,99" Grid.Row="2" FontSize="24" Grid.RowSpan="3"/>
             </Grid>
         </Grid>
     </Grid>

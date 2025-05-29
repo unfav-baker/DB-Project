@@ -5,51 +5,81 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Adminn"
       mc:Ignorable="d"
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Reports">
-    <Grid>
-        <Grid>
-            <Grid Background="#FF065668" Height="61" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="📝 Reports" VerticalAlignment="Top" Width="auto" Foreground="White" FontSize="22" FontWeight="Bold"/>
+      d:DesignHeight="450" 
+      d:DesignWidth="1200" 
+      Title="Order Summaries">
 
-            <DataGrid x:Name="ReportsDataGrid"
-                      Margin="10,71,10,55"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      HeadersVisibility="Column"
-                      IsReadOnly="False" SelectionMode="Single"
-                      BorderBrush="#CCCCCC"
-                      BorderThickness="1"
-                      ItemsSource="{Binding ReportsList}"
-                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                      CanUserResizeColumns="True">
-                <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
+    <Page.Resources>
+        <Style x:Key="RightAlignedCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+        </Style>
+    </Page.Resources>
 
-                    <DataGridTextColumn Header="Report ID"     Binding="{Binding ReportId}"        Width="1.2*" MinWidth="80" IsReadOnly="True"/>
-                    <!--<DataGridTextColumn Header="Employee ID"   Binding="{Binding EmployeeId}"      Width="1.3*" MinWidth="90" IsReadOnly="True"/>-->
-                    <DataGridTextColumn Header="Report Type"   Binding="{Binding ReportType}"      Width="2*"   MinWidth="120" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status"        Binding="{Binding Status}"          Width="1.5*" MinWidth="90" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Updated At"    Binding="{Binding UpdatedAt, StringFormat=dd/MM/yyyy HH:mm}" Width="1.8*" MinWidth="130" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Generated At"  Binding="{Binding DateGenerated, StringFormat=dd/MM/yyyy HH:mm}" Width="1.8*" MinWidth="130" IsReadOnly="True"/>
-                  
-                </DataGrid.Columns>
-            </DataGrid>
+    <Grid Background="#FFF0F2F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
 
-            <Border VerticalAlignment="Bottom"
-                    Height="45"
-                    Background="#F5F5F5"
-                    BorderBrush="#DDDDDD"
-                    BorderThickness="0,1,0,0">
-                <Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0">
-                        <Button Content="View Reports" Background="#FF065668" BorderBrush="#FF065668" Width="auto" Padding="10,5" Foreground="White" Height="30" Click="ViewReport_Click" Margin="0,0,10,0"/>
-                        <Button Content="👁" ToolTip="View Details" Background="#6C757D" BorderBrush="#6C757D" Width="35" Foreground="White" Height="30" Margin="0,0,5,0" FontSize="14" Click="ViewReportDetails_Click"/>
-                        <Button Content="🗑" ToolTip="Delete" Background="#DC3545" BorderBrush="#DC3545" Width="35" Foreground="White" Height="30" Margin="0,0,0,0" FontSize="14" Click="DeleteReport_Click"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </Grid>
+        <Border Grid.Row="0" Background="#FF065668">
+            <TextBlock Text=" 📝 Order Summaries" 
+                       HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       Margin="20,0,0,0" Foreground="White" 
+                       FontSize="22" FontWeight="Bold"/>
+        </Border>
+
+        <DataGrid Grid.Row="1" x:Name="ReportsDataGrid" 
+                  ItemsSource="{Binding ReportsList}" 
+                  Margin="10" AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  IsReadOnly="True" 
+                  SelectionMode="Single" 
+                  BorderBrush="#CCCCCC" BorderThickness="1"
+                  HorizontalGridLinesBrush="#FFE0E0E0" VerticalGridLinesBrush="#FFE0E0E0"
+                  RowBackground="White" AlternatingRowBackground="#FFF9F9F9"
+                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                  CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
+
+                <DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" MinWidth="70" Width="Auto"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}" MinWidth="90" Width="Auto"/>
+                <DataGridTextColumn Header="Party Name" Binding="{Binding PartyName}" MinWidth="150" Width="2*"/>
+                <DataGridTextColumn Header="Export Through" Binding="{Binding ExportThrough}" MinWidth="120" Width="1.2*"/>
+                <DataGridTextColumn Header="Plant" Binding="{Binding Plant}" MinWidth="100" Width="1.2*"/>
+                <DataGridTextColumn Header="Importer" Binding="{Binding Importer}" MinWidth="120" Width="1.2*"/>
+                <DataGridTextColumn Header="Phyto Number" Binding="{Binding PhytoNumber}" MinWidth="110" Width="*"/>
+
+                <DataGridTextColumn Header="Carton" Binding="{Binding Carton}" MinWidth="60" Width="Auto" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Weight, StringFormat={}{0:N2}}" MinWidth="70" Width="Auto" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+                <DataGridTextColumn Header="Rate" Binding="{Binding Rate, StringFormat=C}" MinWidth="80" Width="Auto" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+                <DataGridTextColumn Header="Received" Binding="{Binding AmountReceived, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedCellStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Row="2" Background="#F5F5F5" BorderBrush="#DDDDDD" BorderThickness="0,1,0,0" Padding="10">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Content="View Report Page" 
+                            Click="ViewReport_Click" 
+                            Background="#FF065668" BorderBrush="#FF065668" 
+                            Padding="10,7" Margin="0,0,10,0"
+                            Foreground="White" Height="30" FontWeight="SemiBold"/>
+                    <Button Content="👁" ToolTip="View Selected Order Details" 
+                            Background="#6C757D" BorderBrush="#6C757D" 
+                            Width="35" Foreground="White" Height="30" Margin="0,0,5,0" FontSize="14" 
+                            Click="ViewReportDetails_Click"/>
+                    <Button Content="🗑" ToolTip="Delete Selected Order" 
+                            Background="#DC3545" BorderBrush="#DC3545" 
+                            Width="35" Foreground="White" Height="30" FontSize="14" 
+                            Click="DeleteReport_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>

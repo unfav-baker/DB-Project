@@ -93,8 +93,7 @@
   
                        <Button Content="📦 Products" Style="{StaticResource SidebarButton}" Tag="ProductsPage" Click="NavigationButton_Click"/>  
 
-                       <Button Content="📤 Export Orders" Style="{StaticResource SidebarButton}" Tag="ExportOrdersPage" Click="NavigationButton_Click"/>  
-
+                       
 
                    </StackPanel>  
 

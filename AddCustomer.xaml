@@ -7,7 +7,6 @@
       mc:Ignorable="d"
       d:DesignHeight="700" d:DesignWidth="850" Title="Add New Customer"
       Background="#FFF0F2F5">
-
     <Page.Resources>
         <Style TargetType="TextBlock" x:Key="FormLabelStyle">
             <Setter Property="FontWeight" Value="SemiBold"/>
@@ -15,7 +14,6 @@
             <Setter Property="Margin" Value="0,0,0,5"/>
             <Setter Property="FontSize" Value="13"/>
         </Style>
-
         <Style TargetType="TextBox" x:Key="FormInputStyle">
             <Setter Property="Height" Value="38"/>
             <Setter Property="Padding" Value="10,0"/>
@@ -32,8 +30,7 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="4" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
-                                          HorizontalScrollBarVisibility="Hidden"
-                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           Margin="{TemplateBinding Padding}"/>
@@ -51,64 +48,15 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <Style TargetType="DatePicker" x:Key="FormDataPickerStyle">
+        <Style TargetType="ComboBox" x:Key="FormComboBoxStyle">
             <Setter Property="Height" Value="38"/>
-            <Setter Property="Padding" Value="8,0"/>
+            <Setter Property="Padding" Value="10,0"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="BorderBrush" Value="#FFABADB3"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="DatePicker">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}"
-                                CornerRadius="4" SnapsToDevicePixels="True">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <DatePickerTextBox x:Name="PART_TextBox" Grid.Column="0"
-                                     Focusable="{TemplateBinding Focusable}"
-                                     HorizontalContentAlignment="Stretch"
-                                     VerticalContentAlignment="Stretch"
-                                     Foreground="{TemplateBinding Foreground}"
-                                     Padding="{TemplateBinding Padding}"
-                                     BorderThickness="0" 
-                                     Background="Transparent" />
-                                <Button x:Name="PART_Button" Grid.Column="1"
-                                        Focusable="False"
-                                        HorizontalAlignment="Right"
-                                        VerticalAlignment="Center"
-                                        Width="{Binding ActualHeight, ElementName=PART_TextBox}"
-                                        Height="{Binding ActualHeight, ElementName=PART_TextBox}"
-                                        Style="{DynamicResource {x:Static ToolBar.ButtonStyleKey}}"
-                                        FontFamily="Segoe MDL2 Assets" Content=""/>
-                                <Popup x:Name="PART_Popup" AllowsTransparency="True"
-                                       Placement="Bottom"
-                                       PlacementTarget="{Binding ElementName=PART_TextBox}"
-                                       IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
-                                       StaysOpen="False"/>
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" Value="#FF7EB4EA"/>
-                            </Trigger>
-                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
-                                <Setter Property="BorderBrush" Value="#FF065668"/>
-                                <Setter Property="BorderThickness" Value="1.5"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
         </Style>
-
         <Style TargetType="Button" x:Key="FormSaveButtonStyle">
             <Setter Property="Width" Value="160"/>
             <Setter Property="Height" Value="38"/>
@@ -118,25 +66,7 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Margin" Value="0,0,0,0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="4" BorderThickness="1"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF054A5C"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
         </Style>
-
         <Style TargetType="Button" x:Key="FormClearButtonStyle">
             <Setter Property="Width" Value="130"/>
             <Setter Property="Height" Value="38"/>
@@ -146,28 +76,9 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Margin" Value="0,0,10,0"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="4"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFE9ECEF"/>
-                                <Setter Property="BorderBrush" Value="#FF868E96"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Margin" Value="0,0,10,0"/>
         </Style>
-
         <Style TargetType="Button" x:Key="HeaderCloseButtonStyle">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="White"/>
@@ -195,7 +106,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
     </Page.Resources>
 
     <Grid>
@@ -206,12 +116,7 @@
 
         <Border Grid.Row="0" Background="#FF065668">
             <Grid>
-                <TextBlock Text="➕ Add New Customer"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Margin="24,0,0,0"
-                           Foreground="White"
-                           FontSize="22" FontWeight="Bold"/>
+                <TextBlock Text="➕ Add New Customer" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="24,0,0,0" Foreground="White" FontSize="22" FontWeight="Bold"/>
                 <Button x:Name="btnClosePage" Style="{StaticResource HeaderCloseButtonStyle}" Click="ClosePage_Click"/>
             </Grid>
         </Border>
@@ -221,15 +126,11 @@
                 <Border.Effect>
                     <DropShadowEffect Color="#DDDDDD" ShadowDepth="1" BlurRadius="10" Opacity="0.4"/>
                 </Border.Effect>
-
                 <StackPanel>
                     <TextBlock Text="Customer Information" FontSize="20" FontWeight="SemiBold"
                                Foreground="#FF333333" Margin="0,0,0,25" HorizontalAlignment="Left"/>
-
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -244,66 +145,49 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Date *" Style="{StaticResource FormLabelStyle}"/>
-                            <DatePicker x:Name="DatePicker" Style="{StaticResource FormDataPickerStyle}"/>
+                            <TextBlock Text="Party Name (Full Name) *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="PartyNameTextBox" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
-
                         <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Phyto Number *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="PhytoNumberTextBox" Style="{StaticResource FormInputStyle}"/>
+                            <TextBlock Text="Phone Number *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtPhoneNumber" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Party Name *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="PartyNameTextBox" Style="{StaticResource FormInputStyle}"/>
+                            <TextBlock Text="Email Address *" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtEmail" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
-
                         <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Export Through" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="ExportThroughTextBox" Style="{StaticResource FormInputStyle}"/>
+                            <TextBlock Text="Customer Type" Style="{StaticResource FormLabelStyle}"/>
+                            <ComboBox x:Name="cmbCustomerType" Style="{StaticResource FormComboBoxStyle}">
+                                <ComboBoxItem Content="Individual"/>
+                                <ComboBoxItem Content="Business"/>
+                                <ComboBoxItem Content="Other"/>
+                            </ComboBox>
                         </StackPanel>
 
                         <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Plant" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="PlantTextBox" Style="{StaticResource FormInputStyle}"/>
+                            <TextBlock Text="Business Name (If applicable)" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtBusinessName" Style="{StaticResource FormInputStyle}"/>
                         </StackPanel>
-
                         <StackPanel Grid.Row="2" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Importer *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="ImporterTextBox" Style="{StaticResource FormInputStyle}"/>
+                            <TextBlock Text="Status *" Style="{StaticResource FormLabelStyle}"/>
+                            <ComboBox x:Name="cmbStatus" Style="{StaticResource FormComboBoxStyle}">
+                                <ComboBoxItem Content="Active" IsSelected="True"/>
+                                <ComboBoxItem Content="Inactive"/>
+                                <ComboBoxItem Content="Prospect"/>
+                            </ComboBox>
                         </StackPanel>
 
-                        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Carton *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="CartonTextBox" Style="{StaticResource FormInputStyle}"/>
+                        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,15">
+                            <TextBlock Text="Address" Style="{StaticResource FormLabelStyle}"/>
+                            <TextBox x:Name="txtAddress" Style="{StaticResource FormInputStyle}" Height="76" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Row="3" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Weight *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="WeightTextBox" Style="{StaticResource FormInputStyle}"/>
-                        </StackPanel>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="* Required fields"
+                                   FontStyle="Italic" Foreground="Gray" Margin="0,10,0,20" FontSize="12"/>
 
-                        <StackPanel Grid.Row="4" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Rate *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="RateTextBox" Style="{StaticResource FormInputStyle}"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="4" Grid.Column="2" Margin="0,0,0,15">
-                            <TextBlock Text="Amount *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="AmountTextBox" Style="{StaticResource FormInputStyle}"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="5" Grid.Column="0" Margin="0,0,0,15">
-                            <TextBlock Text="Received *" Style="{StaticResource FormLabelStyle}"/>
-                            <TextBox x:Name="ReceivedTextBox" Style="{StaticResource FormInputStyle}"/>
-                        </StackPanel>
-
-                        <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Text="* Required fields"
-                                   FontStyle="Italic" Foreground="Gray"
-                                   Margin="0,10,0,20" FontSize="12"/>
-
-                        <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3"
+                        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
                                     Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
                             <Button x:Name="btnCancel" Content="Clear Form" Style="{StaticResource FormClearButtonStyle}" Click="Cancel_Click"/>
                             <Button x:Name="btnSave" Content="Save Customer" Style="{StaticResource FormSaveButtonStyle}" Click="SaveCustomer_Click"/>

@@ -33,23 +33,20 @@
                       Margin="0,0,0,10" AutoGenerateColumns="False"
                       CanUserAddRows="False"
                       HeadersVisibility="Column"
-                      IsReadOnly="False" SelectionMode="Single"
-                      BorderBrush="#CCCCCC"
+                      IsReadOnly="False" SelectionMode="Single" BorderBrush="#CCCCCC"
                       BorderThickness="1"
-                      ItemsSource="{Binding products}"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ItemsSource="{Binding ProductList}" ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       CanUserResizeColumns="True">
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
-
                     <DataGridTextColumn Header="Product ID"   Binding="{Binding ProductId}"     Width="100" MinWidth="90" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Supplier ID"  Binding="{Binding SupplierId}"    Width="100" MinWidth="90" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Category"     Binding="{Binding Category}"        Width="1.5*" MinWidth="120" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Quantity"     Binding="{Binding Quantity}"        Width="80"  MinWidth="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Category"     Binding="{Binding Category}"      Width="1.5*" MinWidth="120" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Quantity"     Binding="{Binding Quantity}"      Width="80"  MinWidth="70" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Price"        Binding="{Binding Price, StringFormat=C}" Width="100" MinWidth="80" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Batch No"     Binding="{Binding BatchNo}"         Width="1*"  MinWidth="90" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status"       Binding="{Binding Status}"          Width="90" MinWidth="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Batch No"     Binding="{Binding BatchNo}"       Width="1*"  MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status"       Binding="{Binding Status}"        Width="90" MinWidth="70" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Created At"   Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy}" Width="120" MinWidth="100" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>

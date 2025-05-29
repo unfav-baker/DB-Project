@@ -97,10 +97,7 @@ namespace Adminn
                     case "CustomerPage":
                         MainContentFrame.Content = new Customer();
                         break;
-                    case "ExportOrdersPage":
-                        MainContentFrame.Content = new Export_Orders();
-                        break;
-                        // Add more cases as needed
+                  
                 }
             }
         }

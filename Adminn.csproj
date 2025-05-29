@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="5.1.0" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
     <PackageReference Include="QuestPDF" Version="2025.5.0" />
@@ -29,6 +30,12 @@
     <Resource Include="Images\download-removebg-preview (1).png" />
     <Resource Include="Images\dsd.png" />
     <Resource Include="Images\Leonardo_Phoenix_10_Design_a_professional_and_visually_appeali_3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".env">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
