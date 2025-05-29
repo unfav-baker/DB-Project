@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="5.1.0" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
   </ItemGroup>
@@ -65,6 +66,14 @@
     <Resource Include="Images\logo_dolphin-removebg-preview.png" />
     <Resource Include="Images\Watercolor and earth map vector - WeLoveSoLo.jpg" />
     <Resource Include="Images\X.png" />
+  </ItemGroup>
+
+ 
+
+  <ItemGroup>
+    <None Update=".env">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 	

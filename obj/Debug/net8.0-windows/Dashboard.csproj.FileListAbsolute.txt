@@ -170,3 +170,9 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runti
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x86\native\libstdc++-6.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\.env
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\DotNetEnv.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Sprache.dll
