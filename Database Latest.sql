@@ -306,3 +306,34 @@ VALUES
 (1, 1, 1, '2025-06-10', '2025-06-15', 50, 5, 100.00, 7537.50, 'Global Shippers', 'Primary Plant', 'ImportEx Ltd.', 'PN-EXP-2025-003', 150.75, 7000.00, 'Partially Paid', 'BATCH-A001', 'TRUCK-007'),
 (2, 3, 2, '2025-06-12', NULL, 200, 10, 50.00, 15100.00, 'Oceanic Freight', 'Beta Production', 'Worldwide Goods', 'PN-EXP-2025-004', 75.50, 0.00, 'Pending', 'BATCH-C003', NULL);
 
+
+-- Apne MySQL client mein 'prime_tech' database select karein: USE prime_tech;
+
+ALTER TABLE admin
+ADD COLUMN Address VARCHAR(255) NULL AFTER Email,
+ADD COLUMN Nationality VARCHAR(100) NULL AFTER Date_Of_Birth,
+ADD COLUMN Language_Preference VARCHAR(10) DEFAULT 'en-US' NULL AFTER Status,
+ADD COLUMN Time_Zone VARCHAR(50) NULL AFTER Language_Preference;
+
+
+UPDATE admin
+SET 
+    Address = '123 Admin Street, Capital City',
+    Nationality = 'Pakistani',
+    Language_Preference = 'en-US',
+    Time_Zone = 'Asia/Karachi'
+WHERE Admin_ID = 1; -- Apne Admin_ID ke hisaab se update karein
+
+-- Baaki dummy admins ke liye bhi isi tarah update karein.
+
+
+
+
+
+INSERT INTO login (id, user_name, email, password, created_at, updated_at)
+VALUES 
+(9, 'MANA', 'manakhanoffical@gmail.com', 'mana12345', '2025-05-28 23:41:48', '2025-05-28 23:50:20'),
+
+(10, 'Abu baker', 'abubakerbarkat45@gmail.com', 'ismaeel123', '2025-05-29 20:51:33', '2025-05-29 21:17:55'),
+
+(11, 'Ismaeel', 'abubakermukhtar55@gmail.com', 'baker1234', '2025-05-29 20:55:24', '2025-05-29 21:08:23');
