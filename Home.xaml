@@ -3,9 +3,51 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Employee"
       mc:Ignorable="d"
       Title="Home"
-      Background="#F8F8F8">
+      Background="#F8F8F8"
+      d:DesignHeight="600" d:DesignWidth="800">
+
+    <Page.Resources>
+        <Style x:Key="DashboardButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="2" Color="#FFCCCCCC" Opacity="0.3" BlurRadius="8"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FFF0F0F0"/>
+                                <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="#FF065668"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FFE0E0E0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,80 +56,56 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Welcome Section -->
         <StackPanel Grid.Row="0" Margin="30">
             <TextBlock Text="Welcome to PRIME-TECH" 
-                     FontSize="28" 
-                     FontWeight="Bold"
-                     Foreground="#FF065668"
-                     HorizontalAlignment="Center"
-                     Margin="0,0,0,10"/>
+                       FontSize="28" 
+                       FontWeight="Bold"
+                       Foreground="#FF065668"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
 
             <TextBlock Text="Your Export Management Dashboard"
-                     FontSize="18"
-                     Foreground="#666666"
-                     HorizontalAlignment="Center"/>
+                       FontSize="18"
+                       Foreground="#666666"
+                       HorizontalAlignment="Center"/>
         </StackPanel>
 
-        <!-- Dashboard Cards -->
         <UniformGrid Grid.Row="1" 
-                   Columns="3" 
-                   Rows="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Margin="30">
-            
-            <!-- View Products Card -->
-            <Button >
-                <StackPanel>
-                    <TextBlock Text="📦" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
-                    <TextBlock Text="VIEW PRODUCTS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Button>
+                     Columns="2" 
+                     Rows="1" VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Margin="30">
 
-            <!-- Manage Orders Card -->
-            <Button >
+            <Button x:Name="ReportsButton" Style="{StaticResource DashboardButtonStyle}" Click="ReportsButton_Click">
                 <StackPanel>
                     <TextBlock Text="📑" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
-                    <TextBlock Text="MANAGE ORDERS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
+                               FontSize="40"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="View Order Reports" FontSize="16"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
 
-            <!-- Generate Reports Card -->
-            <Button >
+            <Button x:Name="GenerateReportsButton" Style="{StaticResource DashboardButtonStyle}" Click="GenerateReportsButton_Click">
                 <StackPanel>
-                    <TextBlock Text="📊" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
-                    <TextBlock Text="GENERATE REPORTS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
+                    <TextBlock Text="➕"  FontSize="40"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="Create New Order Entry" FontSize="16"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </UniformGrid>
 
-        <!-- Footer -->
         <Border Grid.Row="2" 
-              Background="#FF065668"
-              Padding="20">
-            <TextBlock Text="2025 PRIME-TECH Export Solutions"
-                     Foreground="White"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"/>
+                Background="#FF065668"
+                Padding="20" MinHeight="60">
+            <TextBlock Text="© 2025 PRIME-TECH Export Solutions" Foreground="White"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
         </Border>
     </Grid>
 </Page>

@@ -6,13 +6,21 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       Title="Order Reports"
       d:DesignHeight="450" 
-      d:DesignWidth="1000" mc:Ignorable="d">
+      d:DesignWidth="1200" 
+      mc:Ignorable="d">
 
-    <Grid>
+    <Page.Resources>
+        <Style x:Key="RightAlignedTextCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#FFF0F2F5">
         <Grid.RowDefinitions>
             <RowDefinition Height="61"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Background="#FF065668">
@@ -22,36 +30,48 @@
                        FontSize="22" FontWeight="Bold"/>
         </Border>
 
-        <DataGrid Grid.Row="1" x:Name="ReportsDataGrid" ItemsSource="{Binding ReportDataList}" 
+        <DataGrid Grid.Row="1" x:Name="ReportsDataGrid"
+                  ItemsSource="{Binding ReportDataList}" 
                   Margin="10" AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   HeadersVisibility="Column"
                   IsReadOnly="True" 
                   SelectionMode="Single" 
-                  BorderBrush="#CCCCCC" BorderThickness="1"
-                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                  BorderBrush="#FFCCCCCC" BorderThickness="1"
+                  HorizontalGridLinesBrush="#FFE0E0E0" VerticalGridLinesBrush="#FFE0E0E0"
+                  RowBackground="White" AlternatingRowBackground="#FFF9F9F9"
+                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                  CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}" Width="100"/>
-                <DataGridTextColumn Header="Party Name" Binding="{Binding PartyName}" Width="1.5*"/>
-                <DataGridTextColumn Header="Export Through" Binding="{Binding ExportThrough}" Width="1*"/>
-                <DataGridTextColumn Header="Plant" Binding="{Binding Plant}" Width="1*"/>
-                <DataGridTextColumn Header="Importer" Binding="{Binding Importer}" Width="1*"/>
-                <DataGridTextColumn Header="Phyto Number" Binding="{Binding PhytoNumber}" Width="120"/>
-                <DataGridTextColumn Header="Carton" Binding="{Binding Carton}" Width="70"/>
-                <DataGridTextColumn Header="Weight" Binding="{Binding Weight, StringFormat={}{0:N2}}" Width="80"/>
-                <DataGridTextColumn Header="Rate" Binding="{Binding Rate, StringFormat=C}" Width="90"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" Width="100"/>
-                <DataGridTextColumn Header="Received" Binding="{Binding AmountReceived, StringFormat=C}" Width="100"/>
-                <DataGridTextColumn Header="Balance" Binding="{Binding Balance, StringFormat=C}" Width="100"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}" MinWidth="90" Width="Auto"/>
+                <DataGridTextColumn Header="Party Name" Binding="{Binding PartyName}" MinWidth="150" Width="2*"/>
+                <DataGridTextColumn Header="Export Through" Binding="{Binding ExportThrough}" MinWidth="120" Width="1.5*"/>
+                <DataGridTextColumn Header="Plant" Binding="{Binding Plant}" MinWidth="100" Width="1.5*"/>
+                <DataGridTextColumn Header="Importer" Binding="{Binding Importer}" MinWidth="120" Width="1.5*"/>
+                <DataGridTextColumn Header="Phyto Number" Binding="{Binding PhytoNumber}" MinWidth="110" Width="Auto"/>
+
+                <DataGridTextColumn Header="Carton" Binding="{Binding Carton}" MinWidth="60" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Weight, StringFormat={}{0:N2}}" MinWidth="70" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Rate" Binding="{Binding Rate, StringFormat=C}" MinWidth="80" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Received" Binding="{Binding AmountReceived, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <Border Grid.Row="2" Background="#F5F5F5" BorderBrush="#DDDDDD" BorderThickness="0,1,0,0">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Grid.Row="2" Background="#FFF5F5F5" BorderBrush="#FFDDDDDD" BorderThickness="0,1,0,0" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                 <Button Content="Refresh Reports" 
                         Click="RefreshReports_Click" 
                         Background="#FF065668" BorderBrush="#FF065668" 
-                        Width="130" Foreground="White" Height="30"/>
+                        Padding="12,7"
+                        Foreground="White" FontWeight="SemiBold" FontSize="13">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </StackPanel>
         </Border>
     </Grid>
