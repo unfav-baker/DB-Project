@@ -1,57 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Project\\Other\\Employee\\Employee\\",
+  "WorkspaceRootPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\customcontrols\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:customcontrols\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\One Drive\\OneDrive\\Desktop\\Air University\\2nd Semester\\Employee\\Employee\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\profile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:profile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\reports.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:reports.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\view customer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:view customer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\view suppliers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:view suppliers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\generate reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:generate reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|c:\\project\\other\\employee\\employee\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\MainWindow.xaml",
+              "ToolTip": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-08T14:51:52.526Z",
@@ -78,141 +43,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwCgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAzwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T14:51:45.365Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T11:22:38.105Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Generic.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\Themes\\Generic.xaml",
-              "RelativeDocumentMoniker": "Themes\\Generic.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\Themes\\Generic.xaml",
-              "RelativeToolTip": "Themes\\Generic.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T11:14:12.608Z",
+              "Title": "Reports.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml.cs",
+              "RelativeDocumentMoniker": "Reports.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml.cs",
+              "RelativeToolTip": "Reports.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:29:15.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\AssemblyInfo.cs",
-              "RelativeToolTip": "AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T11:01:52.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.g.cs",
-              "DocumentMoniker": "D:\\One Drive\\OneDrive\\Desktop\\Air University\\2nd Semester\\Employee\\Employee\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "ToolTip": "D:\\One Drive\\OneDrive\\Desktop\\Air University\\2nd Semester\\Employee\\Employee\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T10:59:44.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\CustomControls\\Employee.cs",
-              "RelativeDocumentMoniker": "CustomControls\\Employee.cs",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\CustomControls\\Employee.cs",
-              "RelativeToolTip": "CustomControls\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T10:42:18.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "View Suppliers.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\View Suppliers.xaml",
-              "RelativeDocumentMoniker": "View Suppliers.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\View Suppliers.xaml",
-              "RelativeToolTip": "View Suppliers.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:21:48.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Generate Reports.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\Generate Reports.xaml",
-              "RelativeDocumentMoniker": "Generate Reports.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\Generate Reports.xaml",
-              "RelativeToolTip": "Generate Reports.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:21:21.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Reports.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\Reports.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml",
               "RelativeDocumentMoniker": "Reports.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\Reports.xaml",
+              "ToolTip": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml",
               "RelativeToolTip": "Reports.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:20:59.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Profile.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\Profile.xaml",
-              "RelativeDocumentMoniker": "Profile.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\Profile.xaml",
-              "RelativeToolTip": "Profile.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:20:11.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "View Customer.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\View Customer.xaml",
-              "RelativeDocumentMoniker": "View Customer.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\View Customer.xaml",
-              "RelativeToolTip": "View Customer.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:22:09.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Project\\Other\\Employee\\Employee\\Home.xaml",
-              "RelativeDocumentMoniker": "Home.xaml",
-              "ToolTip": "C:\\Project\\Other\\Employee\\Employee\\Home.xaml",
-              "RelativeToolTip": "Home.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T05:19:42.931Z"
+              "WhenOpened": "2025-04-10T05:20:59.417Z",
+              "EditorCaption": ""
             }
           ]
         }

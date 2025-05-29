@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="EditProfile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Generate Reports.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +24,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View Suppliers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewReport.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
