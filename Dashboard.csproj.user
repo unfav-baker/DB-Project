@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="EmailVerificationApp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FP_5.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -9,6 +12,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="FP_7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Password.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Password_b.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Password_c.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Window2.xaml.cs">

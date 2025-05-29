@@ -120,6 +120,217 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\refin
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.genruntimeconfig.cache
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\ref\Dashboard.dll
+<<<<<<< HEAD
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.deps.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.exe
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.exe
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.pdb
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.pdb
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.AssemblyReference.cache
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window2.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window2.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window5.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window6.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window7.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\App.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window5.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window6.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window7.baml
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.g.resources
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfoInputs.cache
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfo.cs
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.Up2Date
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\refint\Dashboard.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.genruntimeconfig.cache
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\ref\Dashboard.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\SilentWishMAFA\Downloads\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.exe
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.deps.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.runtimeconfig.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.exe
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.deps.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.runtimeconfig.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.exe
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.deps.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.runtimeconfig.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.exe
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Adminn.pdb
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Employee.pdb
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Supplier.pdb
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.AssemblyReference.cache
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window2.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window2.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_b.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window3_c.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window5.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window6.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window7.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.cache
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard_MarkupCompile.lref
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\App.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_5.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_6.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\FP_7.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_b.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window4_c.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window5.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window6.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Window7.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.g.resources
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfoInputs.cache
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.AssemblyInfo.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.sourcelink.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.csproj.Up2Date
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\refint\Dashboard.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.pdb
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Images\LG..jpg
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll.config
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.deps.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.runtimeconfig.json
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.pdb
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Dashboard.genruntimeconfig.cache
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\ref\Dashboard.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password_b.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password_b.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password_c.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\Password_c.baml
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\MVVMEssentials.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\EmailVerificationApp.g.cs
+C:\Users\SilentWishMAFA\Pictures\Document from ~MAFA (1)\Project\Dashboard\obj\Debug\net8.0-windows\EmailVerificationApp.baml
+=======
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
@@ -176,3 +387,43 @@ D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Micro
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Sprache.dll
+>>>>>>> f617a17faea2fd6236a2c2a08c2b52860f34ca82
+>>>>>>> 3aa716558573c6fcc51b80a11ec2f63a1f43f895
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Dashboard.dll.config
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\MVVMEssentials.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\EmailVerificationApp.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password_b.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password_c.g.cs
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\EmailVerificationApp.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password_b.baml
+D:\Downloads\Downloads\WhatsApp\Project\Dashboard\obj\Debug\net8.0-windows\Password_c.baml
