@@ -6,94 +6,73 @@
       xmlns:local="clr-namespace:Adminn"
       mc:Ignorable="d"
       d:DesignHeight="450"
-      d:DesignWidth="800"
-      Title="Customer">
-    <Grid>
+      d:DesignWidth="1000" Title="Customers">
+    <Page.Resources>
+        <Style x:Key="RightAlignedCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#FFF0F2F5">
         <Grid.RowDefinitions>
             <RowDefinition Height="61"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="#FF065668">
-            <TextBlock Text="👥 Customer"
+        <Border Grid.Row="0" Background="#FF065668">
+            <TextBlock Text="👥 Customers"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
-                       Margin="24,0,0,0"
+                       Margin="20,0,0,0"
                        Foreground="White"
                        FontSize="22" FontWeight="Bold"/>
-        </Grid>
+        </Border>
 
         <Grid Grid.Row="1" Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
             <DataGrid x:Name="CustomerDataGrid"
-                      Grid.Row="0"
-                      Margin="0,0,0,10"
-                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding Customers}" 
+                      Margin="0,0,0,0" AutoGenerateColumns="False"
                       CanUserAddRows="False"
                       HeadersVisibility="Column"
-                      IsReadOnly="False" SelectionMode="Single"
-                      BorderBrush="#CCCCCC"
-                      BorderThickness="1"
-                      ItemsSource="{Binding Customers}"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      IsReadOnly="True" SelectionMode="Single" BorderBrush="#CCCCCC" BorderThickness="1"
+                      HorizontalGridLinesBrush="#FFE0E0E0" VerticalGridLinesBrush="#FFE0E0E0"
+                      RowBackground="White" AlternatingRowBackground="#FFF9F9F9"
+                      HorizontalScrollBarVisibility="Auto"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       CanUserResizeColumns="True">
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False"/>
-                    <DataGridTextColumn Header="Date"           Binding="{Binding Date, StringFormat=dd/MM/yyyy}" Width="100" MinWidth="90" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Phyto Number"   Binding="{Binding PhytoNumber}"     Width="1.2*" MinWidth="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Party Name"     Binding="{Binding PartyName}"       Width="2*"   MinWidth="150" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Export Through" Binding="{Binding ExportThrough}"   Width="1.2*" MinWidth="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Plant"          Binding="{Binding Plant}"           Width="1*"   MinWidth="80" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Importer"       Binding="{Binding Importer}"        Width="1.5*" MinWidth="120" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Carton"         Binding="{Binding Carton}"          Width="70" MinWidth="60" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Weight"         Binding="{Binding Weight}"          Width="70" MinWidth="60" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Rate"           Binding="{Binding Rate, StringFormat=C}" Width="80" MinWidth="70" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Amount"         Binding="{Binding Amount, StringFormat=C}" Width="100" MinWidth="90" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Received"       Binding="{Binding Received, StringFormat=C}" Width="100" MinWidth="90" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding CustomerId}" MinWidth="60" Width="Auto" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Name (Party)" Binding="{Binding Name}" MinWidth="150" Width="2*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding PhoneNumber}" MinWidth="110" Width="1.2*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" MinWidth="150" Width="1.5*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding Address}" MinWidth="180" Width="2.5*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Customer Type" Binding="{Binding CustomerType}" MinWidth="100" Width="*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Business Name" Binding="{Binding BusinessName}" MinWidth="130" Width="1.5*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" MinWidth="80" Width="Auto" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Registered On" Binding="{Binding CreatedAt, StringFormat='dd/MM/yyyy'}" MinWidth="100" Width="Auto" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
-
-            <Border Grid.Row="1"
-                    Height="45"
-                    Background="#F5F5F5"
-                    BorderBrush="#DDDDDD"
-                    BorderThickness="0,1,0,0">
-                <Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
-                        <Button Content="Add New Customer"
-                                Background="#FF065668"
-                                BorderBrush="#FF065668"
-                                Width="auto" Padding="10,5"
-                                Foreground="White"
-                                Height="30"
-                                Click="AddCustomer_Click"
-                                Margin="0,0,10,0"/>
-                        <Button Content="👁" ToolTip="View Customer"
-                                Background="#6C757D"
-                                BorderBrush="#6C757D"
-                                Width="35"
-                                Foreground="White"
-                                Height="30"
-                                Margin="0,0,5,0"
-                                FontSize="14"
-                                Click="ViewCustomer_Click"/>
-                        <Button Content="🗑" ToolTip="Delete Customer"
-                                Background="#FFDC3545"
-                                BorderBrush="#FFDC3545"
-                                Width="35"
-                                Foreground="White"
-                                Height="30"
-                                Margin="0,0,0,0"
-                                FontSize="14"
-                                Click="DeleteCustomer_Click"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
         </Grid>
+
+        <Border Grid.Row="2" Background="#F5F5F5" BorderBrush="#DDDDDD" BorderThickness="0,1,0,0" Padding="10">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Content="Add New Customer"
+                            Background="#FF065668" BorderBrush="#FF065668"
+                            Width="auto" Padding="10,7" Foreground="White" Height="30"
+                            Click="AddCustomer_Click" Margin="0,0,10,0" FontWeight="SemiBold"/>
+                    <Button Content="👁" ToolTip="View Selected Customer"
+                            Background="#6C757D" BorderBrush="#6C757D"
+                            Width="35" Foreground="White" Height="30" Margin="0,0,5,0" FontSize="14"
+                            Click="ViewCustomer_Click"/>
+                    <Button Content="🗑" ToolTip="Delete Selected Customer"
+                            Background="#FFDC3545" BorderBrush="#FFDC3545"
+                            Width="35" Foreground="White" Height="30" FontSize="14"
+                            Click="DeleteCustomer_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>

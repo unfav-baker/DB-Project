@@ -1,234 +1,227 @@
 ﻿using System;
-using System.Collections.Generic; // For List<T>
-using System.Globalization;       // For CultureInfo in TryParse if needed
+using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
-using MySql.Data.MySqlClient;   // Ensure you have this NuGet package (MySql.Data)
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace Adminn
 {
     public partial class AddProduct : Page
     {
-        private readonly string connectionString = "Server=127.0.0.1;Port=3306;Database=prime_tech;Uid=root;Pwd=Abubaker85@@;";
+        private readonly string? connectionString;
+        private const string DbConnectionStringEnvVar = "PRIMETECH_DB_CONN_STRING";
+
+        public class SupplierComboBoxItem
+        {
+            public int SupplierId { get; set; }
+            public string DisplayText { get; set; } = string.Empty;
+        }
 
         public AddProduct()
         {
             InitializeComponent();
-            LoadSuppliers();
-            if (cmbStatus.Items.Count > 0) // Ensure ComboBox is populated
+            connectionString = Environment.GetEnvironmentVariable(DbConnectionStringEnvVar);
+
+            if (string.IsNullOrEmpty(connectionString))
             {
-                cmbStatus.SelectedIndex = 0; // Default to "In Stock"
+                MessageBox.Show($"Database connection string not configured. Cannot save product.",
+                                "Configuration Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (this.FindName("btnSave") is Button saveButton) saveButton.IsEnabled = false;
             }
-            // Set focus to the first actionable field if cmbSupplierId is populated
-            // Otherwise, you might focus on another field like txtQuantity after suppliers load.
-            // For now, let cmbSupplierId get focus if it has items.
+            else
+            {
+                LoadSuppliersIntoComboBox();
+            }
+
+            if (cmbStatus.Items.Count > 0) cmbStatus.SelectedIndex = 0;
         }
 
-        private void LoadSuppliers()
+        private void LoadSuppliersIntoComboBox()
         {
-            var suppliers = new List<SupplierItem>();
+            if (string.IsNullOrEmpty(connectionString)) return;
+
+            var suppliers = new List<SupplierComboBoxItem>();
             try
             {
-                using var connection = new MySqlConnection(connectionString);
+                using MySqlConnection connection = new(connectionString);
                 connection.Open();
-
-                // Assuming your supplier table has Supplier_ID and S_Name
-                string query = "SELECT Supplier_ID, S_Name FROM supplier WHERE S_Status = 'Active' ORDER BY S_Name";
-
-                using var command = new MySqlCommand(query, connection);
-                using var reader = command.ExecuteReader();
-
+                // Assuming your supplier table is named 'supplier' and has 'Name' and 'Status' columns
+                string query = "SELECT Supplier_ID, Name FROM supplier WHERE Status = 'Active' ORDER BY Name";
+                using MySqlCommand command = new(query, connection);
+                using MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    suppliers.Add(new SupplierItem
+                    suppliers.Add(new SupplierComboBoxItem
                     {
-                        SupplierId = reader.GetInt32("Supplier_ID"),
-                        // DisplayText used for ComboBox DisplayMemberPath
-                        DisplayText = $"{reader.GetInt32("Supplier_ID")} - {reader.GetString("S_Name")}"
+                        SupplierId = reader.GetInt32(reader.GetOrdinal("Supplier_ID")),
+                        DisplayText = $"{reader.GetInt32(reader.GetOrdinal("Supplier_ID"))} - {(reader.IsDBNull(reader.GetOrdinal("Name")) ? "N/A" : reader.GetString(reader.GetOrdinal("Name")))}"
                     });
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading suppliers: {ex.Message}", "Database Error",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                Debug.WriteLine($"Error loading suppliers for AddProduct: {ex.Message}");
+                MessageBox.Show($"Error loading suppliers: {ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            finally // Ensure ItemsSource is set even if list is empty after an error during population
+            finally
             {
                 cmbSupplierId.ItemsSource = suppliers;
-                if (suppliers.Count > 0)
-                {
-                    cmbSupplierId.SelectedIndex = 0; // Optionally select first supplier
-                }
+                if (suppliers.Count > 0) cmbSupplierId.SelectedIndex = 0;
+                else Debug.WriteLine("No active suppliers found to populate ComboBox.");
             }
         }
 
         private void SaveProduct_Click(object sender, RoutedEventArgs e)
         {
-            // Validate input fields
-            if (cmbSupplierId.SelectedItem == null)
+            if (string.IsNullOrEmpty(connectionString))
             {
-                ShowValidationError("Please select a supplier.", cmbSupplierId);
+                MessageBox.Show("Database connection not configured.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (cmbCategory.SelectedItem == null)
-            {
-                ShowValidationError("Please select a category.", cmbCategory);
-                return;
-            }
+
+            if (cmbSupplierId.SelectedItem == null) { ShowValidationError("Please select a Supplier.", cmbSupplierId); return; }
+            if (cmbCategory.SelectedItem == null) { ShowValidationError("Please select a Category.", cmbCategory); return; }
             if (string.IsNullOrWhiteSpace(txtQuantity.Text) || !int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
+            { ShowValidationError("Please enter a valid non-negative Quantity.", txtQuantity); return; }
+            if (string.IsNullOrWhiteSpace(txtPrice.Text) || !decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
+            { ShowValidationError("Please enter a valid non-negative Price.", txtPrice); return; }
+
+            decimal? weight = null;
+            if (this.FindName("txtWeight") is TextBox weightTextBox && !string.IsNullOrWhiteSpace(weightTextBox.Text))
             {
-                ShowValidationError("Please enter a valid quantity (non-negative integer).", txtQuantity);
-                return;
+                if (decimal.TryParse(weightTextBox.Text, out decimal w)) weight = w;
+                else { ShowValidationError("Please enter a valid Weight or leave empty.", weightTextBox); return; }
             }
-            if (string.IsNullOrWhiteSpace(txtPrice.Text) || !decimal.TryParse(txtPrice.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal price) || price < 0)
-            {
-                // Try parsing without currency symbol if first attempt fails (more robust)
-                if (!decimal.TryParse(txtPrice.Text, out price) || price < 0)
-                {
-                    ShowValidationError("Please enter a valid price (non-negative number).", txtPrice);
-                    return;
-                }
-            }
-            if (string.IsNullOrWhiteSpace(txtBatchNo.Text)) // Assuming Batch No is required
-            {
-                ShowValidationError("Please enter the Batch Number.", txtBatchNo);
-                return;
-            }
-            if (cmbStatus.SelectedItem == null)
-            {
-                ShowValidationError("Please select a status.", cmbStatus);
-                return;
-            }
+            if (cmbStatus.SelectedItem == null) { ShowValidationError("Please select a Status.", cmbStatus); return; }
 
             try
             {
-                int newProductId = SaveProductToDatabase(quantity, price); // Pass parsed values
+                using MySqlConnection connection = new(connectionString);
+                connection.Open();
+
+                // CORRECTED: Table name changed to 'Product' (singular)
+                // Also included Updated_At based on your Product table schema.
+                string query = @"INSERT INTO Product 
+                                 (FK_Supplier_ID, Category, Description, Quantity, Price, Batch_No, Weight, Status, Created_At, Updated_At) 
+                               VALUES 
+                                 (@SupplierId, @Category, @Description, @Quantity, @Price, @BatchNo, @Weight, @Status, @CreatedAt, @UpdatedAt);
+                               SELECT LAST_INSERT_ID();";
+
+                using MySqlCommand command = new(query, connection);
+
+                command.Parameters.AddWithValue("@SupplierId", ((SupplierComboBoxItem)cmbSupplierId.SelectedItem).SupplierId);
+                command.Parameters.AddWithValue("@Category", ((ComboBoxItem)cmbCategory.SelectedItem).Content.ToString());
+                command.Parameters.AddWithValue("@Description", string.IsNullOrWhiteSpace(txtDescription?.Text) ? DBNull.Value : (object)txtDescription.Text.Trim());
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.Parameters.AddWithValue("@Price", price);
+                command.Parameters.AddWithValue("@BatchNo", string.IsNullOrWhiteSpace(txtBatchNo.Text) ? DBNull.Value : (object)txtBatchNo.Text.Trim());
+                command.Parameters.AddWithValue("@Weight", weight as object ?? DBNull.Value);
+                command.Parameters.AddWithValue("@Status", ((ComboBoxItem)cmbStatus.SelectedItem).Content.ToString());
+                command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+                command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now); // Added Updated_At
+
+                object? result = command.ExecuteScalar();
+                int newProductId = 0;
+                if (result is not (null or DBNull))
+                {
+                    newProductId = Convert.ToInt32(result);
+                }
 
                 if (newProductId > 0)
                 {
-                    MessageBox.Show($"Product added successfully! Product ID: {newProductId}", "Success",
+                    MessageBox.Show($"Product '{((ComboBoxItem)cmbCategory.SelectedItem).Content}' added successfully! Product ID: {newProductId}", "Success",
                                     MessageBoxButton.OK, MessageBoxImage.Information);
                     ClearForm();
-                    NavigateToProductsPage(); // Navigate back after successful save
+                    NavigateToProductsPage();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to add product or retrieve new ID. Please try again.", "Error",
-                                    MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Failed to add product or retrieve ID.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+            catch (MySqlException myEx)
+            {
+                Debug.WriteLine($"MySQL Error saving product: {myEx.ToString()}");
+                MessageBox.Show($"Database Error (MySQL): {myEx.Message} (Code: {myEx.Number})", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving product: {ex.Message}", "Database Error",
-                                MessageBoxButton.OK, MessageBoxImage.Error);
+                Debug.WriteLine($"Generic error saving product: {ex.ToString()}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Application Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private int SaveProductToDatabase(int quantity, decimal price) // Accept parsed values
-        {
-            using var connection = new MySqlConnection(connectionString);
-            connection.Open();
-
-            // Assuming your products table has an auto-increment primary key (e.g., Product_ID)
-            // and the column names match.
-            string query = @"INSERT INTO products (Supplier_ID, Category, Quantity, Price, Batch_No, Status, Created_At) 
-                             VALUES (@SupplierId, @Category, @Quantity, @Price, @BatchNo, @Status, @CreatedAt);
-                             SELECT LAST_INSERT_ID();";
-
-            using var command = new MySqlCommand(query, connection);
-
-            var selectedSupplier = (SupplierItem)cmbSupplierId.SelectedItem;
-            command.Parameters.AddWithValue("@SupplierId", selectedSupplier.SupplierId);
-            command.Parameters.AddWithValue("@Category", ((ComboBoxItem)cmbCategory.SelectedItem).Content.ToString());
-            command.Parameters.AddWithValue("@Quantity", quantity); // Use parsed int
-            command.Parameters.AddWithValue("@Price", price);       // Use parsed decimal
-            command.Parameters.AddWithValue("@BatchNo", txtBatchNo.Text.Trim());
-            command.Parameters.AddWithValue("@Status", ((ComboBoxItem)cmbStatus.SelectedItem).Content.ToString());
-            command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
-            // Note: Your original INSERT query for Products did not include Updated_At, which is fine for new records.
-
-            var result = command.ExecuteScalar();
-            if (result != null && result != DBNull.Value)
-            {
-                return Convert.ToInt32(result);
-            }
-            return 0; // Indicate failure
-        }
-
-        // MODIFIED: Cancel_Click now only clears the form
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            var result = MessageBox.Show("Are you sure you want to clear the form? All entered data will be lost.",
-                                         "Confirm Clear", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result == MessageBoxResult.Yes)
-            {
-                ClearForm();
-            }
-        }
-
-        // NEW: Click handler for the Close button in the header
-        private void ClosePage_Click(object sender, RoutedEventArgs e)
-        {
-            NavigateToProductsPage();
         }
 
         private void ClearForm()
         {
-            cmbSupplierId.SelectedIndex = (cmbSupplierId.Items.Count > 0) ? 0 : -1; // Default to first or no selection
-            cmbCategory.SelectedIndex = -1;   // No selection
+            if (cmbSupplierId.Items.Count > 0) cmbSupplierId.SelectedIndex = 0; else cmbSupplierId.SelectedIndex = -1;
+            if (cmbCategory.Items.Count > 0) cmbCategory.SelectedIndex = -1;
             txtQuantity.Clear();
             txtPrice.Clear();
             txtBatchNo.Clear();
-            if (cmbStatus.Items.Count > 0)
-            {
-                cmbStatus.SelectedIndex = 0; // Default to "In Stock" (first item)
-            }
-            cmbSupplierId.Focus(); // Set focus to the first input field
+            if (this.FindName("txtDescription") is TextBox descBox) descBox.Clear();
+            if (this.FindName("txtWeight") is TextBox weightBox) weightBox.Clear();
+            if (cmbStatus.Items.Count > 0) cmbStatus.SelectedIndex = 0;
+            if (cmbSupplierId.Items.Count > 0) cmbSupplierId.Focus(); else txtQuantity.Focus();
         }
 
-        // Renamed for clarity and consistency
         private void NavigateToProductsPage()
         {
             try
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow && mainWindow.MainContentFrame != null)
                 {
-                    // Navigate to a new instance of the Products page to ensure fresh data
-                    Products productsPage = new Products(); // Assuming your list page is named Products.xaml
+                    Products productsPage = new();
                     mainWindow.MainContentFrame.Navigate(productsPage);
                 }
-                else if (this.NavigationService != null && this.NavigationService.CanGoBack)
-                {
-                    this.NavigationService.GoBack(); // Fallback if appropriate
-                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error navigating to Products page: {ex.Message}", "Navigation Error",
-                                MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            catch (Exception ex) { MessageBox.Show($"Navigation Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to clear the form? All entered data will be lost.",
+                                         "Confirm Clear", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes) ClearForm();
+        }
+
+        private void ClosePage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToProductsPage();
         }
 
         private static void ShowValidationError(string message, Control controlToFocus)
         {
             MessageBox.Show(message, "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-            if (controlToFocus != null)
-            {
-                controlToFocus.Focus();
-            }
+            if (controlToFocus is not null) controlToFocus.Focus();
         }
 
-        // Optional: Add TextChanged event handlers for real-time validation for numeric fields if desired
-        // private void TxtQuantity_TextChanged(object sender, TextChangedEventArgs e) { /* Allow only numbers */ }
-        // private void TxtPrice_TextChanged(object sender, TextChangedEventArgs e) { /* Allow only numbers and one decimal */ }
-    }
+        private void NumericOnly_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
 
-    // This class was part of your provided code for populating cmbSupplierId.
-    // Ideally, it would be in its own file or a Models folder if used elsewhere.
-    public class SupplierItem
-    {
-        public int SupplierId { get; set; }
-        public string? DisplayText { get; set; } // Made DisplayText nullable for safety
+        private void DecimalOnly_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                string currentText = textBox.Text;
+                int caretIndex = textBox.CaretIndex;
+                string newText = currentText.Insert(caretIndex, e.Text);
+
+                if (!Regex.IsMatch(newText, @"^[0-9]*(\.[0-9]{0,2})?$") && newText != "." && !string.IsNullOrEmpty(newText))
+                {
+                    e.Handled = true;
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

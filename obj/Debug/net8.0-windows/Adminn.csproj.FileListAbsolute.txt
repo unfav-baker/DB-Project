@@ -115,6 +115,7 @@ C:\Project\Other\Adminn\obj\Debug\net8.0-windows\refint\Adminn.dll
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.pdb
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\Adminn.genruntimeconfig.cache
 C:\Project\Other\Adminn\obj\Debug\net8.0-windows\ref\Adminn.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\.env
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
@@ -140,6 +141,7 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Ad
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Adminn.pdb
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\DotNetEnv.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Google.Protobuf.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
@@ -182,8 +184,12 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Ma
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.VaadinIcons.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.WeatherIcons.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.Zondicons.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\MySql.Data.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\QuestPDF.dll
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\Sprache.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\bin\Debug\net8.0-windows\System.Text.Json.dll

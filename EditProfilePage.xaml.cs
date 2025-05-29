@@ -1,110 +1,112 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
+using System.Windows.Navigation; // For NavigationService
+using System.Diagnostics;    // For Debug.WriteLine
+using System.Threading.Tasks; // For async Task
 
-namespace Adminn // Your project's namespace
+namespace Adminn
 {
     public partial class EditProfilePage : Page
     {
-        private ProfileData? _profileToEdit;
-        public event EventHandler<ProfileData?>? ProfileUpdated;
+        public ProfileData ProfileToEdit { get; private set; } // Data context for bindings
 
-        public EditProfilePage(ProfileData? profileData)
+        // Store a copy of the original data to revert on cancel, or to compare if only changed fields should be saved
+        private ProfileData originalProfileDataCopy;
+
+        public EditProfilePage(ProfileData profileDataInstance)
         {
             InitializeComponent();
-            _profileToEdit = profileData;
-            LoadDataIntoForm();
+
+            // Create a deep copy for editing, so original instance isn't modified until save
+            originalProfileDataCopy = new ProfileData
+            {
+                AdminId = profileDataInstance.AdminId,
+                FullName = profileDataInstance.FullName,
+                DisplayName = profileDataInstance.DisplayName,
+                DateOfBirth = profileDataInstance.DateOfBirth,
+                Gender = profileDataInstance.Gender,
+                Nationality = profileDataInstance.Nationality,
+                Address = profileDataInstance.Address,
+                PhoneNumber = profileDataInstance.PhoneNumber,
+                Email = profileDataInstance.Email,
+                LanguagePreference = profileDataInstance.LanguagePreference,
+                TimeZone = profileDataInstance.TimeZone,
+                // Read-only fields that shouldn't be edited here but might be needed for context
+                AccountCreated = profileDataInstance.AccountCreated,
+                AccountVerification = profileDataInstance.AccountVerification, // Status
+                Role = profileDataInstance.Role,
+                Username = profileDataInstance.Username,
+                StatusFromDB = profileDataInstance.StatusFromDB
+            };
+
+            ProfileToEdit = originalProfileDataCopy; // Bind to the copy
+            this.DataContext = ProfileToEdit;
+            LoadDataIntoForm(); // Not strictly needed if direct binding works, but good for ComboBoxes etc.
         }
 
         private void LoadDataIntoForm()
         {
-            if (_profileToEdit == null)
-            {
-                MessageBox.Show("No profile data to edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                if (this.NavigationService != null && this.NavigationService.CanGoBack)
-                {
-                    this.NavigationService.GoBack();
-                }
-                return;
-            }
+            // TextBoxes will be populated by DataBinding.
+            // This method is useful if you need to set ComboBox selected items programmatically
+            // based on the string value from ProfileToEdit, if ComboBoxes are not directly bound
+            // to a list of strings or if items are more complex.
 
-            FullNameEditTextBox.Text = _profileToEdit.FullName;
-            DisplayNameEditTextBox.Text = _profileToEdit.DisplayName;
-            DobEditDatePicker.SelectedDate = _profileToEdit.DateOfBirth;
-
-            // MODIFIED: Load Gender into ComboBox
-            GenderEditComboBox.Items.Refresh(); // Ensure items are available if dynamically added (not the case here but good practice)
-            if (!string.IsNullOrEmpty(_profileToEdit.Gender))
+            // Example for Gender ComboBox:
+            if (GenderEditComboBox != null && !string.IsNullOrEmpty(ProfileToEdit.Gender))
             {
-                bool genderSet = false;
                 foreach (ComboBoxItem item in GenderEditComboBox.Items)
                 {
-                    if (item.Content.ToString() == _profileToEdit.Gender)
+                    if (item.Content?.ToString() == ProfileToEdit.Gender)
                     {
                         GenderEditComboBox.SelectedItem = item;
-                        genderSet = true;
                         break;
                     }
                 }
-                if (!genderSet) // If the saved gender isn't one of the predefined items
+            }
+        }
+
+        private async void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Update ProfileToEdit properties from controls IF NOT using TwoWay binding
+            // With TwoWay binding (default for TextBox), ProfileToEdit is already updated.
+            // For ComboBoxes, ensure SelectedValue is bound to ProfileToEdit property.
+            // For DatePicker, SelectedDate is bound.
+
+            // Example: If ComboBox SelectedItem is used instead of SelectedValue binding:
+            if (GenderEditComboBox.SelectedItem is ComboBoxItem selectedGenderItem)
+            {
+                ProfileToEdit.Gender = selectedGenderItem.Content?.ToString() ?? string.Empty;
+            }
+
+            Debug.WriteLine($"[{DateTime.Now:HH:mm:ss.fff}] EditProfilePage: Attempting to save profile for Admin_ID: {ProfileToEdit.AdminId}");
+            bool success = await ProfileToEdit.SaveProfileAsync();
+
+            if (success)
+            {
+                MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                // The original instance passed to Profile.xaml needs to be updated IF EditProfilePage modified a copy.
+                // If EditProfilePage modified the original instance directly, then Profile.xaml will see changes.
+                // Since we are passing the shared instance _sharedUserProfileInstance directly to EditProfilePage,
+                // any changes made to _profileToEdit (which is _sharedUserProfileInstance) will reflect back.
+                // The ProfileUpdated event is an alternative way to signal changes.
+                // ProfileUpdated?.Invoke(this, _profileToEdit); // This was in your original code, can be used.
+
+                if (this.NavigationService is { CanGoBack: true })
                 {
-                    GenderEditComboBox.SelectedIndex = -1; // Or select a default, e.g., "Other"
+                    this.NavigationService.GoBack(); // This will trigger Navigated event in Profile.xaml.cs
                 }
             }
             else
             {
-                GenderEditComboBox.SelectedIndex = -1; // No selection
-            }
-
-            NationalityEditTextBox.Text = _profileToEdit.Nationality;
-            AddressEditTextBox.Text = _profileToEdit.Address;
-            PhoneNumberEditTextBox.Text = _profileToEdit.PhoneNumber;
-            EmailEditTextBox.Text = _profileToEdit.Email;
-            LanguagePreferenceEditTextBox.Text = _profileToEdit.LanguagePreference;
-            TimeZoneEditTextBox.Text = _profileToEdit.TimeZone;
-        }
-
-        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (_profileToEdit == null)
-            {
-                MessageBox.Show("Cannot save, profile data is missing.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            _profileToEdit.FullName = FullNameEditTextBox.Text;
-            _profileToEdit.DisplayName = DisplayNameEditTextBox.Text;
-            _profileToEdit.DateOfBirth = DobEditDatePicker.SelectedDate;
-
-            // MODIFIED: Save Gender from ComboBox
-            if (GenderEditComboBox.SelectedItem != null)
-            {
-                _profileToEdit.Gender = (GenderEditComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? string.Empty;
-            }
-            else
-            {
-                _profileToEdit.Gender = string.Empty; // Or a default value if preferred
-            }
-
-            _profileToEdit.Nationality = NationalityEditTextBox.Text;
-            _profileToEdit.Address = AddressEditTextBox.Text;
-            _profileToEdit.PhoneNumber = PhoneNumberEditTextBox.Text;
-            _profileToEdit.Email = EmailEditTextBox.Text;
-            _profileToEdit.LanguagePreference = LanguagePreferenceEditTextBox.Text;
-            _profileToEdit.TimeZone = TimeZoneEditTextBox.Text;
-
-            ProfileUpdated?.Invoke(this, _profileToEdit);
-
-            if (this.NavigationService != null && this.NavigationService.CanGoBack)
-            {
-                this.NavigationService.GoBack();
+                MessageBox.Show("Failed to update profile. Please check details or try again.", "Update Failed", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.NavigationService != null && this.NavigationService.CanGoBack)
+            Debug.WriteLine($"[{DateTime.Now:HH:mm:ss.fff}] EditProfilePage: Cancel clicked.");
+            if (this.NavigationService is { CanGoBack: true })
             {
                 this.NavigationService.GoBack();
             }

@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace Adminn
 {
@@ -13,30 +14,39 @@ namespace Adminn
     {
         public ObservableCollection<EmployeeData> Employees { get; set; }
 
-        // Replace this with your actual MySQL connection string
-        private readonly string connectionString = "Server=127.0.0.1;Port=3306;Database=prime_tech;Uid=root;Pwd=Abubaker85@@;";
-        // Alternative format: "Server=localhost;Port=3306;Database=prime_tech;Uid=root;Pwd=YOUR_PASSWORD;";
+        private const string DbConnectionStringEnvVar = "PRIMETECH_DB_CONN_STRING";
+        private readonly string? connectionString;
 
         public Employee()
         {
             InitializeComponent();
-            Employees = [];
+            Employees = new();
 
-            // Load employee data from database
+            connectionString = Environment.GetEnvironmentVariable(DbConnectionStringEnvVar);
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                MessageBox.Show($"Database connection string from environment variable '{DbConnectionStringEnvVar}' was not found or is empty. " +
+                                $"Please ensure your .env file is correctly set up and loaded at application startup (App.xaml.cs).\n\n" +
+                                "Employee data cannot be loaded.",
+                                "Configuration Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             LoadEmployeeDataFromDatabase();
-
-            // Set the DataContext for binding
             DataContext = this;
         }
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            // Navigate to AddEmployee page within the parent frame
-            AddEmployee addEmployeePage = new AddEmployee();
-            // Find the main window's frame and navigate
-            if (Application.Current.MainWindow is MainWindow mainWindow)
+            AddEmployee addEmployeePage = new();
+            if (Application.Current.MainWindow is MainWindow mainWindow && mainWindow.MainContentFrame != null)
             {
                 mainWindow.MainContentFrame.Navigate(addEmployeePage);
+            }
+            else
+            {
+                MessageBox.Show("Cannot navigate to Add Employee page. Main frame not found.", "Navigation Error");
             }
         }
 
@@ -44,8 +54,19 @@ namespace Adminn
         {
             if (EmployeeDataGrid.SelectedItem is EmployeeData selectedEmployee)
             {
-                MessageBox.Show($"Employee Details:\n\n1:   ID: {selectedEmployee.EmployeeId}\n\n2:   Name: {selectedEmployee.Name}\n\n3:   Role: {selectedEmployee.Role}\n\n4:   Phone: {selectedEmployee.PhoneNumber}\n\n5:   Salary: {selectedEmployee.Salary:C}\n\n6:   Status: {selectedEmployee.Status}",
-                    "Employee Details", MessageBoxButton.OK, MessageBoxImage.Information);
+                string details = $"""
+                                  Employee Details:
+
+                                  1:    ID: {selectedEmployee.EmployeeId}
+                                  2:    Name: {selectedEmployee.Name}
+                                  3:    Role: {selectedEmployee.Role}
+                                  4:    Phone: {selectedEmployee.PhoneNumber}
+                                  5:    Salary: {selectedEmployee.Salary:C} 
+                                  6:    Status: {selectedEmployee.Status}
+                                  7:    Created At: {selectedEmployee.CreatedAt:dd/MM/yyyy HH:mm}
+                                  8:    Updated At: {selectedEmployee.UpdatedAt:dd/MM/yyyy HH:mm}
+                                  """;
+                MessageBox.Show(details, "Employee Details", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -57,8 +78,8 @@ namespace Adminn
         {
             if (EmployeeDataGrid.SelectedItem is EmployeeData selectedEmployee)
             {
-                // Here you can navigate to an edit page or open an edit dialog
-                MessageBox.Show($"Edit functionality for Employee ID: {selectedEmployee.EmployeeId}", "Edit Employee", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Edit functionality for Employee ID: {selectedEmployee.EmployeeId} needs to be implemented (e.g., navigate to an Edit page).",
+                                "Edit Employee", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -70,8 +91,8 @@ namespace Adminn
         {
             if (EmployeeDataGrid.SelectedItem is EmployeeData selectedEmployee)
             {
-                var result = MessageBox.Show($"Are you sure you want to delete employee '{selectedEmployee.Name}'?",
-                    "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var result = MessageBox.Show($"Are you sure you want to delete employee '{selectedEmployee.Name}' (ID: {selectedEmployee.EmployeeId})?",
+                                             "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
                 if (result == MessageBoxResult.Yes)
                 {
@@ -86,76 +107,111 @@ namespace Adminn
 
         private void LoadEmployeeDataFromDatabase()
         {
+            if (string.IsNullOrEmpty(this.connectionString))
+            {
+                System.Diagnostics.Debug.WriteLine("LoadEmployeeDataFromDatabase: Connection string is missing.");
+                return;
+            }
+
+            Employees.Clear();
             try
             {
-                using var connection = new MySqlConnection(connectionString);
+                using MySqlConnection connection = new(this.connectionString);
                 connection.Open();
 
-                string query = @"SELECT AdminId, Name, Role, PhoneNumber, Salary, Status, CreatedAt, UpdatedAt 
-                               FROM employees ORDER BY AdminId";
+                // CORRECTED: Changed table name from 'employees' to 'employee'
+                // Also, assuming your DB table uses Employee_ID as the primary key for consistency with earlier table designs
+                // If your 'employee' table uses 'AdminId' as the primary key, change 'Employee_ID' back to 'AdminId' in the query.
+                string query = @"SELECT Employee_ID, Name, Role, Phone_Number, Salary, Status, Created_At, Updated_At  
+                                 FROM employee ORDER BY Employee_ID"; // Using singular 'employee'
 
-                using var command = new MySqlCommand(query, connection);
-                using var reader = command.ExecuteReader();
+                using MySqlCommand command = new(query, connection);
+                using MySqlDataReader reader = command.ExecuteReader();
 
-                Employees.Clear();
+                // Get ordinals for safety
+                int empIdOrdinal = reader.GetOrdinal("Employee_ID"); // Or "AdminId" if that's your PK in 'employee' table
+                int nameOrdinal = reader.GetOrdinal("Name");
+                int roleOrdinal = reader.GetOrdinal("Role");
+                int phoneOrdinal = reader.GetOrdinal("Phone_Number");
+                int salaryOrdinal = reader.GetOrdinal("Salary");
+                int statusOrdinal = reader.GetOrdinal("Status");
+                int createdAtOrdinal = reader.GetOrdinal("Created_At");
+                int updatedAtOrdinal = reader.GetOrdinal("Updated_At");
 
                 while (reader.Read())
                 {
                     var employee = new EmployeeData
                     {
-                        EmployeeId = reader.GetInt32("AdminId"), // Using AdminId as EmployeeId
-                        Name = reader.IsDBNull("Name") ? string.Empty : reader.GetString("Name"),
-                        Role = reader.IsDBNull("Role") ? string.Empty : reader.GetString("Role"),
-                        PhoneNumber = reader.IsDBNull("PhoneNumber") ? string.Empty : reader.GetString("PhoneNumber"),
-                        Salary = reader.IsDBNull("Salary") ? 0 : reader.GetDecimal("Salary"),
-                        AdminId = reader.IsDBNull("AdminId") ? 0 : reader.GetInt32("AdminId"),
-                        Status = reader.IsDBNull("Status") ? string.Empty : reader.GetString("Status"),
-                        CreatedAt = reader.IsDBNull("CreatedAt") ? DateTime.Now : reader.GetDateTime("CreatedAt"),
-                        UpdatedAt = reader.IsDBNull("UpdatedAt") ? DateTime.Now : reader.GetDateTime("UpdatedAt")
+                        EmployeeId = reader.GetInt32(empIdOrdinal),
+                        Name = reader.IsDBNull(nameOrdinal) ? string.Empty : reader.GetString(nameOrdinal),
+                        Role = reader.IsDBNull(roleOrdinal) ? string.Empty : reader.GetString(roleOrdinal),
+                        PhoneNumber = reader.IsDBNull(phoneOrdinal) ? string.Empty : reader.GetString(phoneOrdinal),
+                        Salary = reader.IsDBNull(salaryOrdinal) ? 0m : reader.GetDecimal(salaryOrdinal),
+                        Status = reader.IsDBNull(statusOrdinal) ? string.Empty : reader.GetString(statusOrdinal),
+                        CreatedAt = reader.IsDBNull(createdAtOrdinal) ? DateTime.MinValue : reader.GetDateTime(createdAtOrdinal),
+                        UpdatedAt = reader.IsDBNull(updatedAtOrdinal) ? DateTime.MinValue : reader.GetDateTime(updatedAtOrdinal),
+                        // Clarify what EmployeeData.AdminId should be. If it's the same as EmployeeId:
+                        AdminId = reader.GetInt32(empIdOrdinal)
                     };
-
                     Employees.Add(employee);
                 }
             }
+            catch (MySqlException myEx)
+            {
+                Debug.WriteLine($"MySQL Error loading employee data: {myEx.ToString()}");
+                MessageBox.Show($"Database Error (MySQL): {myEx.Message} (Code: {myEx.Number})", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading employee data: {ex.Message}", "Database Error",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                Debug.WriteLine($"Generic error loading employee data: {ex.ToString()}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Application Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void DeleteEmployeeFromDatabase(int employeeId)
+        private void DeleteEmployeeFromDatabase(int employeeIdToDelete)
         {
+            if (string.IsNullOrEmpty(this.connectionString))
+            {
+                MessageBox.Show("Database connection string is not configured. Cannot delete employee.",
+                                "Configuration Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
-                using var connection = new MySqlConnection(connectionString);
+                using MySqlConnection connection = new(this.connectionString);
                 connection.Open();
 
-                string query = "DELETE FROM employees WHERE AdminId = @AdminId";
+                // CORRECTED: Changed table name from 'employees' to 'employee'
+                // Also, ensure 'Employee_ID' is the correct primary key column name in your 'employee' table
+                string query = "DELETE FROM employee WHERE Employee_ID = @EmployeeId";
 
-                using var command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@AdminId", employeeId);
+                using MySqlCommand command = new(query, connection);
+                command.Parameters.AddWithValue("@EmployeeId", employeeIdToDelete);
 
                 int rowsAffected = command.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Employee deleted successfully!", "Success",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Refresh the data
+                    MessageBox.Show($"Employee with ID {employeeIdToDelete} deleted successfully!", "Success",
+                                    MessageBoxButton.OK, MessageBoxImage.Information);
                     LoadEmployeeDataFromDatabase();
                 }
                 else
                 {
-                    MessageBox.Show("Employee not found or could not be deleted.", "Error",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Employee with ID {employeeIdToDelete} not found or could not be deleted.", "Deletion Error",
+                                    MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+            catch (MySqlException myEx)
+            {
+                Debug.WriteLine($"MySQL Error deleting employee: {myEx.ToString()}");
+                MessageBox.Show($"Database Error (MySQL) deleting employee: {myEx.Message} (Code: {myEx.Number})", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error deleting employee: {ex.Message}", "Database Error",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                Debug.WriteLine($"Generic error deleting employee: {ex.ToString()}");
+                MessageBox.Show($"Error deleting employee: {ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -181,105 +237,55 @@ namespace Adminn
         public bool IsSelected
         {
             get => _isSelected;
-            set
-            {
-                _isSelected = value;
-                OnPropertyChanged();
-            }
+            set { if (_isSelected != value) { _isSelected = value; OnPropertyChanged(); } }
         }
-
         public int EmployeeId
         {
             get => _employeeId;
-            set
-            {
-                _employeeId = value;
-                OnPropertyChanged();
-            }
+            set { if (_employeeId != value) { _employeeId = value; OnPropertyChanged(); } }
         }
-
         public string Name
         {
             get => _name;
-            set
-            {
-                _name = value ?? string.Empty;
-                OnPropertyChanged();
-            }
+            set { if (_name != value) { _name = value ?? string.Empty; OnPropertyChanged(); } }
         }
-
         public string Role
         {
             get => _role;
-            set
-            {
-                _role = value ?? string.Empty;
-                OnPropertyChanged();
-            }
+            set { if (_role != value) { _role = value ?? string.Empty; OnPropertyChanged(); } }
         }
-
         public string PhoneNumber
         {
             get => _phoneNumber;
-            set
-            {
-                _phoneNumber = value ?? string.Empty;
-                OnPropertyChanged();
-            }
+            set { if (_phoneNumber != value) { _phoneNumber = value ?? string.Empty; OnPropertyChanged(); } }
         }
-
         public decimal Salary
         {
             get => _salary;
-            set
-            {
-                _salary = value;
-                OnPropertyChanged();
-            }
+            set { if (_salary != value) { _salary = value; OnPropertyChanged(); } }
         }
-
         public int AdminId
         {
             get => _adminId;
-            set
-            {
-                _adminId = value;
-                OnPropertyChanged();
-            }
+            set { if (_adminId != value) { _adminId = value; OnPropertyChanged(); } }
         }
-
         public string Status
         {
             get => _status;
-            set
-            {
-                _status = value ?? string.Empty;
-                OnPropertyChanged();
-            }
+            set { if (_status != value) { _status = value ?? string.Empty; OnPropertyChanged(); } }
         }
-
         public DateTime CreatedAt
         {
             get => _createdAt;
-            set
-            {
-                _createdAt = value;
-                OnPropertyChanged();
-            }
+            set { if (_createdAt != value) { _createdAt = value; OnPropertyChanged(); } }
         }
-
         public DateTime UpdatedAt
         {
             get => _updatedAt;
-            set
-            {
-                _updatedAt = value;
-                OnPropertyChanged();
-            }
+            set { if (_updatedAt != value) { _updatedAt = value; OnPropertyChanged(); } }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

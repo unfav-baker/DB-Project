@@ -54,7 +54,7 @@ namespace Adminn {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Adminn;V1.0.0.0;component/lga.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Adminn;component/lga.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\LGA.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

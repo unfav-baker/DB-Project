@@ -23,9 +23,6 @@
     <Compile Update="Employee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Export Orders.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
