@@ -52,7 +52,7 @@ namespace Dashboard {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Dashboard;component/window3_b.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Dashboard;V1.0.0.0;component/window3_b.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Window3_b.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

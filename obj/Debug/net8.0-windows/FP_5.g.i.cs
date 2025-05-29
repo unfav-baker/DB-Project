@@ -94,7 +94,7 @@ namespace Dashboard {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Dashboard;component/fp_5.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Dashboard;V1.0.0.0;component/fp_5.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FP_5.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

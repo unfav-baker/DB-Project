@@ -61,6 +61,7 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+<<<<<<< HEAD
             "MVVMEssentials.WPF": {
               "target": "Package",
               "version": "[1.0.3, )"
@@ -68,6 +69,11 @@
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[10.0.0-preview.4.25258.110, )"
+=======
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+>>>>>>> f617a17faea2fd6236a2c2a08c2b52860f34ca82
             },
             "MySql.Data": {
               "target": "Package",
@@ -143,6 +149,20 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -212,6 +232,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -281,6 +311,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
