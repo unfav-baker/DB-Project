@@ -38,7 +38,7 @@
                     CornerRadius="18"
                     FontFamily="Segoe UI Symbol"
                     FontSize="16"
-                    PlaceHolder="Name" 
+                    PlaceHolder="Username" 
                     BorderBrush="Black" 
                     Foreground="Black" 
                     Grid.Row="1" 
@@ -55,7 +55,7 @@
                     BorderThickness="0"
                     Cursor="Hand"
                     VerticalAlignment="Top"
-                    Margin="80,340,26,0" 
+                    Margin="80,316,26,0" 
                     RenderTransformOrigin="0.656,-1.011" 
                     Grid.RowSpan="2" 
                     Grid.Column="2"
@@ -112,7 +112,11 @@
                     Foreground="Black" 
                     Grid.Row="1" 
                     Grid.ColumnSpan="2" 
-                    Grid.Column="2" HorizontalAlignment="Left" Width="246" />
+                    Grid.Column="2" HorizontalAlignment="Left" Width="246" 
+                    
+                    
+                    />
+
 
                 <CC:Dashboard
                     x:Name="ConfirmPasswordTextBox"
@@ -124,23 +128,6 @@
  FontFamily="Segoe UI Symbol"
                     FontSize="16"
                     PlaceHolder="Confirm Password" 
-                    BorderBrush="Black" 
-                    Foreground="Black" 
-                    Grid.Row="1" 
-                    Grid.ColumnSpan="2" 
-                    Grid.Column="2" HorizontalAlignment="Left" Width="246" />
-
-                <CC:Dashboard
-                    x:Name="CodeTextBox"
-                    FontSize="16"
-                    Margin="16,298,0,98"
-                    BorderThickness="1"
-                   CaretBrush="Black"
-                    
-                    VerticalContentAlignment="Center"
- CornerRadius="18"
- FontFamily="Segoe UI Symbol"
-                    PlaceHolder="Enter the code you get on Email " 
                     BorderBrush="Black" 
                     Foreground="Black" 
                     Grid.Row="1" 
@@ -190,17 +177,17 @@
 
                 <TextBlock 
                     HorizontalAlignment="Left" 
-                    Margin="41,375,0,0" 
+                    Margin="23,366,0,0" 
                     TextWrapping="Wrap" 
                     Text="Already have an account?" 
                     VerticalAlignment="Top" 
                     Width="180" 
                     FontSize="14"
                     Grid.Column="2" 
-                    Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                    Grid.RowSpan="2"/>
 
                 <TextBlock 
-    Margin="203,375,298,34" 
+    Margin="193,366,308,43" 
     TextWrapping="Wrap" 
     FontSize="14" 
     FontWeight="Bold" 

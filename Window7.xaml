@@ -35,6 +35,7 @@
 
 
                 <CC:Dashboard
+                   x:Name="EmailInput"
     Margin="16,132,0,264"
    BorderThickness="1"
       CaretBrush="Black"
@@ -79,6 +80,7 @@
                 </Button>
 
                 <CC:Dashboard
+                   x:Name="PasswordInput"
                     Margin="16,182,0,214"
                     BorderThickness="1"
                     CaretBrush="Black"
@@ -87,17 +89,6 @@
                     FontFamily="Segoe UI Symbol"
                     FontSize="16"
                     PlaceHolder="Password" BorderBrush="Black" Foreground="Black" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Width="246" />
-
-
-                <CC:Dashboard
-                    Margin="16,227,0,169"
-                    BorderThickness="1"
-                    CaretBrush="Black"
-                    VerticalContentAlignment="Center"
-                    CornerRadius="18"
-                    FontFamily="Segoe UI Symbol"
-                    FontSize="16"
-                    PlaceHolder="Role" BorderBrush="Black" Foreground="Black" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Width="246" />
 
 
                 <TextBlock HorizontalAlignment="Left" Margin="80,33,0,0" TextWrapping="Wrap" Text="Sign In" VerticalAlignment="Top" Foreground="#FF0080C3" FontWeight="Bold" FontSize="32" Width="204" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
@@ -132,7 +123,10 @@
                 </TextBlock>
 
 
-                <CheckBox Grid.Column="2" Content="Remember Me" 
+                <CheckBox 
+                    
+                    x:Name="RememberMeCheckbox"
+                    Grid.Column="2" Content="Remember Me" 
           HorizontalAlignment="Left" Margin="16,277,0,0" 
           Grid.RowSpan="2" VerticalAlignment="Top" 
           Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>

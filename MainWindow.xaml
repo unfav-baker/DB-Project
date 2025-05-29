@@ -110,6 +110,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>-->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
 
         <!-- Same grid content as previous version -->
         <!-- ... (copy the Grid content from previous answer) ... -->
