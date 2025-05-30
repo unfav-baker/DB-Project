@@ -200,9 +200,6 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.csproj.AssemblyReference.cache
-D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Home.baml
-D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.baml
-D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\CreateReportPage.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\EditProfile.g.cs
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.g.cs
@@ -221,11 +218,14 @@ D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\CreateReportPage.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\EditProfile.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Generate Reports.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Home.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\LGE.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Profile.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Reports.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Themes\Generic.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Customer.baml
+D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\View Suppliers.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\ViewReport.baml
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.g.resources
 D:\Downloads\Downloads\WhatsApp\Project\Other\Employee\obj\Debug\net8.0-windows\Employee.GeneratedMSBuildEditorConfig.editorconfig

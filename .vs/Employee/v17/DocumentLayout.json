@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:reports.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|d:\\downloads\\downloads\\whatsapp\\project\\other\\employee\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{47A64016-D282-486E-8B6C-75B9D526F9C8}|Employee.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -22,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -39,7 +35,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -49,18 +45,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T14:51:45.365Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Reports.xaml",
-              "DocumentMoniker": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml",
-              "RelativeDocumentMoniker": "Reports.xaml",
-              "ToolTip": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Employee\\Reports.xaml",
-              "RelativeToolTip": "Reports.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-29T13:58:59.211Z",
-              "EditorCaption": ""
             }
           ]
         }
