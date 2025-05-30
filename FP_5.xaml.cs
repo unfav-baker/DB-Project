@@ -25,7 +25,7 @@ namespace Dashboard
     public partial class FP_5 : Window
     {
 
-        string connectionString = "server=localhost;user=root;password=VORTEX@20000;database=exportmanagementsystem;";
+        string connectionString = "server=127.0.0.1;Port=3306;Database=prime_tech;Uid=root;Pwd=Abubaker85@@;";
         string sentCode = "";
 
         public FP_5()

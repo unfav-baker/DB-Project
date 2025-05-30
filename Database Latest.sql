@@ -337,3 +337,88 @@ VALUES
 (10, 'Abu baker', 'abubakerbarkat45@gmail.com', 'ismaeel123', '2025-05-29 20:51:33', '2025-05-29 21:17:55'),
 
 (11, 'Ismaeel', 'abubakermukhtar55@gmail.com', 'baker1234', '2025-05-29 20:55:24', '2025-05-29 21:08:23');
+
+
+CREATE TABLE EXPORT_ORDER (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    supplier_id INT,
+    customer_id INT,
+    batch_number VARCHAR(50),
+    vehicle_number VARCHAR(50),
+    quantity INT,
+    total_amount DECIMAL(10,2),
+    order_status VARCHAR(50),
+    order_date DATE,
+    delivery_date DATE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    -- Foreign Keys
+    CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
+    CONSTRAINT fk_supplier FOREIGN KEY (supplier_id) REFERENCES SUPPLIER(supplier_id),
+    CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES CUSTOMER(customer_id)
+);
+
+
+INSERT INTO EXPORT_ORDER (
+    product_id,
+    supplier_id,
+    customer_id,
+    batch_number,
+    vehicle_number,
+    quantity,
+    total_amount,
+    order_status,
+    order_date,
+    delivery_date
+)
+VALUES (
+    1,             -- product_id
+    1,             -- supplier_id
+    1,             -- customer_id
+    'BN001',       -- batch_number
+    'VEH123',      -- vehicle_number
+    10,            -- quantity
+    1000.00,       -- total_amount
+    'Pending',     -- order_status
+    CURDATE(),     -- order_date
+    DATE_ADD(CURDATE(), INTERVAL 7 DAY)  -- delivery_date
+);    
+
+
+
+
+
+
+INSERT INTO customer (Name, Customer_Type, Email) VALUES
+('John Export', 'Export', 'johnexport@example.com'),
+('Local Larry', 'Local', 'locallarry@example.com'),
+('Retail Rachel', 'Retail', 'retailrachel@example.com'),
+('Individual Ian', 'Individual', 'individualian@example.com');
+
+INSERT INTO export_order (customer_id, total_amount, order_status, order_date) VALUES
+(1, 500.00, 'Delivered', CURDATE() - INTERVAL 10 DAY),
+(2, 300.00, 'Delivered', CURDATE() - INTERVAL 8 DAY),
+(3, 200.00, 'Pending', CURDATE() - INTERVAL 5 DAY),
+(4, 1000.00, 'Delivered', CURDATE() - INTERVAL 2 DAY);
+
+INSERT INTO product (FK_supplier_id, quantity, price, created_at, Category)
+VALUES
+(1, 5, 10.00, CURDATE() - INTERVAL 6 DAY, 'Fruit'),
+(1, 3, 20.00, CURDATE() - INTERVAL 5 DAY, 'Fruit'),
+(1, 4, 15.00, CURDATE() - INTERVAL 3 DAY, 'Fruit'),
+(1, 7, 25.00, CURDATE() - INTERVAL 1 DAY, 'Fruit'),
+(1, 2, 30.00, CURDATE(), 'Fruit');
+
+
+INSERT INTO product (FK_supplier_id, quantity, price, created_at, Category)
+VALUES
+(1, 10, 10.00, '2025-01-15', 'Fruit'),
+(1, 5, 20.00, '2025-02-20', 'Fruit'),
+(1, 8, 15.00, '2025-03-05', 'Fruit'),
+(1, 12, 25.00, '2025-04-10', 'Fruit'),
+(1, 7, 30.00, '2025-05-15', 'Fruit');
+
+
+ 

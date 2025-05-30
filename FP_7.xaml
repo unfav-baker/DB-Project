@@ -13,8 +13,8 @@
     AllowsTransparency="True"  
     mc:Ignorable="d">
 
- 
-   
+
+
     <!-- Rounded Window -->
     <Border CornerRadius="30" Background="#FFE4E9EF" BorderBrush="#FFE4E9EF" BorderThickness="1">
 
@@ -75,7 +75,7 @@
 
                 <CC:Dashboard  
     x:Name="CodeBox"
-     Margin="42,223,0,170"  
+     Margin="0,228,0,165"  
      BorderThickness="1"  
      CaretBrush="Black"  
      VerticalContentAlignment="Center"  
@@ -83,8 +83,8 @@
      FontFamily="Segoe UI Symbol"  
      FontSize="16"  
      PlaceHolder="Enter Code" BorderBrush="Black" Foreground="Black" 
-     Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" 
-     Width="246" Height="35" />
+     Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" 
+     Width="246" Height="35" TextChanged="CodeBox_TextChanged" Grid.Column="2" />
 
                 <!-- Verification Code Input -->
 

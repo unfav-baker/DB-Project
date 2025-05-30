@@ -12,13 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\SilentWishMAFA\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\SilentWishMAFA\\.nuget\\packages",
-=======
       "C:\\Users\\DELL\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\DELL\\.nuget\\packages",
->>>>>>> f617a17faea2fd6236a2c2a08c2b52860f34ca82
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

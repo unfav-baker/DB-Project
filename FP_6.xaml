@@ -73,7 +73,7 @@
 
                 <CC:Dashboard  
     x:Name="CodeBox"
-     Margin="42,223,0,170"  
+     Margin="0,223,0,170"  
      BorderThickness="1"  
      CaretBrush="Black"  
      VerticalContentAlignment="Center"  
@@ -81,8 +81,8 @@
      FontFamily="Segoe UI Symbol"  
      FontSize="16"  
      PlaceHolder="Enter Code" BorderBrush="Black" Foreground="Black" 
-     Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" 
-     Width="246" Height="35" />
+     Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" 
+     Width="246" Height="35" Grid.Column="2" />
 
                 <!-- Verification Code Input -->
 
