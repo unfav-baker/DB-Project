@@ -123,7 +123,7 @@
                     </Grid.ColumnDefinitions>
 
                     <!-- Summary -->
-                    <Border Grid.Column="2" Style="{StaticResource DashboardCardStyle}" Margin="171,-412,-404,286">
+                    <Border Grid.Column="2" Style="{StaticResource DashboardCardStyle}" Margin="171,-413,-372,0" Height="264" VerticalAlignment="Top">
                         <StackPanel>
                             <TextBlock Style="{StaticResource DashboardCardSmallTitleStyle}" Text="Summary" />
                             <lvc:CartesianChart x:Name="SummaryChart" Height="179"/>
@@ -131,15 +131,15 @@
                     </Border>
 
                     <!-- Daily Sales -->
-                    <Border Style="{StaticResource DashboardCardStyle}" Margin="108,-128,-372,1" Grid.Column="2">
+                    <Border Style="{StaticResource DashboardCardStyle}" Margin="171,-104,-372,1" Grid.Column="2">
                         <StackPanel>
                             <TextBlock Style="{StaticResource DashboardCardSmallTitleStyle}" Text="Daily Sales" />
                             <lvc:CartesianChart x:Name="DailySalesChart" Height="185"/>
                         </StackPanel>
                     </Border>
+                    <Button Content="View Reports" Background="#FF065668" BorderBrush="#FF065668" Width="auto" Padding="5,5" Foreground="White" Click="AddEmployee_Click" Margin="53,0,232,48" FontSize="24" Grid.ColumnSpan="3"/>
 
                 </Grid>
-                <Button Content="Generate Reports" Background="#FF065668" BorderBrush="#FF065668" Width="auto" Padding="5,5" Foreground="White" Click="AddEmployee_Click" Margin="31,152,254,99" Grid.Row="2" FontSize="24" Grid.RowSpan="3"/>
             </Grid>
         </Grid>
     </Grid>

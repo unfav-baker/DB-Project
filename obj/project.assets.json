@@ -7703,23 +7703,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SilentWishMAFA\\.nuget\\packages\\": {},
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SilentWishMAFA\\Downloads\\fike\\Project\\Other\\Adminn\\Adminn.csproj",
+      "projectUniqueName": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Adminn\\Adminn.csproj",
       "projectName": "Adminn",
-      "projectPath": "C:\\Users\\SilentWishMAFA\\Downloads\\fike\\Project\\Other\\Adminn\\Adminn.csproj",
-      "packagesPath": "C:\\Users\\SilentWishMAFA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SilentWishMAFA\\Downloads\\fike\\Project\\Other\\Adminn\\obj\\",
+      "projectPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Adminn\\Adminn.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Downloads\\Downloads\\WhatsApp\\Project\\Other\\Adminn\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\SilentWishMAFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7728,7 +7728,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7793,7 +7792,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

@@ -4,32 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\SilentWishMAFA\Downloads\fike\Project\Other\Adminn\obj\Debug\net8.0-windows\
+D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\obj\Debug\net8.0-windows\
 Adminn
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-<<<<<<< HEAD
 D:\Downloads\Downloads\WhatsApp\Project\Other\Adminn\App.xaml
 16-1045700194
 
 26-1605059122
-250-589209217
+252-1631707521
 AddCustomer.xaml;AddEmployee.xaml;AddProduct.xaml;AddSupplier.xaml;Customer.xaml;EditProfilePage.xaml;Employee.xaml;Home.xaml;LGA.xaml;MainWindow.xaml;Products.xaml;Profile.xaml;Reports.xaml;Supplier.xaml;Themes\Generic.xaml;ViewReport.xaml;
-=======
-C:\Users\SilentWishMAFA\Downloads\fike\Project\Other\Adminn\App.xaml
-16-1045700194
-
-<<<<<<< HEAD
-26-1605059122
-252935850238
-AddCustomer.xaml;AddEmployee.xaml;AddProduct.xaml;AddSupplier.xaml;Customer.xaml;EditProfilePage.xaml;Employee.xaml;Home.xaml;LGA.xaml;MainWindow.xaml;Products.xaml;Profile.xaml;Reports.xaml;Supplier.xaml;Themes\Generic.xaml;ViewReport.xaml;
-=======
-27-126205878
-250-589209217
-AddCustomer.xaml;AddEmployee.xaml;AddProduct.xaml;AddSupplier.xaml;Customer.xaml;EditProfilePage.xaml;Employee.xaml;Export Orders.xaml;Home.xaml;LGA.xaml;MainWindow.xaml;Products.xaml;Profile.xaml;Reports.xaml;Supplier.xaml;Themes\Generic.xaml;ViewReport.xaml;
->>>>>>> bf312a97cb77fe8e420e1883fd983c78bcbc0f4a
->>>>>>> b76b3fde70bda40cb4c33261c7422b96eb59e4bc
 
 False
 

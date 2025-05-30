@@ -186,7 +186,7 @@ namespace Adminn
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
             // Create the Reports page instance
-            Reports reportsPage = new Reports();
+            ViewReport reportsPage = new ViewReport();
 
             // Navigate to Reports page using NavigationService
             if (this.NavigationService != null)

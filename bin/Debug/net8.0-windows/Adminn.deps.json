@@ -9,10 +9,7 @@
       "Adminn/1.0.0": {
         "dependencies": {
           "DotNetEnv": "3.1.1",
-<<<<<<< HEAD
           "LiveCharts.Wpf": "0.9.7",
-=======
->>>>>>> bf312a97cb77fe8e420e1883fd983c78bcbc0f4a
           "MahApps.Metro.IconPacks": "5.1.0",
           "MySql.Data": "9.3.0",
           "QuestPDF": "2025.5.0"
