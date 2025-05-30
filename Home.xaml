@@ -1,4 +1,4 @@
-﻿<Page x:Class="Adminn.Home"
+﻿<Page x:Class="Supplier.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -14,81 +14,74 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Welcome Section -->
         <StackPanel Grid.Row="0" Margin="30">
-            <TextBlock Text="Welcome to PRIME-TECH" 
-                     FontSize="28" 
-                     FontWeight="Bold"
-                     Foreground="#FF065668"
-                     HorizontalAlignment="Center"
-                     Margin="0,0,0,10"/>
+            <TextBlock Text="Welcome to PRIME-TECH"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#FF065668"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
 
             <TextBlock Text="Your Export Management Dashboard"
-                     FontSize="18"
-                     Foreground="#666666"
-                     HorizontalAlignment="Center"/>
+                       FontSize="18"
+                       Foreground="#666666"
+                       HorizontalAlignment="Center"/>
         </StackPanel>
 
-        <!-- Dashboard Cards -->
-        <UniformGrid Grid.Row="1" 
-                   Columns="3" 
-                   Rows="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Margin="30">
+        <UniformGrid Grid.Row="1"
+                     Columns="3"
+                     Rows="1"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Margin="30">
 
-            <!-- View Products Card -->
-            <Button >
+            <Button x:Name="ViewProductsButton" Click="ViewProductsButton_Click">
                 <StackPanel>
-                    <TextBlock Text="📦" 
-                             FontSize="40"
-                             HorizontalAlignment="Center"
-                             Margin="0,0,0,10"/>
+                    <TextBlock Text="📦"
+                               FontSize="40"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
                     <TextBlock Text="VIEW PRODUCTS"
-                             FontSize="16"
-                             FontWeight="SemiBold"
-                             HorizontalAlignment="Center"/>
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
 
-            <!-- Manage Orders Card -->
-            <Button >
-      <StackPanel>
-          <TextBlock Text="📊" 
-                   FontSize="40"
-                   HorizontalAlignment="Center"
-                   Margin="0,0,0,10"/>
-          <TextBlock Text="REPORTS"
-                   FontSize="16"
-                   FontWeight="SemiBold"
-                   HorizontalAlignment="Center"/>
-      </StackPanel>
-  </Button>
-
-            <!-- Generate Reports Card -->
-          
-            <Button >
+            <Button x:Name="ReportsButton" Click="ReportsButton_Click">
                 <StackPanel>
-                    <TextBlock Text="📑" 
-                 FontSize="40"
-                 HorizontalAlignment="Center"
-                 Margin="0,0,0,10"/>
-                    <TextBlock Text="MANAGE ORDERS"
-                 FontSize="16"
-                 FontWeight="SemiBold"
-                 HorizontalAlignment="Center"/>
+                    <TextBlock Text="📊"
+                               FontSize="40"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="REPORTS"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="OrdersButton" Click="OrdersButton_Click">
+                <StackPanel>
+                    <TextBlock Text="📑"
+                               FontSize="40"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="ORDERS"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </UniformGrid>
 
-        <!-- Footer -->
-        <Border Grid.Row="2" 
-              Background="#FF065668"
-              Padding="20">
+        <Border Grid.Row="2"
+                Background="#FF065668"
+                Padding="20">
             <TextBlock Text="2025 PRIME-TECH Export Solutions"
-                     Foreground="White"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"/>
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
         </Border>
     </Grid>
 </Page>

@@ -1,155 +1,78 @@
 ﻿<Page x:Class="Supplier.Reports"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Supplier"
-      mc:Ignorable="d"
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="System Reports"
-      Background="#FFF0F2F5">
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Title="Order Reports"
+      d:DesignHeight="450" 
+      d:DesignWidth="1200" 
+      mc:Ignorable="d">
 
     <Page.Resources>
-        <Style TargetType="Button" x:Key="ActionButtonStyle">
-            <Setter Property="Background" Value="#FF065668"/>
-            <Setter Property="BorderBrush" Value="#FF065668"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="Margin" Value="0,0,10,0"/>
-            <Setter Property="MinWidth" Value="100"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="1" CornerRadius="4">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF054A5C"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style TargetType="Button" x:Key="IconButtonStyle" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Width" Value="35"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="14"/>
+        <Style x:Key="RightAlignedTextCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="Margin" Value="0,0,5,0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="1" CornerRadius="4">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity" Value="0.8"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="ViewIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
-            <Setter Property="Background" Value="#6C757D"/>
-            <Setter Property="BorderBrush" Value="#6C757D"/>
-        </Style>
-        <Style x:Key="DeleteIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
-            <Setter Property="Background" Value="#DC3545"/>
-            <Setter Property="BorderBrush" Value="#DC3545"/>
         </Style>
     </Page.Resources>
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="25">
-        <Grid Background="#FF065668">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+    <Grid Background="#FFF0F2F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="📝 Reports"
-                       FontSize="24" FontWeight="SemiBold"
-                      Background="#FF065668" Foreground="White" Margin="0,0,0,25" HorizontalAlignment="Left"/>
+        <Border Grid.Row="0" Background="#FF065668">
+            <TextBlock Text=" 📝 Order Reports" 
+                       HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       Margin="20,0,0,0" Foreground="White" 
+                       FontSize="22" FontWeight="Bold"/>
+        </Border>
 
-            <DataGrid Grid.Row="1" x:Name="ReportsDataGrid"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      HeadersVisibility="Column"
-                      IsReadOnly="False" 
-                      SelectionMode="Single"
-                      BorderBrush="#FFD0D0D0"
-                      BorderThickness="1"
-                      ItemsSource="{Binding ReportItemsList}" 
-                      ScrollViewer.VerticalScrollBarVisibility="Auto"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                      CanUserResizeColumns="True"
-                      Background="White"
-                      AlternatingRowBackground="#FFF9F9F9"
-                      RowHeaderWidth="0">
-                <DataGrid.Resources>
-                    <Style TargetType="DataGridColumnHeader">
-                        <Setter Property="Background" Value="LightGray"/>
-                        <Setter Property="Foreground" Value="Black"/>
-                        <Setter Property="FontWeight" Value="Normal"/>
-                        <Setter Property="Padding" Value="8,5"/>
-                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                        <Setter Property="BorderBrush" Value="#FF054A5C"/>
-                    </Style>
-                    <Style TargetType="DataGridCell">
-                        <Setter Property="Padding" Value="8,5"/>
-                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                        <Setter Property="BorderBrush" Value="#FFE0E0E0"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="DataGridCell">
-                                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </DataGrid.Resources>
-                <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="40" Header="" Binding="{Binding IsSelected}" CanUserResize="False">
-                        <DataGridCheckBoxColumn.ElementStyle>
-                            <Style TargetType="CheckBox">
-                                <Setter Property="HorizontalAlignment" Value="Center"/>
-                                <Setter Property="VerticalAlignment" Value="Center"/>
-                            </Style>
-                        </DataGridCheckBoxColumn.ElementStyle>
-                    </DataGridCheckBoxColumn>
+        <DataGrid Grid.Row="1" x:Name="ReportsDataGrid"
+                  ItemsSource="{Binding ReportDataList}" 
+                  Margin="10" AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  IsReadOnly="True" 
+                  SelectionMode="Single" 
+                  BorderBrush="#FFCCCCCC" BorderThickness="1"
+                  HorizontalGridLinesBrush="#FFE0E0E0" VerticalGridLinesBrush="#FFE0E0E0"
+                  RowBackground="White" AlternatingRowBackground="#FFF9F9F9"
+                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                  CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}" MinWidth="90" Width="Auto"/>
+                <DataGridTextColumn Header="Party Name" Binding="{Binding PartyName}" MinWidth="150" Width="2*"/>
+                <DataGridTextColumn Header="Export Through" Binding="{Binding ExportThrough}" MinWidth="120" Width="1.5*"/>
+                <DataGridTextColumn Header="Plant" Binding="{Binding Plant}" MinWidth="100" Width="1.5*"/>
+                <DataGridTextColumn Header="Importer" Binding="{Binding Importer}" MinWidth="120" Width="1.5*"/>
+                <DataGridTextColumn Header="Phyto Number" Binding="{Binding PhytoNumber}" MinWidth="110" Width="Auto"/>
 
-                    <DataGridTextColumn Header="Report ID"      Binding="{Binding ReportId}"        Width="*"    MinWidth="80" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Report Type"    Binding="{Binding ReportType}"      Width="2*"   MinWidth="150" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Generated"      Binding="{Binding DateGenerated, StringFormat=dd/MM/yyyy}" Width="1.2*" MinWidth="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status"         Binding="{Binding Status}"          Width="*"    MinWidth="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Employee"       Binding="{Binding EmployeeName}"    Width="1.5*" MinWidth="120" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Created At"     Binding="{Binding CreatedAt, StringFormat=dd/MM/yyyy HH:mm}" Width="1.3*" MinWidth="140" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Updated At"     Binding="{Binding UpdatedAt, StringFormat=dd/MM/yyyy HH:mm}" Width="1.3*" MinWidth="140" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>
+                <DataGridTextColumn Header="Carton" Binding="{Binding Carton}" MinWidth="60" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Weight, StringFormat={}{0:N2}}" MinWidth="70" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Rate" Binding="{Binding Rate, StringFormat=C}" MinWidth="80" Width="Auto" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Received" Binding="{Binding AmountReceived, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance, StringFormat=C}" MinWidth="90" Width="*" ElementStyle="{StaticResource RightAlignedTextCellStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-            <Border Grid.Row="2"
-                    Background="#FFF0F2F5"
-                    Padding="0,10,0,0">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button Content="Refresh List" Style="{StaticResource ActionButtonStyle}" Click="RefreshButton_Click"/>
-                    <Button Content="👁" ToolTip="View Details" Style="{StaticResource ViewIconButtonStyle}" Click="ViewDetails_Click"/>
-                    <Button Content="🗑" ToolTip="Delete" Style="{StaticResource DeleteIconButtonStyle}" Margin="0" Click="Delete_Click"/>
-                </StackPanel>
-            </Border>
-        </Grid>
-    </ScrollViewer>
+        <Border Grid.Row="2" Background="#FFF5F5F5" BorderBrush="#FFDDDDDD" BorderThickness="0,1,0,0" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Content="Refresh Reports" 
+                        Click="RefreshReports_Click" 
+                        Background="#FF065668" BorderBrush="#FF065668" 
+                        Padding="12,7"
+                        Foreground="White" FontWeight="SemiBold" FontSize="13">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
 </Page>
